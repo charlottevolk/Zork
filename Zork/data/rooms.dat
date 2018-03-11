@@ -1,9 +1,24 @@
-Room Name: Room 1
-Room Description:  This is room<br>1
-Exit Rooms: E-Room 2
-Room Name: Room 2
-Room Description:  This is Room 2
-Exit Rooms: W-Room 1, U-Room 3
-Room Name: Room 3
-Room Description:  You are upstairs.
-Exit Rooms: D-Room 2
+Room Name:Apartment
+Room Description:You are in Winston's apartment. To the north, there is a door. To the west, there is a large chair. To the south, there is a tall bookshelf and the telescreen and to the east, there is a desk.
+Exit Rooms:N-Door, W-Chair, S-Bookshelf, E-Desk
+Room Name:Door
+Room Description:This is the door.
+Exit Rooms:S-Apartment
+Room Name:Chair
+Room Description:This is a chair. It is in an alcove where you can be out of view from the telescreen.
+Exit Rooms:E-Apartment
+Room Name:Bookshelf and Telescreen
+Room Description:To the right, there is a telescreen and to the left, there is a bookshelf.
+Exit Rooms:N-Apartment
+Room Name:Desk
+Room Description:This is a desk. In the desk, there is a book. Would you like to pick up the book?
+Exit Rooms:W-Apartment
+Room Name:Hallway
+Room Description:To the north there are stairs that go down. To the south, there is the door to the apartment.
+Exit Rooms:N-Lobby, S-Apartment
+Room Name:Lobby
+Room Description:The lobby smells of old cabbage. To the north, there are the stairs. To the east, there is an exit to the street.
+Exit Rooms:N-Hallway, E-Street
+Room Name:Street
+Room Description:The street is empty. To the east there is the Ministry of Truth. 
+Exit Rooms:N-Hallway
