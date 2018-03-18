@@ -94,7 +94,7 @@ class Game {
 	public Game() {
 		try {
 			initRooms("data/Rooms.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
+			currentRoom = masterRoomMap.get("Apartment");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -164,8 +164,9 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println("You are lost. You are alone. You wander");
-		System.out.println("around at Monash Uni, Peninsula Campus.");
+		System.out.println("You are lost. You are alone. You ");
+		System.out.println("are wandering around Airstrip One ");
+		System.out.println("in the year 1984.");
 		System.out.println();
 		System.out.println("Your command words are:");
 		parser.showCommands();
