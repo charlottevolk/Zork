@@ -94,7 +94,7 @@ class Game {
 	public Game() {
 		try {
 			initRooms("data/Rooms.dat");
-			currentRoom = masterRoomMap.get("APARTMENT");
+			currentRoom = masterRoomMap.get("Apartment");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -153,8 +153,6 @@ class Game {
 				return true; // signal that we want to quit
 		} else if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
-		} else if (commandWord.equals("climb")) {
-			System.out.println("Are you Spiderman?");
 		}
 		return false;
 	}
