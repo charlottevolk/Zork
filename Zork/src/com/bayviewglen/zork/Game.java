@@ -153,6 +153,8 @@ class Game {
 				return true; // signal that we want to quit
 		} else if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
+		} else if (commandWord.equals("climb")) {
+			System.out.println("Are you Spiderman?");
 		}
 		return false;
 	}
