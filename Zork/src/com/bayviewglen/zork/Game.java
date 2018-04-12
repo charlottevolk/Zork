@@ -125,7 +125,7 @@ class Game {
 	private void printWelcome() {
 		System.out.println();
 		System.out.println("Welcome to Zork!");
-		System.out.println("Zork is a new, incredibly boring adventure game.");
+		System.out.println("You are currently wandering around Airstrip One in the year 1984.");
 		System.out.println("Type 'help' if you need help.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
