@@ -155,6 +155,8 @@ class Game {
 			System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("climb")) {
 			System.out.println("Are you Spiderman?!");
+		} else if (commandWord.equals("watch")) {
+			System.out.println("Do you really think you should be watching TV right now?");
 		}
 		return false;
 	}
