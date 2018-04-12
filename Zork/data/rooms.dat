@@ -1,9 +1,6 @@
 Room Name:Apartment
 Room Description:You are in Winston's apartment. To the north, there is a door. To the west, there is a large chair. To the south, there is a tall bookshelf and the telescreen and to the east, there is a desk.
-Exit Rooms:N-Door, W-Chair, S-Bookshelf, E-Desk
-Room Name:Apartment->Door
-Room Description:This is the door.
-Exit Rooms:S-Apartment
+Exit Rooms:N-Hallway, W-Chair, S-Bookshelf, E-Desk
 Room Name:Apartment->Chair
 Room Description:This is a chair. It is in an alcove where you can be out of view from the telescreen.
 Exit Rooms:E-Apartment
@@ -14,11 +11,26 @@ Room Name:Apartment->Desk
 Room Description:This is a desk. In the desk, there is a book. Would you like to pick up the book?
 Exit Rooms:W-Apartment
 Room Name:Hallway
-Room Description:To the north there are stairs that go down. To the south, there is the door to the apartment.
-Exit Rooms:N-Lobby, S-Apartment
+Room Description:You are in the hallway. There are stairs to the north.
+Exit Rooms:N-Stairs, S-Apartment
+Room Name:Stairs
+Room Description: You are on the stairs.
+Exit Rooms: S-Hallway, D-BottomStairs, U-TopStairs
+Room Name:BottomStairs
+Room Description: You are at the bottom of the stairs.
+Exit Room: S-Lobby, U-Stairs
 Room Name:Lobby
-Room Description:The lobby smells of old cabbage. To the north, there are the stairs. To the east, there is an exit to the street.
-Exit Rooms:N-Hallway, E-Street
+Room Description:The lobby smells of old cabbage.
+Exit Rooms:N-BottomStairs, E-Street
 Room Name:Street
-Room Description:The street is empty. To the east there is the Ministry of Truth. 
-Exit Rooms:N-Hallway
+Room Description:You are on the street. The street is empty.
+Exit Rooms:W-Lobby
+Room Name: TopStairs
+Room Description: You are at the top of the stairs.
+Exit Room: D-Stairs, N-Landing
+Room Name: Landing
+Room Description: You are at the landing at the top of the stairs.
+Exit Room: E-SecretRoom, S-TopStairs
+Room Name: SecretRoom
+Room Description: You have found a secret room! It is extremely dusty, and the dust looks undisturbed. There is a tiny barred window at the top of the slanted roof that lets in just enough light to see by.
+Exit Room: W-Landing
