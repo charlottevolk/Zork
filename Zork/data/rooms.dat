@@ -1,17 +1,17 @@
 Room Name:Apartment
-Room Description:You are in Winston's apartment. To the north, there is a door. To the west, there is a large chair. To the south, there is a tall bookshelf and the telescreen and to the east, there is a desk.
-Exit Rooms:N-Hallway, W-Chair, S-Bookshelf, E-Desk
-Room Name:Apartment->Chair
+Room Description:You are in<br>Winston's apartment. 
+Exit Rooms:N-Hallway, W-Apartment Chair, S-Apartmenk, Bookshelf and Telescreen, E-Apartment, Desk
+Room Name:Apartment, Chair
 Room Description:This is a chair. It is in an alcove where you can be out of view from the telescreen.
 Exit Rooms:E-Apartment
-Room Name:Apartment->Bookshelf and Telescreen
-Room Description:To the right, there is a telescreen and to the left, there is a bookshelf.
+Room Name:Apartment, Bookshelf and Telescreen
+Room Description:You are now looking into a very dusty bookshelf covered in spiderwebs.<br>There is a Telecsreen with a cracked screen next to you.
 Exit Rooms:N-Apartment
-Room Name:Apartment->Desk
-Room Description:This is a desk. In the desk, there is a book. Would you like to pick up the book?
+Room Name:Apartment, Desk
+Room Description:This is a desk. In the desk, there is an odd looking book.
 Exit Rooms:W-Apartment
 Room Name:Hallway
-Room Description:You are in the hallway. There are stairs to the north.
+Room Description:You are in the hallway. There are stairs that go down.
 Exit Rooms:N-Stairs, S-Apartment
 Room Name:Stairs
 Room Description: You are on the stairs.
@@ -24,7 +24,7 @@ Room Description:The lobby smells of old cabbage.
 Exit Rooms:N-BottomStairs, E-Street
 Room Name:Street
 Room Description:You are on the street. The street is empty.
-Exit Rooms:W-Lobby
+Exit Rooms:W-Lobby, E-MinitruEntrance
 Room Name: TopStairs
 Room Description: You are at the top of the stairs.
 Exit Room: D-Stairs, N-Landing
@@ -32,5 +32,10 @@ Room Name: Landing
 Room Description: You are at the landing at the top of the stairs.
 Exit Room: E-SecretRoom, S-TopStairs
 Room Name: SecretRoom
-Room Description: You have found a secret room! It is extremely dusty, and the dust looks undisturbed. There is a tiny barred window at the top of the slanted roof that lets in just enough light to see by.
+Room Description: You have found a secret room! It is extremely dusty,<br>and the dust looks undisturbed. There is a tiny barred window at the top of the slanted roof<br>that lets in just enough light to see by.
 Exit Room: W-Landing
+Room Name:MiniTruEntrance
+Room Description:You are at the entrance of the Ministry of Truth
+Exit Rooms: W-Street, E-MinitruLobby
+
+
