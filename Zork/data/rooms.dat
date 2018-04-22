@@ -1,13 +1,13 @@
 Room Name:Apartment
 Room Description:You are in<br>Winston's apartment. 
-Exit Rooms:N-Hallway, W-Apartment Chair, S-Apartmenk, Bookshelf and Telescreen, E-Apartment, Desk
-Room Name:Apartment, Chair
+Exit Rooms:N-Hallway&Apartment Key, W-Apartment Chair, S-Apartment Bookshelf and Telescreen, E-Apartment Desk
+Room Name:Apartment Chair
 Room Description:This is a chair. It is in an alcove where you can be out of view from the telescreen.
 Exit Rooms:E-Apartment
-Room Name:Apartment, Bookshelf and Telescreen
+Room Name:Apartment Bookshelf and Telescreen
 Room Description:You are now looking into a very dusty bookshelf covered in spiderwebs.<br>There is a Telecsreen with a cracked screen next to you.
 Exit Rooms:N-Apartment
-Room Name:Apartment, Desk
+Room Name:Apartment Desk
 Room Description:This is a desk. In the desk, there is an odd looking book.
 Exit Rooms:W-Apartment
 Room Name:Hallway

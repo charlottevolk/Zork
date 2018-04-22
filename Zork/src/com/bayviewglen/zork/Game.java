@@ -65,6 +65,7 @@ class Game {
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
 
 				// Now we better set the exits.
+
 			}
 
 			for (String key : masterRoomMap.keySet()) {
@@ -74,9 +75,19 @@ class Game {
 					// s = direction
 					// value is the room.
 
-					String roomName2 = tempExits.get(s.trim());
-					Room exitRoom = masterRoomMap.get(roomName2.toUpperCase().replaceAll(" ", "_"));
-					roomTemp.setExit(s.trim().charAt(0), exitRoom);
+					String roomInfo = tempExits.get(s.trim());
+
+					String[] roomSplit = roomInfo.split("&");
+
+					Item requiredItem = null;
+					if (roomSplit.length > 1) {
+						requiredItem = new Item(roomSplit[1]);
+
+					}
+
+					Room exitRoom = masterRoomMap.get(roomSplit[0].toUpperCase().replaceAll(" ", "_"));
+					Exit exit = new Exit(exitRoom, requiredItem);
+					roomTemp.setExit(s.trim().charAt(0), exit);
 
 				}
 
@@ -190,12 +201,12 @@ class Game {
 		String direction = command.getSecondWord();
 
 		// Try to leave current room.
-		Room nextRoom = currentRoom.nextRoom(direction);
+		Exit nextExit = currentRoom.nextExit(direction);
 
-		if (nextRoom == null)
+		if (nextExit == null)
 			System.out.println("There is no door!");
 		else {
-			currentRoom = nextRoom;
+			currentRoom = nextExit.getRoom();
 			System.out.println(currentRoom.longDescription());
 		}
 	}
