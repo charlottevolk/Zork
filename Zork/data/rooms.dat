@@ -1,6 +1,6 @@
 Room Name:Apartment
 Room Description:You are in<br>Winston's apartment. 
-Exit Rooms:N-Hallway&Apartment Key, W-Apartment Chair, S-Apartment Bookshelf and Telescreen, E-Apartment Desk
+Exit Rooms:N-Hallway&ApartmentKey, W-Apartment Chair, S-Apartment Bookshelf and Telescreen, E-Apartment Desk
 Room Name:Apartment Chair
 Room Description:This is a chair. It is in an alcove where you can be out of view from the telescreen.
 Exit Rooms:E-Apartment
@@ -30,7 +30,7 @@ Room Description: You are at the top of the stairs.
 Exit Room: D-Stairs, N-Landing
 Room Name: Landing
 Room Description: You are at the landing at the top of the stairs.
-Exit Room: E-SecretRoom, S-TopStairs
+Exit Room: E-SecretRoomQQ, S-TopStairs
 Room Name: SecretRoom
 Room Description: You have found a secret room! It is extremely dusty,<br>and the dust looks undisturbed. There is a tiny barred window at the top of the slanted roof<br>that lets in just enough light to see by.
 Exit Room: W-Landing
