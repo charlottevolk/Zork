@@ -78,12 +78,13 @@ class Game {
 					String roomInfo = tempExits.get(s.trim());
 
 					String[] roomSplit = roomInfo.split("&");
-
+					/*
 					Item requiredItem = null;
 					if (roomSplit.length > 1) {
 						requiredItem = new Item(roomSplit[1]);
 
 					}
+					*/
 
 					Room exitRoom = masterRoomMap.get(roomSplit[0].toUpperCase().replaceAll(" ", "_"));
 					Exit exit = new Exit(exitRoom, requiredItem);
