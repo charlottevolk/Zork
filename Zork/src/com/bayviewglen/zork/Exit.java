@@ -9,6 +9,13 @@ public class Exit {
 		this.requiredItem = requiredItem;
 
 	}
+	
+	public boolean canLeave(Room room, Item item) {
+		if(this.room.equals(room) && this.requiredItem.equals(item)) {
+			return true;
+		}
+		return false;
+	}
 
 	public Room getRoom() {
 		return room;

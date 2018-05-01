@@ -118,6 +118,7 @@ class Game {
 	 */
 	public void play() {
 		printWelcome();
+		Code code = new Code();
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
