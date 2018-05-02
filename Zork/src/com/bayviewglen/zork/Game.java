@@ -65,7 +65,6 @@ class Game {
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
 
 				// Now we better set the exits.
-
 			}
 
 			for (String key : masterRoomMap.keySet()) {
@@ -75,20 +74,9 @@ class Game {
 					// s = direction
 					// value is the room.
 
-					String roomInfo = tempExits.get(s.trim());
-
-					String[] roomSplit = roomInfo.split("&");
-					/*
-					Item requiredItem = null;
-					if (roomSplit.length > 1) {
-						requiredItem = new Item(roomSplit[1]);
-
-					}
-					*/
-
-					Room exitRoom = masterRoomMap.get(roomSplit[0].toUpperCase().replaceAll(" ", "_"));
-					Exit exit = new Exit(exitRoom, requiredItem);
-					roomTemp.setExit(s.trim().charAt(0), exit);
+					String roomName2 = tempExits.get(s.trim());
+					Room exitRoom = masterRoomMap.get(roomName2.toUpperCase().replaceAll(" ", "_"));
+					roomTemp.setExit(s.trim().charAt(0), exitRoom);
 
 				}
 
@@ -106,7 +94,7 @@ class Game {
 	public Game() {
 		try {
 			initRooms("data/Rooms.dat");
-			currentRoom = masterRoomMap.get("APARTMENT");
+			currentRoom = masterRoomMap.get("Apartment");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -119,7 +107,6 @@ class Game {
 	 */
 	public void play() {
 		printWelcome();
-		Code code = new Code();
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -138,7 +125,7 @@ class Game {
 	private void printWelcome() {
 		System.out.println();
 		System.out.println("Welcome to Zork!");
-		System.out.println("You are currently wandering around Airstrip One in the year 1984.");
+		System.out.println("Zork is a new, incredibly boring adventure game.");
 		System.out.println("Type 'help' if you need help.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -166,10 +153,6 @@ class Game {
 				return true; // signal that we want to quit
 		} else if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
-		} else if (commandWord.equals("climb")) {
-			System.out.println("Are you Spiderman?!");
-		} else if (commandWord.equals("watch")) {
-			System.out.println("Do you really think you should be watching TV right now?");
 		}
 		return false;
 	}
@@ -203,12 +186,12 @@ class Game {
 		String direction = command.getSecondWord();
 
 		// Try to leave current room.
-		Exit nextExit = currentRoom.nextExit(direction);
+		Room nextRoom = currentRoom.nextRoom(direction);
 
-		if (nextExit == null)
+		if (nextRoom == null)
 			System.out.println("There is no door!");
 		else {
-			currentRoom = nextExit.getRoom();
+			currentRoom = nextRoom;
 			System.out.println(currentRoom.longDescription());
 		}
 	}
