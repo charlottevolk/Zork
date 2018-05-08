@@ -153,7 +153,7 @@ class Game
         String commandWord = command.getCommandWord();
         if (commandWord.equals("help"))
             printHelp();
-        else if (commandWord.equals("go"))
+        else if (commandWord.equals("walk"))
             goRoom(command);
         else if (commandWord.equals("quit"))
         {
@@ -163,6 +163,12 @@ class Game
                 return true;  // signal that we want to quit
         }else if (commandWord.equals("eat")){
         	System.out.println("Do you really think you should be eating at a time like this?");
+        }else if(commandWord.equals("run")) {
+        	if(command.getSecondWord() != null && command.getSecondWord().equals("away")) {
+        		System.out.println("You were caught by the Thought Police. Did you honestly think you could run for more than 1.25 seconds?");
+        	}else {
+        		System.out.println("Why run when you could walk?");
+        	}
         }
         return false;
     }
@@ -192,11 +198,18 @@ class Game
         if(!command.hasSecondWord())
         {
             // if there is no second word, we don't know where to go...
-            System.out.println("Go where?");
+            System.out.println("Walk where?");
             return;
         }
 
         String direction = command.getSecondWord();
+        
+        if(command.getSecondWord().equals("up")) {
+        	//if(command.getThirdWord().equals("stairs"){
+        		// Room nextRoom = currentRoom.nextRoom(direction);
+        	//}else{
+        		// System.out.println("You can't walk up into thin air!");
+        }
 
         // Try to leave current room.
         Room nextRoom = currentRoom.nextRoom(direction);
