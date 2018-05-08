@@ -1,49 +1,60 @@
-Room Name:Room 1
-Room Description:This is room 1
-Exit Rooms:E-Room 2
-Room Name:Room 2
-Room Description:This is Room 2
-Exit Rooms:W-Room 1, U-Room 3
-Room Name:Room 3
-Room Description:You are upstairs.
-Exit Rooms:D-Room 2
-Room Name:Apartment
-Room Description:You are in Winston's apartment. 
-Exit Rooms:N-Hallway, W-Apartment Chair, S-Apartment Bookshelf and Telescreen, E-Apartment Desk
-Room Name:Apartment Chair
-Room Description:This is a chair. It is in an alcove where you can be out of view from the telescreen.
-Exit Rooms:E-Apartment
-Room Name:Apartment Bookshelf and Telescreen
-Room Description:You are now looking into a very dusty bookshelf covered in spiderwebs.<br>There is a Telecsreen with a cracked screen next to you.
-Exit Rooms:N-Apartment
-Room Name:Apartment Desk
-Room Description:This is a desk. In the desk, there is an odd looking book.
-Exit Rooms:W-Apartment
-Room Name:Hallway
-Room Description:You are in the hallway. There are stairs that go down.
-Exit Rooms:N-Stairs, S-Apartment
-Room Name:Stairs
-Room Description: You are on the stairs.
-Exit Rooms: S-Hallway, D-BottomStairs, U-TopStairs
-Room Name:BottomStairs
-Room Description: You are at the bottom of the stairs.
-Exit Room: S-Lobby, U-Stairs
-Room Name:Lobby
-Room Description:The lobby smells of old cabbage.
-Exit Rooms:N-BottomStairs, E-Street
-Room Name:Street
-Room Description:You are on the street. The street is empty.
-Exit Rooms:W-Lobby, E-MinitruEntrance
-Room Name:TopStairs
-Room Description:You are at the top of the stairs.
-Exit Room:D-Stairs, N-Landing
-Room Name:Landing
-Room Description:You are at the landing at the top of the stairs.
-Exit Room:E-SecretRoom, S-TopStairs
-Room Name:SecretRoom
-Room Description:You have found a secret room! It is extremely dusty,<br>and the dust looks undisturbed. There is a tiny barred window at the top of the slanted roof<br>that lets in just enough light to see by.
-Exit Room:W-Landing
-Room Name:MiniTruEntrance
-Room Description:You are at the entrance of the Ministry of Truth
-Exit Rooms:W-Street, E-MinitruLobby
-
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
+Room Name:
+Room Description:
+Exit Rooms:
