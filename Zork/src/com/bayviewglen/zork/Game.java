@@ -92,7 +92,7 @@ class Game {
 	public Game() {
 		try {
 			initRooms("data/Rooms.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
+			currentRoom = masterRoomMap.get("PRISON_CELL");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -126,13 +126,8 @@ class Game {
 		System.out.println("...");
 		System.out.println("Darkness. You are surrounded by darkness.");
 		System.out.println("Your eyes shoot open. You inhale sharply as your air-deprived lungs begs for oxygen.");
-		System.out.println(
-				"You find yourself to be lying down on a bed,<br>a pillow under your head and a blanket over your body.");
-		System.out.println(
-				"You push head up, creating a crinkling sound,<br>move the blanket to the side,<br>and get off the bed to stand and look around.");
-		System.out.println("You are in a white room.");
-		System.out.println(
-				"To your right is a large, wardrobe mirror.<br>To your left is some strange, illegible writing on the wall from,<br>you assume, the previous person.<br>In front of you is a desk with a half-eaten apple,<br> a glass bottle of water, and a book.");
+		System.out.println("You find yourself to be lying down on a bed,\na pillow under your head and a blanket over your body.");
+		System.out.println("You push head up, creating a crinkling sound,\nmove the blanket to the side,\nand get off the bed to stand and look around.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 	}
