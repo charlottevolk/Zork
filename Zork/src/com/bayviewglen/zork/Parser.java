@@ -35,7 +35,6 @@ class Parser
         String inputLine = "";   // will hold the full input line
         String word1;
         String word2;
-        String word3;
 
         System.out.print("> ");     // print prompt
 
@@ -59,10 +58,6 @@ class Parser
             word2 = tokenizer.nextToken();      // get second word
         else
             word2 = null;
-        if(tokenizer.hasMoreTokens())
-        	word3 = tokenizer.nextToken();
-        else
-        	word3 = null;
 
         // note: we just ignore the rest of the input line.
 
@@ -70,9 +65,9 @@ class Parser
         // with it. If not, create a "nil" command (for unknown command).
 
         if(commands.isCommand(word1))
-            return new Command(word1, word2, word3);
+            return new Command(word1, word2);
         else
-            return new Command(null, word2, word3);
+            return new Command(null, word2);
     }
 
     /**

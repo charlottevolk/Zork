@@ -3,13 +3,13 @@ package com.bayviewglen.zork;
 import java.util.ArrayList;
 
 public class Inventory {
-	private static ArrayList<Item> items;
+	private ArrayList<Item> items;
 	
-	public Inventory() {
-		items = new ArrayList<Item>();
+	public Inventory(ArrayList<Item> itemsInHand) {
+		items = itemsInHand;
 	}
 	
-	public static void addItem(Item item) {
+	public void addItem(Item item) {
 		items.add(item);
 	}
 	
@@ -19,9 +19,5 @@ public class Inventory {
 	
 	public int howManyItems() {
 		return items.size();
-	}
-	
-	public static ArrayList<Item> getInventory(){
-		return items;
 	}
 }
