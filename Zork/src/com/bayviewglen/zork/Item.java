@@ -1,16 +1,41 @@
 package com.bayviewglen.zork;
 
-public abstract class Item {
+public class Item {
 
-	private String name;
+	private String type;
+	private String property;
 
-	public Item(String name) {
-		this.name = name;
+	public Item(String type, String property) {
+		this.type = type;
+		this.property = property;
 	}
 	
-	public abstract void pickUpItem(Item item);
+	public void pickUpItem(Item item) {
+		System.out.print("You picked up the ");
+	}
 	
-	public abstract void putDownItem(Item item);
+	public void putDownItem(Item item) {
+		System.out.print("You put down the ");
+	}
 	
-	public abstract void putInInventory(Item item);
+	public void putInInventory(Item item) {
+		Inventory.addItem(item);
+	}
+	
+	public String getDescription() {
+		return property + " " + type.toLowerCase();
+	}
+
+	public String getType() {
+		return type;
+	}
+	
+	public String getProperty() {
+		return property;
+	}
+/*
+	public void setName(String name) {
+		this.name = name;
+	}
+	*/	
 }
