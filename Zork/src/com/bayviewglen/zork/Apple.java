@@ -1,6 +1,6 @@
 package com.bayviewglen.zork;
 
-public class Apple extends Item{
+public class Apple extends Food{
 	
 	private String colour;
 
@@ -8,22 +8,4 @@ public class Apple extends Item{
 		super("Apple", enteredColour);
 	}
 	
-	public void setColour(String colour) {
-		this.colour = colour;
-	}
-
-	@Override
-	public void pickUpItem(Item apple) {
-		super.pickUpItem(apple);
-		System.out.println(getProperty() + " " + getType().toLowerCase());
-		
-	}
-
-	@Override
-	public void putDownItem(Item apple) {
-		super.putDownItem(apple);
-		System.out.println(getProperty() + " " + getType().toLowerCase());
-		
-	}
-
 }

@@ -1,5 +1,7 @@
 package com.bayviewglen.zork;
 
+import java.util.ArrayList;
+
 public class Item {
 
 	private String type;
@@ -9,19 +11,39 @@ public class Item {
 		this.type = type;
 		this.property = property;
 	}
-	
-	public void pickUpItem(Item item) {
-		System.out.print("You picked up the ");
+
+	public void pickUpItem() {
+		if(canPickUp())
+			System.out.println("You picked up the " + getDescription());
+		else
+			System.out.println("You can't pick up the " + getDescription());
 	}
-	
-	public void putDownItem(Item item) {
-		System.out.print("You put down the ");
+
+	public void putDownItem() {
+		if(!canPickUp())
+			System.out.println("You can't put down the " + getDescription() + "... you aren't holding it!");
+		else
+			System.out.println("You put down the " + getDescription());
 	}
-	
+
 	public void putInInventory(Item item) {
 		Inventory.addItem(item);
 	}
-	
+
+	public boolean canPickUp() {
+		if(getType().equalsIgnoreCase("apple")){
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("bread")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("water")) {
+			return true;
+		}
+		else
+			return false;
+	}
+
 	public String getDescription() {
 		return property + " " + type.toLowerCase();
 	}
@@ -29,13 +51,14 @@ public class Item {
 	public String getType() {
 		return type;
 	}
-	
+
 	public String getProperty() {
 		return property;
 	}
-/*
+
+	/*
 	public void setName(String name) {
 		this.name = name;
 	}
-	*/	
+	 */	
 }

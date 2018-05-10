@@ -33,7 +33,7 @@ class NewParser
 		uselessWords = new ArrayList<String>();
 		setUselessWords();
 	}
-	
+
 	private void setUselessWords() {
 		uselessWords.add("the");
 		uselessWords.add("and");
@@ -66,7 +66,7 @@ class NewParser
 		while(tokenizer.hasMoreTokens()) {
 			input.add(tokenizer.nextToken());
 		}
-		
+
 		// Remove unneeded words
 		input.removeAll(uselessWords);
 
@@ -98,10 +98,21 @@ class NewParser
 		}
 		for(Command x : inputCommands) {
 			System.out.println(x.getCommandWord() + " " + x.getSecondWord() + " " + x.getThirdWord());
-			//if(x.getSecondWord().equals(""))
+			if(x.getCommandWord().equals("take")){
+				if(ItemsInGame.isInGame(x.getSecondWord())) {
+					Item item = new Item(x.getSecondWord(), "");
+					if(item.canPickUp()) {
+						item.pickUpItem();
+					}
+				}
+
+			}
+
 		}
 		return inputCommands;
 	}
+
+
 
 	/**
 	 * Print out a list of valid command words.
