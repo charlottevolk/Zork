@@ -24,6 +24,7 @@ import java.util.Scanner;
 
 class Game {
 	private Parser parser;
+	private Inventory inventory;
 	private Room currentRoom;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -98,6 +99,7 @@ class Game {
 			e.printStackTrace();
 		}
 		parser = new Parser();
+		inventory = new Inventory();
 	}
 
 	/**
@@ -124,8 +126,8 @@ class Game {
 		System.out.println();
 		System.out.println("...Please press enter after each line...");
 		System.out.println("...");
-		System.out.println("Darkness. You are surrounded by darkness.");
-		System.out.println("Your eyes shoot open. You inhale sharply as your air-deprived lungs begs for oxygen.");
+		System.out.println("darkness.");
+		System.out.println("Your eyes shoot open. You inhale sharply as\nyour air-deprived lungs begs for oxygen.");
 		System.out.println("You find yourself to be lying down on a bed,\na pillow under your head and a blanket over your body.");
 		System.out.println("You push head up, creating a crinkling sound,\nmove the blanket to the side,\nand get off the bed to stand and look around.");
 		System.out.println();
@@ -157,7 +159,7 @@ class Game {
 		} else if (commandWord.equals("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equals("away")) {
 				System.out.println(
-						"You were caught by the Thought Police. Did you honestly think you could run for more than 1.25 seconds?");
+						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing you strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into you neck.\nYou drop to the ground with a thud and all you see is");
 			} else {
 				System.out.println("Why run when you could walk?");
 			}
@@ -172,9 +174,7 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println("You are lost. You are alone. You wander");
-		System.out.println("around at Monash Uni, Peninsula Campus.");
-		System.out.println();
+		System.out.println("You have been captured.\nYou need to escape\nthe Ministry of Love.");
 		System.out.println("Your command words are:");
 		parser.showCommands();
 	}
