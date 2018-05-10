@@ -99,7 +99,6 @@ class Game {
 			e.printStackTrace();
 		}
 		parser = new Parser();
-		inventory = new Inventory();
 	}
 
 	/**
@@ -133,6 +132,7 @@ class Game {
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 	}
+
 
 	/**
 	 * Given a command, process (that is: execute) the command. If this command ends
@@ -174,10 +174,12 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println("You have been captured.\nYou need to escape\nthe Ministry of Love.");
-		System.out.println("Your command words are:");
-		parser.showCommands();
-	}
+        System.out.println("You have been captured.\nYou need to escape\nthe Ministry of Love.");
+ 
+ 
+        System.out.println("Your command words are:");
+        parser.showCommands();
+    }
 
 	/**
 	 * Try to go to one direction. If there is an exit, enter the new room,
@@ -208,6 +210,10 @@ class Game {
 			currentRoom = nextRoom;
 			System.out.println(currentRoom.longDescription());
 		}
+	}
+	
+	public Room getCurrentRoom() {
+		return currentRoom;
 	}
 
 }
