@@ -42,6 +42,25 @@ public class Item {
 		else
 			return false;
 	}
+	
+	public boolean canEat() {
+		if(getType().equalsIgnoreCase("apple")){
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("bread")) {
+			return true;
+		}
+		else
+			return false;
+	}
+	
+	public boolean canDrink() {
+		if(getType().equalsIgnoreCase("water")){
+			return true;
+		}
+		else
+			return false;
+	}
 
 	public String getDescription() {
 		return property + " " + type.toLowerCase();
