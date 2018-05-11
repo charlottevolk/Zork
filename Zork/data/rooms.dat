@@ -1,6 +1,33 @@
 Room Name:Prison Cell
 Room Description:You are in a white room.<br>To your right is a large, wardrobe mirror.<br>To your left is some strange, illegible writing on the wall from,<br>you assume, the previous person.<br>In front of you is a desk with a half-eaten apple,<br>a glass bottle of water, and a book.
-Exit Rooms:N-Hallway
-Room Name:Hallway
-Room Description:There is nothing here
-Exit Rooms:S-Prison Cell
+Exit Rooms:N-Stairwell Five
+Room Name:Stairwell Ten
+Room Description:You are on floor ten.
+Exit Rooms:D-Stairwell Nine
+Room Name:Stairwell Nine
+Room Description:You are on floor nine.
+Exit Rooms:U-Stairwell Ten, D-Stairwell Eight
+Room Name:Stairwell Eight
+Room Description:You are on floor eight.
+Exit Rooms:U-Stairwell Nine, D-Stairwell Seven
+Room Name:Stairwell Seven
+Room Description:You are on floor seven
+Exit Rooms:U-Stairwell Eight, D-Stairwell Six
+Room Name:Stairwell Six
+Room Description:You are on floor six.
+Exit Rooms:U-Stairwell Seven, D-Stairwell Five
+Room Name:Stairwell Five
+Room Description:You are on floor five.
+Exit Rooms:U-Stairwell Six, D-Stairwell Four, S-Prison Cell
+Room Name:Stairwell Four
+Room Description:You are on floor four.
+Exit Rooms:U-Stairwell Five, D-Stairwell Three
+Room Name:Stairwell Three
+Room Description:You are on floor three.
+Exit Rooms:U-Stairwell Four, D-Stairwell Two
+Room Name:Stairwell Two
+Room Description:You are on floor two.
+Exit Rooms:U-Stairwell Three, D-Stairwell One
+Room Name:Stairwell One
+Room Description:You are on the bottom floor.
+Exit Rooms:U-Stairwell Two
