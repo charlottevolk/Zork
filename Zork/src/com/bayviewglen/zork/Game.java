@@ -122,13 +122,20 @@ class Game {
 	 * Print out the opening message for the player.
 	 */
 	private void printWelcome() {
+		Scanner scanner= new Scanner(System.in);
 		System.out.println();
 		System.out.println("...Please press enter after each line...");
+		scanner.nextLine();
 		System.out.println("...");
-		System.out.println("darkness.");
+		scanner.nextLine();
+		System.out.println("darkness...");
+		scanner.nextLine();
 		System.out.println("Your eyes shoot open. You inhale sharply as\nyour air-deprived lungs begs for oxygen.");
+		scanner.nextLine();
 		System.out.println("You find yourself to be lying down on a bed,\na pillow under your head and a blanket over your body.");
+		scanner.nextLine();
 		System.out.println("You push head up, creating a crinkling sound,\nmove the blanket to the side,\nand get off the bed to stand and look around.");
+		scanner.nextLine();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 	}
