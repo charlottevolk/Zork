@@ -1,36 +1,48 @@
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>To your right is a large, wardrobe mirror.<br>To your left is some strange, illegible writing on the wall from,<br>you assume, the previous person.<br>In front of you is a desk with a half-eaten apple,<br>a glass bottle of water, and a book.
+Room Description:You are in a white room.<br>To your right is a large, wardrobe mirror.<br>To your left is some strange, illegible writing on the wall from,<br>you assume, the previous person.<br>In front of you is a desk with a half-eaten red apple,<br>a glass bottle of water, and a book.
 Exit Rooms:N-Stairwell Five
+Room Items:Apple-Red, Water-Glass of, Book-Title 1984
 Room Name:Stairwell Ten
 Room Description:You are on floor ten. In front of you is a black door with a poster of Big Brother in the centre.
 Exit Rooms:D-Stairwell Nine
+Room Items:None-None
 Room Name:Stairwell Nine
 Room Description:You are on floor nine. In front of you is a grey door.
 Exit Rooms:U-Stairwell Ten, D-Stairwell Eight
+Room Items:None-None
 Room Name:Stairwell Eight
 Room Description:You are on floor eight. In front of you is a grey door.
 Exit Rooms:U-Stairwell Nine, D-Stairwell Seven
+Room Items:None-None
 Room Name:Stairwell Seven
 Room Description:You are on floor seven. In front of you is a grey door.
 Exit Rooms:U-Stairwell Eight, D-Stairwell Six
+Room Items:None-None
 Room Name:Stairwell Six
 Room Description:You are on floor six. In front of you is a grey door.
 Exit Rooms:U-Stairwell Seven, D-Stairwell Five
+Room Items:None-None
 Room Name:Stairwell Five
 Room Description:You are on floor five. In front of you is a grey door.
 Exit Rooms:U-Stairwell Six, D-Stairwell Four, S-Prison Cell
+Room Items:None-None
 Room Name:Stairwell Four
 Room Description:You are on floor four. In front of you is a grey door.
 Exit Rooms:U-Stairwell Five, D-Stairwell Three
+Room Items:None-None
 Room Name:Stairwell Three
 Room Description:You are on floor three. In front of you is a grey door.
 Exit Rooms:U-Stairwell Four, D-Stairwell Two
+Room Items:None-None
 Room Name:Stairwell Two
 Room Description:You are on floor two. In front of you is a wooden door. Above it has a sign reading "CAFETERIA" in bold, black letters.
 Exit Rooms:U-Stairwell Three, D-Stairwell One
+Room Items:None-None
 Room Name:Stairwell One
 Room Description:You are on the bottom floor. In front of you is a white metal door with "101" engraved in it.
 Exit Rooms:U-Stairwell Two, S-Room 101
+Room Items:None-None
 Room Name:Room 101
 Room Description:The room is dark,<br>the only light source coming from above you.<br>On your right is a table with medical tools.<br>On your left is an air vent.<br>In front of you is a TV screen and speaker system,<br>displaying footage of the wars Oceania "won."<br>Behind you is the door that O'Brien left through.
-Exit Rooms: N-Stairwell One
+Exit Rooms:N-Stairwell One
+Room Items:None-None
