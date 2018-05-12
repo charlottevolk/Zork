@@ -16,6 +16,7 @@ class NewParser
 		commands = new CommandWords();
 		uselessWords = new ArrayList<String>();
 		setUselessWords();
+		Food.setValidFoods();
 	}
 
 	private void setUselessWords() {
@@ -98,7 +99,7 @@ class NewParser
 			}else if(x.getCommandWord().equals("eat")) {
 				if(ItemsInGame.isInGame(x.getSecondWord())) {
 					Item food = new Food(x.getSecondWord(), "");
-					if(food.canEat()) {
+					if(food.canEat() && Food.isInValidFoods((Food)food)) {
 						((Food) food).eat();
 					}else {
 						System.out.println("You really thought you could eat that?!");
