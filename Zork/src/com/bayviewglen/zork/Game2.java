@@ -2,6 +2,7 @@ package com.bayviewglen.zork;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -22,8 +23,8 @@ import java.util.Scanner;
  * the parser returns.
  */
 
-class Game {
-	private Parser parser;
+class Game2 {
+	private NewParser newparser;
 	private Inventory inventory;
 	private Room currentRoom;
 	// This is a MASTER object that contains all of the rooms and is easily
@@ -90,7 +91,7 @@ class Game {
 	/**
 	 * Create the game and initialise its internal map.
 	 */
-	public Game() {
+	public Game2() {
 		try {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("PRISON_CELL");
@@ -98,7 +99,7 @@ class Game {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		parser = new Parser();
+		newparser = new NewParser();
 	}
 
 	/**
@@ -112,8 +113,11 @@ class Game {
 
 		boolean finished = false;
 		while (!finished) {
-			Command command = parser.getCommand();
-			finished = processCommand(command);
+			ArrayList<Command> commandList = newparser.getCommands();
+			for(int i=0; i<commandList.size(); i++) {
+				finished = processCommand(commandList.get(i));
+			}
+			
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
@@ -130,19 +134,11 @@ class Game {
 		scanner.nextLine();
 		System.out.println("darkness...");
 		scanner.nextLine();
-		System.out.print("Your eyes shoot open. You inhale sharply as");
+		System.out.println("Your eyes shoot open. You inhale sharply as\nyour air-deprived lungs begs for oxygen.");
 		scanner.nextLine();
-		System.out.print("your air-deprived lungs begs for oxygen.");
+		System.out.println("You find yourself to be lying down on a bed,\na pillow under your head and a blanket over your body.");
 		scanner.nextLine();
-		System.out.print("You find yourself to be lying down on a bed,");
-		scanner.nextLine();
-		System.out.print("a pillow under your head and a blanket over your body.");
-		scanner.nextLine();
-		System.out.print("You push head up (creating a crinkling sound),");
-		scanner.nextLine();
-		System.out.print("move the blanket to the side,");
-		scanner.nextLine();
-		System.out.print("and get off the bed to stand and look around.");
+		System.out.println("You push head up, creating a crinkling sound,\nmove the blanket to the side,\nand get off the bed to stand and look around.");
 		scanner.nextLine();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -169,8 +165,8 @@ class Game {
 				System.out.println("Quit what?");
 			else
 				return true; // signal that we want to quit
-		} else if (commandWord.equals("eat")) {
-			System.out.println("Do you really think you should be eating at a time like this?");
+		//} else if (commandWord.equals("eat")) {
+		//	System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equals("away")) {
 				System.out.println(
@@ -193,7 +189,7 @@ class Game {
  
  
         System.out.println("Your command words are:");
-        parser.showCommands();
+        newparser.showCommands();
     }
 
 	/**

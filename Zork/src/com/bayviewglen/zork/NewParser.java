@@ -88,12 +88,34 @@ class NewParser
 					if(item.canPickUp()) {
 						item.pickUpItem();
 					}
+				}else if(ItemsInGame.isInGame(x.getThirdWord())) {
+					Item item = new Item(x.getThirdWord(), x.getSecondWord());
+					if(item.canPickUp()) {
+						item.pickUpItem();
+					}
 				}
 
-			}
+			}else if(x.getCommandWord().equals("eat")) {
+				if(ItemsInGame.isInGame(x.getSecondWord())) {
+					Item food = new Food(x.getSecondWord(), "");
+					if(food.canEat()) {
+						((Food) food).eat();
+					}else {
+						System.out.println("You really thought you could eat that?!");
+					}
+					
+				}else if(ItemsInGame.isInGame(x.getThirdWord())) {
+					Food food = new Food(x.getThirdWord(), "");
+					if(food.canEat()) {
+						food.eat();
+					}
 
+				}
+			}
 		}
+		
 		return inputCommands;
+
 	}
 
 
@@ -111,4 +133,5 @@ class NewParser
 			System.out.println(x);
 		}
 	}
+
 }
