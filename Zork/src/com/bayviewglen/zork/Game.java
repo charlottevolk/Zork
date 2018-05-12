@@ -24,8 +24,9 @@ import java.util.Scanner;
 
 class Game {
 	private Parser parser;
-	private Inventory inventory;
 	private Room currentRoom;
+	private Inventory inventory;
+	private Inventory roomInventory;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -59,6 +60,19 @@ class Game {
 				}
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
+
+				// Sets items in room (Item type-Item property)
+				String[] roomContents = roomScanner.nextLine().split(":")[1].split(",");
+				roomInventory = new Inventory();
+				for(int i=0; i<roomContents.length; i++) {
+					if(roomContents[i].equals("None-None")) {
+						i++;
+					}else{
+						roomInventory.addItem(new Item(roomContents[i].split("-")[0].trim(), roomContents[i].split("-")[1].trim()));
+					}
+				}
+				room.setRoomInventory(roomInventory);
+
 
 				// This puts the room we created (Without the exits in the masterMap)
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
@@ -189,12 +203,12 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-        System.out.println("You have been captured.\nYou need to escape\nthe Ministry of Love.");
- 
- 
-        System.out.println("Your command words are:");
-        parser.showCommands();
-    }
+		System.out.println("You have been captured.\nYou need to escape\nthe Ministry of Love.");
+
+
+		System.out.println("Your command words are:");
+		parser.showCommands();
+	}
 
 	/**
 	 * Try to go to one direction. If there is an exit, enter the new room,
@@ -226,7 +240,7 @@ class Game {
 			System.out.println(currentRoom.longDescription());
 		}
 	}
-	
+
 	public Inventory getCurrentRoomInventory() {
 		return currentRoom.getRoomContents();
 	}

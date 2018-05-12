@@ -25,8 +25,10 @@ import java.util.Scanner;
 
 class Game2 {
 	private NewParser newparser;
-	private Inventory inventory;
 	private Room currentRoom;
+	private Inventory inventory;
+	private Inventory roomInventory;
+	
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -61,6 +63,18 @@ class Game2 {
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
 
+				// Sets items in room (Item type-Item property)
+                String[] roomContents = roomScanner.nextLine().split(":")[1].split(",");
+                roomInventory = new Inventory();
+                for(int i=0; i<roomContents.length; i++) {
+                    if(roomContents[i].equals("None-None")) {
+                        i++;
+                    }else{
+                        roomInventory.addItem(new Item(roomContents[i].split("-")[0].trim(), roomContents[i].split("-")[1].trim()));
+                    }
+                }
+                room.setRoomInventory(roomInventory);
+				
 				// This puts the room we created (Without the exits in the masterMap)
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
 
@@ -126,23 +140,31 @@ class Game2 {
 	 * Print out the opening message for the player.
 	 */
 	private void printWelcome() {
-		Scanner scanner= new Scanner(System.in);
-		System.out.println();
-		System.out.println("...Please press enter after each line...");
-		scanner.nextLine();
-		System.out.println("...");
-		scanner.nextLine();
-		System.out.println("darkness...");
-		scanner.nextLine();
-		System.out.println("Your eyes shoot open. You inhale sharply as\nyour air-deprived lungs begs for oxygen.");
-		scanner.nextLine();
-		System.out.println("You find yourself to be lying down on a bed,\na pillow under your head and a blanket over your body.");
-		scanner.nextLine();
-		System.out.println("You push head up, creating a crinkling sound,\nmove the blanket to the side,\nand get off the bed to stand and look around.");
-		scanner.nextLine();
-		System.out.println();
-		System.out.println(currentRoom.longDescription());
-	}
+        Scanner scanner= new Scanner(System.in);
+        System.out.println();
+        System.out.println("...Please press enter after each line...");
+        scanner.nextLine();
+        System.out.println("...");
+        scanner.nextLine();
+        System.out.println("darkness...");
+        scanner.nextLine();
+        System.out.print("Your eyes shoot open. You inhale sharply as");
+        scanner.nextLine();
+        System.out.print("your air-deprived lungs begs for oxygen.");
+        scanner.nextLine();
+        System.out.print("You find yourself to be lying down on a bed,");
+        scanner.nextLine();
+        System.out.print("a pillow under your head and a blanket over your body.");
+        scanner.nextLine();
+        System.out.print("You push head up (creating a crinkling sound),");
+        scanner.nextLine();
+        System.out.print("move the blanket to the side,");
+        scanner.nextLine();
+        System.out.print("and get off the bed to stand and look around.");
+        scanner.nextLine();
+        System.out.println();
+        System.out.println(currentRoom.longDescription());
+    }
 
 
 	/**

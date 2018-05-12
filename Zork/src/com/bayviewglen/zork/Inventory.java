@@ -24,4 +24,9 @@ public class Inventory {
 	public static ArrayList<Item> getInventory(){
 		return items;
 	}
+	
+	public static Item getItem(int index){
+		return items.get(index);
+	}
+
 }
