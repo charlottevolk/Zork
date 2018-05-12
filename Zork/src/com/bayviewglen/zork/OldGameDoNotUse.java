@@ -2,7 +2,6 @@ package com.bayviewglen.zork;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -23,12 +22,11 @@ import java.util.Scanner;
  * the parser returns.
  */
 
-class Game2 {
-	private NewParser newparser;
+class OldGameDoNotUse {
+	private OldParserDoNotUse parser;
 	private Room currentRoom;
 	private Inventory inventory;
 	private Inventory roomInventory;
-	
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -64,17 +62,18 @@ class Game2 {
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
 
 				// Sets items in room (Item type-Item property)
-                String[] roomContents = roomScanner.nextLine().split(":")[1].split(",");
-                roomInventory = new Inventory();
-                for(int i=0; i<roomContents.length; i++) {
-                    if(roomContents[i].equals("None-None")) {
-                        i++;
-                    }else{
-                        roomInventory.addItem(new Item(roomContents[i].split("-")[0].trim(), roomContents[i].split("-")[1].trim()));
-                    }
-                }
-                room.setRoomInventory(roomInventory);
-				
+				String[] roomContents = roomScanner.nextLine().split(":")[1].split(",");
+				roomInventory = new Inventory();
+				for(int i=0; i<roomContents.length; i++) {
+					if(roomContents[i].equals("None-None")) {
+						i++;
+					}else{
+						//Inventory.addItem(new Item(roomContents[i].split("-")[0].trim(), roomContents[i].split("-")[1].trim()));
+					}
+				}
+				room.setRoomInventory(roomInventory);
+
+
 				// This puts the room we created (Without the exits in the masterMap)
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
 
@@ -105,7 +104,7 @@ class Game2 {
 	/**
 	 * Create the game and initialise its internal map.
 	 */
-	public Game2() {
+	public OldGameDoNotUse() {
 		try {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("PRISON_CELL");
@@ -113,7 +112,7 @@ class Game2 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		newparser = new NewParser();
+		parser = new OldParserDoNotUse();
 	}
 
 	/**
@@ -127,11 +126,8 @@ class Game2 {
 
 		boolean finished = false;
 		while (!finished) {
-			ArrayList<Command> commandList = newparser.getCommands();
-			for(int i=0; i<commandList.size(); i++) {
-				finished = processCommand(commandList.get(i));
-			}
-			
+			Command command = parser.getCommand();
+			finished = processCommand(command);
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
@@ -140,31 +136,31 @@ class Game2 {
 	 * Print out the opening message for the player.
 	 */
 	private void printWelcome() {
-        Scanner scanner= new Scanner(System.in);
-        System.out.println();
-        System.out.println("...Please press enter after each line...");
-        scanner.nextLine();
-        System.out.println("...");
-        scanner.nextLine();
-        System.out.println("darkness...");
-        scanner.nextLine();
-        System.out.print("Your eyes shoot open. You inhale sharply as");
-        scanner.nextLine();
-        System.out.print("your air-deprived lungs begs for oxygen.");
-        scanner.nextLine();
-        System.out.print("You find yourself to be lying down on a bed,");
-        scanner.nextLine();
-        System.out.print("a pillow under your head and a blanket over your body.");
-        scanner.nextLine();
-        System.out.print("You push head up (creating a crinkling sound),");
-        scanner.nextLine();
-        System.out.print("move the blanket to the side,");
-        scanner.nextLine();
-        System.out.print("and get off the bed to stand and look around.");
-        scanner.nextLine();
-        System.out.println();
-        System.out.println(currentRoom.longDescription());
-    }
+		Scanner scanner= new Scanner(System.in);
+		System.out.println();
+		System.out.println("...Please press enter after each line...");
+		scanner.nextLine();
+		System.out.println("...");
+		scanner.nextLine();
+		System.out.println("darkness...");
+		scanner.nextLine();
+		System.out.print("Your eyes shoot open. You inhale sharply as");
+		scanner.nextLine();
+		System.out.print("your air-deprived lungs beg for oxygen.");
+		scanner.nextLine();
+		System.out.print("You find yourself to be lying down on a bed,");
+		scanner.nextLine();
+		System.out.print("a pillow under your head and a blanket over your body.");
+		scanner.nextLine();
+		System.out.print("You push your head up (creating a crinkling sound),");
+		scanner.nextLine();
+		System.out.print("move the blanket to the side,");
+		scanner.nextLine();
+		System.out.print("and get off the bed to stand and look around.");
+		scanner.nextLine();
+		System.out.println();
+		System.out.println(currentRoom.longDescription());
+	}
 
 
 	/**
@@ -187,8 +183,8 @@ class Game2 {
 				System.out.println("Quit what?");
 			else
 				return true; // signal that we want to quit
-		//} else if (commandWord.equals("eat")) {
-		//	System.out.println("Do you really think you should be eating at a time like this?");
+		} else if (commandWord.equals("eat")) {
+			System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equals("away")) {
 				System.out.println(
@@ -207,12 +203,12 @@ class Game2 {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-        System.out.println("You have been captured.\nYou need to escape\nthe Ministry of Love.");
- 
- 
-        System.out.println("Your command words are:");
-        newparser.showCommands();
-    }
+		System.out.println("You have been captured.\nYou need to escape\nthe Ministry of Love.");
+
+
+		System.out.println("Your command words are:");
+		parser.showCommands();
+	}
 
 	/**
 	 * Try to go to one direction. If there is an exit, enter the new room,
@@ -244,7 +240,7 @@ class Game2 {
 			System.out.println(currentRoom.longDescription());
 		}
 	}
-	
+
 	public Inventory getCurrentRoomInventory() {
 		return currentRoom.getRoomContents();
 	}

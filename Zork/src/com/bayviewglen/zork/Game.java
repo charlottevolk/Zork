@@ -2,6 +2,7 @@ package com.bayviewglen.zork;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -26,7 +27,7 @@ class Game {
 	private Parser parser;
 	private Room currentRoom;
 	private Inventory inventory;
-	private Inventory roomInventory;
+
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -63,7 +64,7 @@ class Game {
 
 				// Sets items in room (Item type-Item property)
 				String[] roomContents = roomScanner.nextLine().split(":")[1].split(",");
-				roomInventory = new Inventory();
+				Inventory roomInventory = new Inventory();
 				for(int i=0; i<roomContents.length; i++) {
 					if(roomContents[i].equals("None-None")) {
 						i++;
@@ -72,7 +73,6 @@ class Game {
 					}
 				}
 				room.setRoomInventory(roomInventory);
-
 
 				// This puts the room we created (Without the exits in the masterMap)
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
@@ -126,8 +126,11 @@ class Game {
 
 		boolean finished = false;
 		while (!finished) {
-			Command command = parser.getCommand();
-			finished = processCommand(command);
+			ArrayList<Command> commandList = parser.getCommands();
+			for(int i=0; i<commandList.size(); i++) {
+				finished = processCommand(commandList.get(i));
+			}
+
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
@@ -168,6 +171,7 @@ class Game {
 	 * the game, true is returned, otherwise false is returned.
 	 */
 	private boolean processCommand(Command command) {
+		System.out.println(command.getCommandWord() + " " + command.getSecondWord() + " " + command.getThirdWord());
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
@@ -183,14 +187,52 @@ class Game {
 				System.out.println("Quit what?");
 			else
 				return true; // signal that we want to quit
-		} else if (commandWord.equals("eat")) {
-			System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equals("away")) {
 				System.out.println(
-						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing you strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into you neck.\nYou drop to the ground with a thud and all you see is");
+						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud and all you see is");
 			} else {
 				System.out.println("Why run when you could walk?");
+			}
+		} else if(command.getCommandWord().equals("take")){
+			if(ItemsInGame.isInGame(command.getThirdWord())) {
+				Item item = new Item(command.getThirdWord(), command.getSecondWord());
+				if(isInRoom(item)) {
+					if(item.canPickUp()) {
+						item.pickUpItem();
+					}
+				}
+			}
+			else if(ItemsInGame.isInGame(command.getSecondWord())) {
+				Item item = new Item(command.getSecondWord(), "");
+				if(isInRoom(item)) {
+					if(item.canPickUp()) {
+						item.pickUpItem();
+					}else {
+						System.out.println("You can't pick that up!");
+					}
+				}else {
+					System.out.println("There is nothing like that in the room...");
+				}
+			}
+
+		}else if(command.getCommandWord().equals("eat")) {
+			if(ItemsInGame.isInGame(command.getSecondWord())) {
+				Item food = new Food(command.getSecondWord(), "");
+				if(food.canEat() && Food.isInValidFoods((Food)food)) {
+					((Food) food).eat();
+				}else {
+					System.out.println("You really thought you could eat that?!");
+				}
+
+			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
+				Food food = new Food(command.getThirdWord(), command.getSecondWord());
+				if(food.canEat() && Food.isInValidFoods((Food)food)) {
+					((Food)food).eat();
+				}else {
+					System.out.println("What...?");
+				}
+
 			}
 		}
 		return false;
@@ -243,6 +285,19 @@ class Game {
 
 	public Inventory getCurrentRoomInventory() {
 		return currentRoom.getRoomContents();
+	}
+
+	public void putInInventory(Item item) {
+		getCurrentRoomInventory().addItem(item);
+	}
+
+	public boolean isInRoom(Item item) {
+		for(int i=0; i<currentRoom.getRoomContents().howManyItems(); i++) {
+			if(currentRoom.getRoomContents().getItem(i).getDescription().equalsIgnoreCase(item.getDescription())) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }

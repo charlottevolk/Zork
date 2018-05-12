@@ -25,10 +25,6 @@ public class Item {
 			System.out.println("You put down the " + getDescription());
 	}
 
-	public void putInInventory(Item item) {
-		Inventory.addItem(item);
-	}
-
 	public boolean canPickUp() {
 		if(getType().equalsIgnoreCase("apple")){
 			return true;
@@ -73,4 +69,6 @@ public class Item {
 	public String getProperty() {
 		return property;
 	}
+	
+	
 }
