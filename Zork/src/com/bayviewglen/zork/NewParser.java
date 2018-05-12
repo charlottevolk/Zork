@@ -89,18 +89,12 @@ class NewParser
 		//removeUnknownCommands();
 
 		for(Command x : inputCommands) {
-			//System.out.println(x.getCommandWord() + " " + x.getSecondWord() + " " + x.getThirdWord());
+			System.out.println(x.getCommandWord() + " " + x.getSecondWord() + " " + x.getThirdWord());
 			if(x.getCommandWord().equals("take")){
 				if(ItemsInGame.isInGame(x.getSecondWord())) {
 					Item item = new Item(x.getSecondWord(), "");
-					if(Room.isInRoom(item)) {
-						if(item.canPickUp()) {
-							item.pickUpItem();
-						}else {
-							System.out.println("You can't pick that up!");
-						}
-					}else {
-						System.out.println("There is nothing like that in the room...");
+					if(item.canPickUp()) {
+						item.pickUpItem();
 					}
 				}else if(ItemsInGame.isInGame(x.getThirdWord())) {
 					Item item = new Item(x.getThirdWord(), x.getSecondWord());
