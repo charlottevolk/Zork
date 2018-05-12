@@ -10,6 +10,7 @@ class NewParser
 	private ArrayList<String> uselessWords;
 	private CommandWords commands;  // holds all valid command words
 	private ArrayList<String> input;
+	ArrayList<Command> inputCommands;
 
 	public NewParser() 
 	{
@@ -26,13 +27,15 @@ class NewParser
 		uselessWords.add("from");
 		uselessWords.add("then");
 		uselessWords.add("a");
+		uselessWords.add("of");
 	}
+
 
 	public ArrayList<Command> getCommands() 
 	{
 		String inputLine = "";   // will hold the full input line
 		input = new ArrayList<String>();
-		ArrayList<Command> inputCommands = new ArrayList<Command>();
+		inputCommands = new ArrayList<Command>();
 
 		System.out.print("> ");     // print prompt
 
@@ -59,6 +62,7 @@ class NewParser
 		// with it. If not, create a "nil" command (for unknown command).
 
 		for(int i1=0; i1<input.size(); i1++) {
+			//if(input.get(i))
 			if(commands.isCommand(input.get(i1))){
 				if(i1 == input.size()-1) {
 					inputCommands.add(new Command(input.get(i1), null, null));
@@ -69,18 +73,21 @@ class NewParser
 					}
 					inputCommands.add(new Command(input.get(i1), input.get(i1+1), null));
 				}
-				else {
+				else if(i1 <= input.size()-3){
 					if(commands.isCommand(input.get(i1+1))) {
 						inputCommands.add(new Command(input.get(i1), null, null));
 					}else if(commands.isCommand(input.get(i1+2))) {
 						inputCommands.add(new Command(input.get(i1), input.get(i1+1), null));
 					}
-					else {
+					else if(commands.isCommand(input.get(i1))){
 						inputCommands.add(new Command(input.get(i1), input.get(i1+1), input.get(i1+2)));
 					}
 				}
 			}
 		}
+
+		//removeUnknownCommands();
+
 		for(Command x : inputCommands) {
 			System.out.println(x.getCommandWord() + " " + x.getSecondWord() + " " + x.getThirdWord());
 			if(x.getCommandWord().equals("take")){
@@ -104,23 +111,32 @@ class NewParser
 					}else {
 						System.out.println("You really thought you could eat that?!");
 					}
-					
+
 				}else if(ItemsInGame.isInGame(x.getThirdWord())) {
-					Food food = new Food(x.getThirdWord(), "");
-					if(food.canEat()) {
-						food.eat();
+					Food food = new Food(x.getThirdWord(), x.getSecondWord());
+					if(food.canEat() && Food.isInValidFoods((Food)food)) {
+						((Food)food).eat();
+					}else {
+						System.out.println("What...?");
 					}
 
 				}
 			}
 		}
-		
 		return inputCommands;
 
 	}
+	/*
+	public void removeUnknownCommands() {
+		for(int i=0; i<inputCommands.size(); i++) {
 
-
-
+			if(inputCommands.getCommandWord()).isUnknown()) {
+				inputCommands.remove(i);
+				System.out.println("What...");
+			}
+		}
+	}
+	 */
 	/**
 	 * Print out a list of valid command words.
 	 */

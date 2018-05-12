@@ -30,6 +30,7 @@ public class Food extends Item{
 	public static boolean isInValidFoods(Item item) {
 		for(int i=0; i<validFoods.length; i++) {
 			if(item.getDescription().equals(validFoods[i].getDescription())) {
+				//item.getType() != null && item.getProperty() != null && 
 				return true;
 			}
 		}
