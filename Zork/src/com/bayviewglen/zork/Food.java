@@ -20,6 +20,8 @@ public class Food extends Item{
 		validFoods[3] = new Bread("");
 		validFoods[4] = new Bread("white");
 		validFoods[5] = new Bread("brown");
+		validFoods[6] = new Stew("");
+		validFoods[7] = new Stew("pinkish");
 
 	}
 

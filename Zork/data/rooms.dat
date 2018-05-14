@@ -1,7 +1,7 @@
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>To your right is a large, wardrobe mirror.<br>To your left is some strange, illegible writing on the wall from,<br>you assume, the previous person.<br>In front of you is a desk with a half-eaten red apple,<br>a glass bottle of water, and a book.
+Room Description:You are in a white room.<br>To your right is a large, wardrobe mirror.<br>To your left is some strange, illegible writing on the wall from,<br>you assume, the previous person.<br>In front of you is a desk with a half-eaten red apple,<br>a glass bottle of water, a pinkish stew,<br>a Victory coffee, and a book.
 Exit Rooms:N-Stairwell Five
-Room Items:Apple-Red, Water-Glass of, Book-Title 1984
+Room Items:Apple-Red, Water-Glass, Book-1984, Stew-Pinkish, Coffee-Victory
 Room Name:Stairwell Ten
 Room Description:You are on floor ten. In front of you is a black door with a poster of Big Brother in the centre.
 Exit Rooms:D-Stairwell Nine

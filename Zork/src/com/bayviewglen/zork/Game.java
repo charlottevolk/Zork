@@ -195,16 +195,10 @@ class Game {
 				System.out.println("Why run when you could walk?");
 			}
 		} else if(command.getCommandWord().equals("take")){
-			if(ItemsInGame.isInGame(command.getThirdWord())) {
+			if(command.getSecondWord() == null && command.getThirdWord() == null) {
+				System.out.println("Take what?!");
+			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
 				Item item = new Item(command.getThirdWord(), command.getSecondWord());
-				if(isInRoom(item)) {
-					if(item.canPickUp()) {
-						item.pickUpItem();
-					}
-				}
-			}
-			else if(ItemsInGame.isInGame(command.getSecondWord())) {
-				Item item = new Item(command.getSecondWord(), "");
 				if(isInRoom(item)) {
 					if(item.canPickUp()) {
 						item.pickUpItem();
@@ -214,6 +208,19 @@ class Game {
 				}else {
 					System.out.println("There is nothing like that in the room...");
 				}
+			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
+				Item item = new Item(command.getSecondWord(), "");
+				if(isInRoom(item)) {
+					if(item.canPickUp()) {
+						item.pickUpItem();
+					}else {
+						System.out.println("You can't pick that up!");
+					}
+				}else {
+					System.out.println("Either there is nothing like that in the room, or you weren't specific enough.\nI'm not a mind-reader, you know.");
+				}
+			}else {
+				System.out.println("There is nothing like that in the game...");
 			}
 
 		}else if(command.getCommandWord().equals("eat")) {

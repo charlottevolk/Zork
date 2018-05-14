@@ -1,11 +1,11 @@
 package com.bayviewglen.zork;
 
 public class ItemsInGame {
-	private static final String[] validItems = {"apple", "bread", "water"};
+	private static final String[] validItems = {"apple", "bread", "water", "stew", "coffee"};
 	
 	public static boolean isInGame(String item) {
 		for(int i=0; i<validItems.length; i++) {
-			if(item.equalsIgnoreCase(validItems[i]))
+			if(item != null && item.equalsIgnoreCase(validItems[i]))
 				return true;
 		}
 		return false;

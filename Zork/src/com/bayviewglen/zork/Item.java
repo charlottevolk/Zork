@@ -34,10 +34,10 @@ public class Item {
 		else if(getType().equalsIgnoreCase("water")) {
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("pinkish-grey stew")) {
+		else if(getType().equalsIgnoreCase("stew")) {
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("victory coffee")) {
+		else if(getType().equalsIgnoreCase("coffee")) {
 			return true;
 		}
 		else
@@ -51,7 +51,7 @@ public class Item {
 		else if(getType().equalsIgnoreCase("bread")) {
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("pinkish-grey stew")) {
+		else if(getType().equalsIgnoreCase("stew")) {
 			return true;
 		}
 		else
@@ -62,7 +62,7 @@ public class Item {
 		if(getType().equalsIgnoreCase("water")){
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("victory coffee")) {
+		else if(getType().equalsIgnoreCase("coffee")) {
 			return true;
 		}
 		else
