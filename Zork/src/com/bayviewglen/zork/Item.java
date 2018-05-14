@@ -1,6 +1,5 @@
 package com.bayviewglen.zork;
 
-import java.util.ArrayList;
 public class Item {
 
 	private String type;
@@ -35,6 +34,12 @@ public class Item {
 		else if(getType().equalsIgnoreCase("water")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("pinkish-grey stew")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("victory coffee")) {
+			return true;
+		}
 		else
 			return false;
 	}
@@ -46,12 +51,18 @@ public class Item {
 		else if(getType().equalsIgnoreCase("bread")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("pinkish-grey stew")) {
+			return true;
+		}
 		else
 			return false;
 	}
 	
 	public boolean canDrink() {
 		if(getType().equalsIgnoreCase("water")){
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("victory coffee")) {
 			return true;
 		}
 		else
