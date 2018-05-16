@@ -140,27 +140,27 @@ class Game {
 	 */
 	private void printWelcome() {
 		Scanner scanner= new Scanner(System.in);
-		System.out.println();
+		//System.out.println();
 		System.out.println("...Please press enter after each line...");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.println("...");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.println("darkness...");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.print("Your eyes shoot open. You inhale sharply as");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.print("your air-deprived lungs begs for oxygen.");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.print("You find yourself to be lying down on a bed,");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.print("a pillow under your head and a blanket over your body.");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.print("You push head up (creating a crinkling sound),");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.print("move the blanket to the side,");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.print("and get off the bed to stand and look around.");
-		scanner.nextLine();
+		//scanner.nextLine();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 	}
