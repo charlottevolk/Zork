@@ -171,7 +171,11 @@ class Game {
 	 * the game, true is returned, otherwise false is returned.
 	 */
 	private boolean processCommand(Command command) {
-		System.out.println(command.getCommandWord() + " " + command.getSecondWord() + " " + command.getThirdWord());
+		String commandOut = command.getCommandWord() + " " + command.getSecondWord();
+		if (command.getThirdWord() != null) {
+			commandOut += " " + command.getThirdWord();
+		}
+		System.out.println(commandOut);
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
