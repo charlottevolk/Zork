@@ -1,17 +1,17 @@
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>To your right is a large, wardrobe mirror.<br>To your left is some strange, illegible writing on the wall from,<br>you assume, the previous person.<br>In front of you is a desk with a half-eaten red apple,<br>a glass bottle of water, a pinkish stew,<br>a Victory coffee, and a book.
+Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror on the outside.<br>To your left there are some strange scribbles on the walls that almost resemble letters<br>Right in front of you is a desk with a half-eaten red apple,<br>a glass bottle of water, and a book.
 Exit Rooms:N-Stairwell Five
 Room Items:Apple-Red, Water-Glass, Book-1984
 Room Name:Stairwell Ten
-Room Description:You are on floor ten. In front of you is a black door with a poster of Big Brother in the centre.
+Room Description:You are now on floor ten. In front of you is a black door with a giant poster of Big Brother in the center.
 Exit Rooms:D-Stairwell Nine, S-Shrine
 Room Items:None-None
 Room Name:Shrine
-Room Description:You are in what appears to be a shrine of Big Brother.
+Room Description:You are in a dark room with lit candles all over the floor. <br>The waxy smell dripping off the candles fills your nose with an almost nostalgic scent. <br>The candle light illuminates the walls ever so slightly to reveal what appears to be 100 posters of Big Brother.<br>You have entered a shrine. 
 Exit Rooms:N-Stairwell Ten, W-Secret Room
 Room Items:None-none
 Room Name:Secret Room
-Room Description:You seem to have stubbled upon a secret room.<br>This room has large stacks of chocolate bars.<br>Looks like the Party has been kepping all this chocolate all to themselves.
+Room Description:You seem to have stumbled upon a secret room.<br>The room is filled to the top with large stacks of chocolate bars.<br>Looks like the Party has been keeping all this chocolate all to themselves.
 Exit Rooms:E-Shrine
 Room Items:Chocolate-dark
 Room Name:Stairwell Nine
