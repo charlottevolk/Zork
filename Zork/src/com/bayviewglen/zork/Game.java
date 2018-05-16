@@ -26,7 +26,8 @@ import java.util.Scanner;
 class Game {
 	private Parser parser;
 	private Room currentRoom;
-	private Inventory inventory;
+	private Inventory inventory = new Inventory();
+	private Inventory roomInventory;
 
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -63,13 +64,13 @@ class Game {
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
 
 				// Sets items in room (Item type-Item property)
-				String[] roomContents = roomScanner.nextLine().split(":")[1].split(",");
-				Inventory roomInventory = new Inventory();
+				String[] roomContents = roomScanner.nextLine().toLowerCase().split(":")[1].split(",");
+				roomInventory = new Inventory();
 				for(int i=0; i<roomContents.length; i++) {
 					if(roomContents[i].equals("None-None")) {
 						i++;
 					}else{
-						roomInventory.addItem(new Item(roomContents[i].split("-")[0].trim(), roomContents[i].split("-")[1].trim()));
+						roomInventory.addItem(new Item(roomContents[i].toLowerCase().split("-")[0].trim(), roomContents[i].toLowerCase().split("-")[1].trim()));
 					}
 				}
 				room.setRoomInventory(roomInventory);
@@ -198,6 +199,8 @@ class Game {
 			} else {
 				System.out.println("Why run when you could walk?");
 			}
+
+			// Code for all permutations of a Command with commandWord "take"
 		} else if(command.getCommandWord().equals("take")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Take what?!");
@@ -206,6 +209,9 @@ class Game {
 				if(isInRoom(item)) {
 					if(item.canPickUp()) {
 						item.pickUpItem();
+						currentRoom.getRoomInventory().removeItem(item);		// DOESN'T WORK. FIX ASAP
+						inventory.addItem(item);
+
 					}else {
 						System.out.println("You can't pick that up!");
 					}
@@ -217,6 +223,8 @@ class Game {
 				if(isInRoom(item)) {
 					if(item.canPickUp()) {
 						item.pickUpItem();
+						roomInventory.removeItem(item);
+						inventory.addItem(item);
 					}else {
 						System.out.println("You can't pick that up!");
 					}
@@ -227,30 +235,71 @@ class Game {
 				System.out.println("There is nothing like that in the game...");
 			}
 
+			// Code for all permutations of a Command with commandWord "eat"
 		}else if(command.getCommandWord().equals("eat")) {
-			if(ItemsInGame.isInGame(command.getSecondWord())) {
-				Item food = new Food(command.getSecondWord(), "");
-				if(food.canEat() && Food.isInValidFoods((Food)food)) {
-					((Food) food).eat();
-				}else {
-					System.out.println("You really thought you could eat that?!");
-				}
-
+			if(command.getSecondWord() == null && command.getThirdWord() == null) {
+				System.out.println("Eat what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
 				Food food = new Food(command.getThirdWord(), command.getSecondWord());
-				if(food.canEat() && Food.isInValidFoods((Food)food)) {
-					((Food)food).eat();
+				if(isInInventory(food)) {
+					if(food.canEat() && Food.isInValidFoods(food)) {
+						food.eat();
+						inventory.removeItem(food);
+					}else {
+						System.out.println("You really thought you could eat that?!");
+					}
 				}else {
-					System.out.println("What...?");
+					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
+			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
+				Food food = new Food(command.getSecondWord(), "");
+				if(isInInventory(food)) {
+					if(food.canEat() && Food.isInValidFoods(food)) {
+						food.eat();
+						inventory.removeItem(food);
+					}else {
+						System.out.println("You really thought you could eat that?!");
+					}
+				}else {
+					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
+				}
+			}else {
+				System.out.println("There is nothing like that in the game...");
+			}
 
+
+			// Code for all permutations of a Command with commandWord "drink"
+		}else if(command.getCommandWord().equals("drink")) {
+			if(command.getSecondWord() == null && command.getThirdWord() == null) {
+				System.out.println("Drink what?!");
+			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
+				Drink drink = new Drink(command.getThirdWord(), command.getSecondWord());
+				if(isInInventory(drink)) {
+					if(drink.canDrink() && Drink.isInValidDrinks(drink)) {
+						drink.drink();
+						inventory.removeItem(drink);
+					}else {
+						System.out.println("You really thought you could drink that?!");
+					}
+				}else {
+					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
+				}
+			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
+				Drink drink = new Drink(command.getSecondWord(), "");
+				if(isInRoom(drink)) {
+					if(drink.canDrink() && Drink.isInValidDrinks(drink)) {
+						drink.drink();
+						roomInventory.removeItem(drink);
+					}else {
+						System.out.println("You really thought you could drink that?!");
+					}
+				}else {
+					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
+				}
+			}else {
+				System.out.println("There is nothing like that in the game...");
 			}
-		}else if(command.getCommandWord().equals("light")) {
-			if(command.getSecondWord().equals("match")) {
-				System.out.println("You have lit the match");
-			}else if(command.getSecondWord().equals("candle")) {
-				
-			}
+
 		}
 		return false;
 	}
@@ -301,7 +350,7 @@ class Game {
 	}
 
 	public Inventory getCurrentRoomInventory() {
-		return currentRoom.getRoomContents();
+		return currentRoom.getRoomInventory();
 	}
 
 	public void putInInventory(Item item) {
@@ -309,8 +358,17 @@ class Game {
 	}
 
 	public boolean isInRoom(Item item) {
-		for(int i=0; i<currentRoom.getRoomContents().howManyItems(); i++) {
-			if(currentRoom.getRoomContents().getItem(i).getDescription().equalsIgnoreCase(item.getDescription())) {
+		for(int i=0; i<currentRoom.getRoomInventory().howManyItems(); i++) {
+			if(currentRoom.getRoomInventory().getItem(i).getDescription().equalsIgnoreCase(item.getDescription())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean isInInventory(Item item) {
+		for(int i=0; i<inventory.howManyItems(); i++) {
+			if(item.getType().equalsIgnoreCase(inventory.getItem(i).getType()) && item.getProperty().equalsIgnoreCase(inventory.getItem(i).getProperty())) {
 				return true;
 			}
 		}

@@ -12,7 +12,12 @@ public class Item {
 
 	public void pickUpItem() {
 		if(canPickUp())
-			System.out.println("You picked up the " + getDescription());
+			if(getType().equalsIgnoreCase("water") && getProperty().equalsIgnoreCase("glass")){
+				System.out.println("You picked up the " + getProperty() + " of " + getType());
+			}
+			else{
+				System.out.println("You picked up the " + getDescription());
+			}
 		else
 			System.out.println("You can't pick up the " + getDescription());
 	}

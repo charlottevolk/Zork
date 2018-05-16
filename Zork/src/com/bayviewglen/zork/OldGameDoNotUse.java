@@ -242,7 +242,7 @@ class OldGameDoNotUse {
 	}
 
 	public Inventory getCurrentRoomInventory() {
-		return currentRoom.getRoomContents();
+		return currentRoom.getRoomInventory();
 	}
 
 }

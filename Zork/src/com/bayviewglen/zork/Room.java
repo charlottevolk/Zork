@@ -141,7 +141,7 @@ class Room
 		roomInventory = contents;
 	}
 
-	public Inventory getRoomContents() {
+	public Inventory getRoomInventory() {
 		return roomInventory;
 	}
 	

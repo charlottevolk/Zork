@@ -14,7 +14,11 @@ public class Inventory {
 	}
 
 	public void removeItem(Item item) {
-		items.remove(item);
+		for(int i=0; i<items.size(); i++) {
+			if(item.getType().equalsIgnoreCase(items.get(i).getType()) && item.getProperty().equalsIgnoreCase(items.get(i).getProperty())) {
+				items.remove(i);
+			}
+		}
 	}
 
 	public int howManyItems() {

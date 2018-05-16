@@ -18,6 +18,7 @@ class Parser
 		uselessWords = new ArrayList<String>();
 		setUselessWords();
 		Food.setValidFoods();
+		Drink.setValidDrinks();
 	}
 
 	private void setUselessWords() {
