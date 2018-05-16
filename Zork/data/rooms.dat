@@ -1,5 +1,5 @@
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror on the outside.<br>To your left there are some strange scribbles on the walls that almost resemble letters<br>Right in front of you is a desk with a half-eaten red apple,<br>a glass bottle of water, and a book.
+Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror mounted.<br>To your left there are some illegible scribbles.<br>In front of you is a desk with<br>a half-eaten red apple, a glass bottle of water, and a book.
 Exit Rooms:N-Stairwell Five
 Room Items:Apple-Red, Water-Glass, Book-1984
 Room Name:Stairwell Ten
@@ -7,7 +7,7 @@ Room Description:You are now on floor ten. In front of you is a black door with 
 Exit Rooms:D-Stairwell Nine, S-Shrine
 Room Items:None-None
 Room Name:Shrine
-Room Description:You are in a dark room with lit candles all over the floor. <br>The waxy smell dripping off the candles fills your nose with an almost nostalgic scent. <br>The candle light illuminates the walls ever so slightly to reveal what appears to be 100 posters of Big Brother.<br>You have entered a shrine. 
+Room Description:You are in a candle-lit room.<br>The crimson red wax melted into pools on the ground.<br>The dull light of the room reveals<br> an acrylic-painted portrait of Big Brother.<br>You have entered a shrine. 
 Exit Rooms:N-Stairwell Ten, W-Secret Room
 Room Items:None-none
 Room Name:Secret Room
@@ -44,12 +44,18 @@ Exit Rooms:U-Stairwell Four, D-Stairwell Two
 Room Items:None-None
 Room Name:Stairwell Two
 Room Description:You are on floor two. In front of you is a wooden door. Above it has a sign reading "CAFETERIA" in bold, black letters.
-Exit Rooms:U-Stairwell Three, D-Stairwell One, S-Cafeteria
+Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
-Room Description:You are in the Cafeteria.<br>There are rows of tables with grease stains.<br>There is a metal tray of pinkish-grey stew,<br> a hunk of cheese and a mug of victory coffee.<br>It appears someone has forgotten to put their tray away.
-Exit Rooms:N-Stairwell Two
+Room Description:You are in the Cafeteria.<br>There are rows of empty tables with grease stains.<br>On one is a metal tray of pinkish-grey stew,<br> a hunk of cheese and a mug of victory coffee.<br>It appears someone had forgotten to put their tray away.
+Exit Rooms:S-Stairwell Two, N-Kitchen
 Room Items:Stew-Pinkish, Coffee-Victory
+Room Name:Kitchen
+Room Description:You are in the kitchen.<br>It is full of industrial kitchen appliances.<br>In front of you is a large refrigerator,<b>ominously, the height of the average human being.
+Exit Rooms:S-Cafeteria, N-Fridge
+Room Name:Fridge
+Room Description:You open the door to find the remains of a limb human body suspended by fishing wire.<br>On the floor, there are piles of bones on the ground.
+Exit Rooms:S-Kitchen
 Room Name:Stairwell One
 Room Description:You are on the bottom floor. In front of you is a white metal door with "101" engraved in it.
 Exit Rooms:U-Stairwell Two, S-Room 101
