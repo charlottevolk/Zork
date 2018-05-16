@@ -28,6 +28,12 @@ public class Item {
 		if(getType().equalsIgnoreCase("apple")){
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("chocolate")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("cheese")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("bread")) {
 			return true;
 		}
@@ -52,6 +58,12 @@ public class Item {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("stew")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("chocolate")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("cheese")) {
 			return true;
 		}
 		else

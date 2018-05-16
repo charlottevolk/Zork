@@ -4,8 +4,16 @@ Exit Rooms:N-Stairwell Five
 Room Items:Apple-Red, Water-Glass, Book-1984
 Room Name:Stairwell Ten
 Room Description:You are on floor ten. In front of you is a black door with a poster of Big Brother in the centre.
-Exit Rooms:D-Stairwell Nine
+Exit Rooms:D-Stairwell Nine, S-Shrine
 Room Items:None-None
+Room Name:Shrine
+Room Description:You are in what appears to be a shrine of Big Brother.
+Exit Rooms:N-Stairwell Ten, W-Secret Room
+Room Items:None-none
+Room Name:Secret Room
+Room Description:You seem to have stubbled upon a secret room.<br>This room has large stacks of chocolate bars.<br>Looks like the Party has been kepping all this chocolate all to themselves.
+Exit Rooms:E-Shrine
+Room Items:Chocolate-dark
 Room Name:Stairwell Nine
 Room Description:You are on floor nine. In front of you is a grey door.
 Exit Rooms:U-Stairwell Ten, D-Stairwell Eight

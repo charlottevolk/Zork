@@ -13,7 +13,7 @@ public class Food extends Item{
 	}
 
 	public static void setValidFoods() {
-		validFoods = new Food[10];
+		validFoods = new Food[20];
 		validFoods[0] = new Apple("");
 		validFoods[1] = new Apple("red");
 		validFoods[2] = new Apple("green");
@@ -24,6 +24,9 @@ public class Food extends Item{
 		validFoods[7] = new Stew("pinkish");
 		validFoods[8] = new Cheese("");
 		validFoods[9] = new Cheese("cheddar");
+		validFoods[10] = new Chocolate("");
+		validFoods[11] = new Chocolate("dark");
+		validFoods[12] = new Chocolate("weird");
 		
 
 	}

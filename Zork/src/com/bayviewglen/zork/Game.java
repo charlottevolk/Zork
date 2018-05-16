@@ -245,6 +245,12 @@ class Game {
 				}
 
 			}
+		}else if(command.getCommandWord().equals("light")) {
+			if(command.getSecondWord().equals("match")) {
+				System.out.println("You have lit the match");
+			}else if(command.getSecondWord().equals("candle")) {
+				
+			}
 		}
 		return false;
 	}

@@ -1,7 +1,7 @@
 package com.bayviewglen.zork;
 
 public class ItemsInGame {
-	private static final String[] validItems = {"apple", "bread", "water", "stew", "coffee"};
+	private static final String[] validItems = {"apple", "bread", "water", "stew", "coffee", "cheese", "chocolate"};
 	
 	public static boolean isInGame(String item) {
 		for(int i=0; i<validItems.length; i++) {
