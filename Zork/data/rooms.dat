@@ -1,7 +1,7 @@
 Room Name:Prison Cell
 Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror mounted.<br>To your left there are some illegible scribbles.<br>In front of you is a desk with<br>a half-eaten red apple, a glass bottle of water, and a book.
 Exit Rooms:N-Stairwell Five
-Room Items:Apple-Red, Water-Glass, Book-1984
+Room Items:Apple-Red, Water-Glass, Book-1984, Code-Note, Pillow-Fluffy
 Room Name:Stairwell Ten
 Room Description:You are now on floor ten. In front of you is a black door with a giant poster of Big Brother in the center.
 Exit Rooms:D-Stairwell Nine, S-Shrine
@@ -43,19 +43,19 @@ Room Description:You are on floor three. In front of you is a grey door.
 Exit Rooms:U-Stairwell Four, D-Stairwell Two
 Room Items:None-None
 Room Name:Stairwell Two
-Room Description:You are on floor two. In front of you is a wooden door. Above it has a sign reading "CAFETERIA" in bold, black letters.
+Room Description:You are on floor two. In front of you is a wooden door. Above it has a red sign reading "CAFETERIA" in bold letters.
 Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
-Room Description:You are in the Cafeteria.<br>There are rows of empty tables with grease stains.<br>On one is a metal tray of pinkish-grey stew,<br> a hunk of cheese and a mug of victory coffee.<br>It appears someone had forgotten to put their tray away.
+Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish-grey stew,<br> a hunk of cheese and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
 Exit Rooms:S-Stairwell Two, N-Kitchen
 Room Items:Stew-Pinkish, Coffee-Victory
 Room Name:Kitchen
-Room Description:You are in the kitchen.<br>It is full of industrial kitchen appliances.<br>In front of you is a large refrigerator,<b>ominously, the height of the average human being.
+Room Description:You have just entered a small room coated in silver from bottom to top<br>Right in front of you there is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances,<br>like forks and knifes, and bowls and plates.
 Exit Rooms:S-Cafeteria, N-Fridge
 Room Items:None-None
 Room Name:Fridge
-Room Description:You open the door to find the remains of a limb human body suspended by fishing wire.<br>On the floor, there are piles of bones on the ground.
+Room Description:You open the door and gasp as your to find the remains of human corpse suspended by fishing wire.<br>On the floor, there are piles of bones on the ground.
 Exit Rooms:S-Kitchen
 Room Items:None-None
 Room Name:Stairwell One
