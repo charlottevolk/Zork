@@ -28,6 +28,7 @@ class Game {
 	private Room currentRoom;
 	private Inventory inventory = new Inventory();
 	private Inventory roomInventory;
+	private Code code = new Code();
 
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -315,16 +316,20 @@ class Game {
 
 		}else if(command.getCommandWord().equals("look")) {
 			if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
-				if(command.getSecondWord().equals("mirror")) {
+				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
 					System.out.println("Your face has lost all colour it once had, a dark grey colour \nhighlights your cheek bones and eyebags, and you have lost \nenough weight that your bones can be easily seen through your \ntransparent looking skin. Out of the corner of your eye, it can \nbe seen that the mirror has  inverted the scribbles on the walls,\nforming a legible message: \r\n" + 
 							"	\"An unknown path you'll find below,  \r\n" + 
 							"	one that none has ever known.\r\n" + 
 							"	Complete the song and seal your fate,\r\n" + 
 							"	Your one and only key to escape.\r\n" + 
 							"	for to won ate\"");
+				}else if(command.getSecondWord().equalsIgnoreCase("pillow") || command.getThirdWord().equalsIgnoreCase("pillow")) {
+					System.out.println("You find a wrinkled note. Written on it is one line,\nrandom symbols, and then two more lines.\nIt looks like this:");
+					code.showEncryptedCode();
 				}
 			}
 		}
+
 		return false;
 	}
 
