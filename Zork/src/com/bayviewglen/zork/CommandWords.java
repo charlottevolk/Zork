@@ -38,7 +38,7 @@ class CommandWords {
 	 * Print all valid commands to System.out.
 	 */
 	public void showAll() {
-		for (int i = 0; i < validCommands.length; i++) {
+		for (int i = 0; i < validCommands.length-1; i++) {
 			System.out.print(validCommands[i] + "  ");
 		}
 		System.out.println();
