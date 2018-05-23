@@ -53,6 +53,7 @@ public class Code {
 			}
 		}
 		System.out.println("Here is what you have so far:");
+		showEncryptedCode();
 	}
 	
 	public void showEncryptedCode() {
