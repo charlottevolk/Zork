@@ -199,6 +199,8 @@ class Game {
 			System.out.println("    -----    ");
 		}else if(commandWord.equals("4218")){
 			goRoom(new Command("walk", "north", null));
+		//}else if(commandWord.equals("go") && command.getSecondWord().equals("through") && command.getThirdWord().equals("trapdoor") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")){
+			
 		}else if (commandWord.equals("walk")) {
 			goRoom(command);
 		}else if (commandWord.equals("quit")) {
