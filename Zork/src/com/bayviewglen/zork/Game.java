@@ -185,9 +185,22 @@ class Game {
 		String commandWord = command.getCommandWord();
 		if (commandWord.equals("help"))
 			printHelp();
-		else if (commandWord.equals("walk"))
+		else if(commandWord.equals("walk") && command.getSecondWord().equals("north") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
+			System.out.println("Cannot enter without pass code. Please enter pass code.");
+			System.out.println("-------------");
+			System.out.println("| 1 | 2 | 3 |");
+			System.out.println("-------------");
+			System.out.println("| 4 | 5 | 6 |");
+			System.out.println("-------------");
+			System.out.println("| 7 | 8 | 9 |");
+			System.out.println("-------------");
+			System.out.println("    | 0 |    ");
+			System.out.println("    -----    ");
+		}else if(commandWord.equals("4218")){
+			goRoom(new Command("walk", "north", null));
+		}else if (commandWord.equals("walk")) {
 			goRoom(command);
-		else if (commandWord.equals("quit")) {
+		}else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
 			else
