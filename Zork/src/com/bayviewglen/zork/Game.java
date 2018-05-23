@@ -313,6 +313,17 @@ class Game {
 				System.out.println("There is nothing like that in the game...");
 			}
 
+		}else if(command.getCommandWord().equals("look")) {
+			if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
+				if(command.getSecondWord().equals("mirror")) {
+					System.out.println("Your face has lost all colour it once had, a dark grey colour \nhighlights your cheek bones and eyebags, and you have lost \nenough weight that your bones can be easily seen through your \ntransparent looking skin. Out of the corner of your eye, it can \nbe seen that the mirror has  inverted the scribbles on the walls,\nforming a legible message: \r\n" + 
+							"	\"An unknown path you'll find below,  \r\n" + 
+							"	one that none has ever known.\r\n" + 
+							"	Complete the song and seal your fate,\r\n" + 
+							"	Your one and only key to escape.\r\n" + 
+							"	for to won ate\"");
+				}
+			}
 		}
 		return false;
 	}

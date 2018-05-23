@@ -29,6 +29,8 @@ class Parser
 		uselessWords.add("then");
 		uselessWords.add("a");
 		uselessWords.add("of");
+		uselessWords.add("at");
+		uselessWords.add("in");
 	}
 
 
@@ -61,27 +63,26 @@ class Parser
 
 		// Now check whether this word is known. If so, create a command
 		// with it. If not, create a "nil" command (for unknown command).
-
-		for(int i1=0; i1<input.size(); i1++) {
-			//if(input.get(i))
-			if(commands.isCommand(input.get(i1))){
-				if(i1 == input.size()-1) {
-					inputCommands.add(new Command(input.get(i1), null, null));
+		
+		for(int j=0; j<input.size(); j++) {
+			if(commands.isCommand(input.get(j))){
+				if(j == input.size()-1) {
+					inputCommands.add(new Command(input.get(j), null, null));
 				}
-				else if(i1 == input.size()-2){
-					if(commands.isCommand(input.get(i1+1))) {
-						inputCommands.add(new Command(input.get(i1), null, null));
+				else if(j == input.size()-2){
+					if(commands.isCommand(input.get(j+1))) {
+						inputCommands.add(new Command(input.get(j), null, null));
 					}
-					inputCommands.add(new Command(input.get(i1), input.get(i1+1), null));
+					inputCommands.add(new Command(input.get(j), input.get(j+1), null));
 				}
-				else if(i1 <= input.size()-3){
-					if(commands.isCommand(input.get(i1+1))) {
-						inputCommands.add(new Command(input.get(i1), null, null));
-					}else if(commands.isCommand(input.get(i1+2))) {
-						inputCommands.add(new Command(input.get(i1), input.get(i1+1), null));
+				else if(j <= input.size()-3){
+					if(commands.isCommand(input.get(j+1))) {
+						inputCommands.add(new Command(input.get(j), null, null));
+					}else if(commands.isCommand(input.get(j+2))) {
+						inputCommands.add(new Command(input.get(j), input.get(j+1), null));
 					}
-					else if(commands.isCommand(input.get(i1))){
-						inputCommands.add(new Command(input.get(i1), input.get(i1+1), input.get(i1+2)));
+					else if(commands.isCommand(input.get(j))){
+						inputCommands.add(new Command(input.get(j), input.get(j+1), input.get(j+2)));
 					}
 				}
 			}
