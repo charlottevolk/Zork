@@ -11,9 +11,9 @@ Room Description:You are in a candle-lit room.<br>The crimson red wax melted int
 Exit Rooms:N-Stairwell Ten, W-Secret Room
 Room Items:None-none
 Room Name:Secret Room
-Room Description:You seem to have stumbled upon a secret room.<br>The room is filled to the top with large stacks of chocolate bars.<br>Looks like the Party has been keeping all this chocolate all to themselves.
+Room Description:You seem to have stumbled upon a secret room.<br>The room is filled to the top with large stacks of dark chocolate bars.<br>Looks like the Party has been keeping all this chocolate all to themselves.
 Exit Rooms:E-Shrine
-Room Items:Chocolate-dark
+Room Items:Chocolate-Dark
 Room Name:Stairwell Nine
 Room Description:You are on floor nine. In front of you is a grey door.
 Exit Rooms:U-Stairwell Ten, D-Stairwell Eight
