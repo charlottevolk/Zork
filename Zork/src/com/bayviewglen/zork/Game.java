@@ -197,7 +197,7 @@ class Game {
 			System.out.println("-------------");
 			System.out.println("    | 0 |    ");
 			System.out.println("    -----    ");
-		}else if(commandWord.equals("4218")){
+		}else if(commandWord.equals("4218") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
 			goRoom(new Command("walk", "north", null));
 		//}else if(commandWord.equals("go") && command.getSecondWord().equals("through") && command.getThirdWord().equals("trapdoor") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")){
 			
@@ -208,7 +208,7 @@ class Game {
 				System.out.println("Quit what?");
 			else
 				return true; // signal that we want to quit
-		} else if (commandWord.equals("run")) {
+		}else if (commandWord.equals("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equals("away")) {
 				System.out.println(
 						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud and all you see is");
@@ -217,7 +217,15 @@ class Game {
 			}
 
 			// Code for all permutations of a Command with commandWord "take"
-		} else if(command.getCommandWord().equals("take")){
+		}else if(command.getCommandWord().equals("take") && command.getSecondWord().equals("dark") && command.getThirdWord().equals("chocolate") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
+			System.out.println("OMG!! You found a trapdoor! There is a small display screen with the words \"Enter code\" written on it. Below is a small slot to accomodate a piece of paper. This could be your chance to escape! What do you want to do next?");
+		}else if(command.getCommandWord().equals("insert") && command.getSecondWord().equals("code") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
+			if(code.isComplete()) {
+				System.out.println("You won!"); 	// add more
+			}else {
+				System.out.println("You do not have the full code."); 	// add more
+			}
+		}else if(command.getCommandWord().equals("take")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Take what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
