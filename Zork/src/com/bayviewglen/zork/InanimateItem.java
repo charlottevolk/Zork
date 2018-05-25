@@ -17,11 +17,9 @@ public class InanimateItem extends Item {
 
 	public static void setValidInanimateItems() {
 		validInanimateItems = new InanimateItem[20];
-		validInanimateItems[0] = new Book("");
-		validInanimateItems[1] = new Book("1984");
-		validInanimateItems[2] = new Box("");
-		validInanimateItems[3] = new Box("wooden");
-		validInanimateItems[4] = new Book("Macbeth");
+		validInanimateItems[0] = new Book("1984");
+		validInanimateItems[1] = new Book("Macbeth");
+		validInanimateItems[2] = new Box("wooden");
 
 	}
 
