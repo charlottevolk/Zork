@@ -1,5 +1,5 @@
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror mounted.<br>To your left there are some illegible scribbles.<br>In front of you is a desk with<br>a half-eaten red apple, a glass bottle of water, and a book.
+Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a desk with<br>a half-eaten red apple, a glass bottle of water, and a book.
 Exit Rooms:N-Stairwell Five
 Room Items:Apple-Red, Water-Glass, Book-1984, Code-Note, Pillow-Fluffy
 Room Name:Stairwell Ten
@@ -55,7 +55,7 @@ Room Description:You have just entered a small room coated in silver from bottom
 Exit Rooms:S-Cafeteria, N-Fridge
 Room Items:None-None
 Room Name:Fridge
-Room Description:You open the door and gasp as your to find the remains of human corpse suspended by fishing wire.<br>On the floor, there are piles of bones on the ground.
+Room Description:You open the door and gasp as the fridge revealed the remains of a human corpse.<br> Isn't this a fun place?
 Exit Rooms:S-Kitchen
 Room Items:None-None
 Room Name:Stairwell One
@@ -63,6 +63,6 @@ Room Description:You are on the bottom floor. In front of you is a white metal d
 Exit Rooms:U-Stairwell Two, S-Room 101
 Room Items:None-None
 Room Name:Room 101
-Room Description:The room is dark,<br>the only light source coming from above you.<br>On your right is a table with medical tools.<br>On your left is an air vent.<br>In front of you is a TV screen and speaker system,<br>displaying footage of the wars Oceania "won."<br>Behind you is the door that O'Brien left through.
+Room Description:The room is dark,<br>the only light source is right above you, causing a sharp pain to your eyes.<br>On your right is a table with medical tools.<br>On your left is an air vent.<br>In front of you is a TV screen and speaker system,<br>displaying footage of the wars Oceania "won."<br>Behind you is the door that O'Brien left through just a couple minutes ago...
 Exit Rooms:N-Stairwell One
 Room Items:None-None
