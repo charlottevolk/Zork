@@ -62,4 +62,13 @@ public class Code {
 			System.out.println("	" + encryptedCode[i]);
 		}
 	}
+
+	public boolean isComplete() {
+		for(int i=0; i<encryptedCode.length; i++) {
+			if(!(code[i].equalsIgnoreCase(encryptedCode[i]))) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
