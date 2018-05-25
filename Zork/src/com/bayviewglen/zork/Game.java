@@ -199,8 +199,8 @@ class Game {
 			System.out.println("    -----    ");
 		}else if(commandWord.equals("4218") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
 			goRoom(new Command("walk", "north", null));
-		//}else if(commandWord.equals("go") && command.getSecondWord().equals("through") && command.getThirdWord().equals("trapdoor") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")){
-			
+			//}else if(commandWord.equals("go") && command.getSecondWord().equals("through") && command.getThirdWord().equals("trapdoor") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")){
+
 		}else if (commandWord.equals("walk")) {
 			goRoom(command);
 		}else if (commandWord.equals("quit")) {
@@ -217,13 +217,17 @@ class Game {
 			}
 
 			// Code for all permutations of a Command with commandWord "take"
-		}else if(command.getCommandWord().equals("take") && command.getSecondWord().equals("dark") && command.getThirdWord().equals("chocolate") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
-			System.out.println("OMG!! You found a trapdoor! There is a small display screen with the words \"Enter code\" written on it. Below is a small slot to accomodate a piece of paper. This could be your chance to escape! What do you want to do next?");
+		}else if(command.getCommandWord().equals("take") && command.getSecondWord() != null && command.getSecondWord().equals("dark") && command.getThirdWord() != null && command.getThirdWord().equals("chocolate") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
+			Item item = new Item(command.getThirdWord(), command.getSecondWord());
+			item.pickUpItem();
+			currentRoom.getRoomInventory().removeItem(item);		// DOESN'T WORK. FIX ASAP
+			inventory.addItem(item);
+			System.out.println("OMG!! You found a trapdoor! There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot to accomodate a piece of paper.\nThis could be your chance to escape!\nWhat do you want to do next?");
 		}else if(command.getCommandWord().equals("insert") && command.getSecondWord().equals("code") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
 			if(code.isComplete()) {
 				System.out.println("You won!"); 	// add more
 			}else {
-				System.out.println("You do not have the full code."); 	// add more
+				System.out.println("Unfortunately, you do not have the full code.\nSo find the rest of it first and then try again :)");
 			}
 		}else if(command.getCommandWord().equals("take")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
@@ -338,6 +342,35 @@ class Game {
 					code.showEncryptedCode();
 				}
 			}
+			// Code for all permutations of "open" (controls finding lines of the code inside books/boxes)
+		}else if(command.getCommandWord().equals("open")){
+			if(command.getSecondWord() == null && command.getThirdWord() == null) {
+				System.out.println("Open what?!");
+			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
+				InanimateItem item = new InanimateItem(command.getThirdWord(), command.getSecondWord());
+				if(isInRoom(item)) {
+					if(item.canOpen()) {
+						open(item, code);
+					}else {
+						System.out.println("You can't open that!");
+					}
+				}else {
+					System.out.println("There is nothing like that in the room...");
+				}
+			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
+				InanimateItem item = new InanimateItem(command.getSecondWord(), "");
+				if(isInRoom(item)) {
+					if(item.canOpen()) {
+						open(item, code);
+					}else {
+						System.out.println("You can't open that!");
+					}
+				}else {
+					System.out.println("Either there is nothing like that in the room, or you weren't specific enough.\nI'm not a mind-reader, you know.");
+				}
+			}else {
+				System.out.println("There is nothing like that in the game...");
+			}
 		}
 
 		return false;
@@ -412,6 +445,20 @@ class Game {
 			}
 		}
 		return false;
+	}
+
+	public void open(InanimateItem object, Code code) {
+		object.open();
+		if(object.getType().equals("book")) {
+			if(object.getProperty().equals("1984")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(1));
+			}
+		}
+		else {
+			System.out.println("There is nothing inside!");
+		}
+
 	}
 
 }
