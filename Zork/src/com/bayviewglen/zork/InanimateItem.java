@@ -21,6 +21,7 @@ public class InanimateItem extends Item {
 		validInanimateItems[1] = new Book("1984");
 		validInanimateItems[2] = new Box("");
 		validInanimateItems[3] = new Box("wooden");
+		validInanimateItems[4] = new Book("Macbeth");
 
 	}
 
