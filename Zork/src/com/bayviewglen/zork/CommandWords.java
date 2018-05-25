@@ -12,7 +12,7 @@ package com.bayviewglen.zork;
 
 class CommandWords {
 	// a constant array that holds all valid command words
-	private static final String validCommands[] = { "quit", "help", "walk", "run", "take", "drop", "climb", "dance", "eat", "drink", "open", "look", "insert", "4218"};
+	private static final String validCommands[] = { "quit", "help", "walk", "run", "take", "drop", "climb", "dance", "eat", "drink", "open", "look", "insert", "yes", "no", "Answer:", "4218"};
 
 	/**
 	 * Constructor - initialise the command words.
@@ -37,8 +37,8 @@ class CommandWords {
 	/*
 	 * Print all valid commands to System.out.
 	 */
-	public void showAll() {
-		for (int i = 0; i < validCommands.length-1; i++) {
+	public void showAll() { 	// does not show "4218", "yes" or "no" as commands
+		for (int i = 0; i < validCommands.length-4; i++) {
 			System.out.print(validCommands[i] + "  ");
 		}
 		System.out.println();

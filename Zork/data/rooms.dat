@@ -48,9 +48,9 @@ Exit Rooms:U-Stairwell Six, D-Stairwell Four, N-Hallway Five
 Room Items:None-None
 Room Name:Hallway Five
 Room Description:You are in a hallway. There are three doors; to west, north, and east. Behind you is the stairwell.
-Exit Rooms:S-Stairwell Five, W-Room 501, N-Your Prison Cell, E-Room 503
+Exit Rooms:S-Stairwell Five, W-Room 501, N-Prison Cell, E-Room 503
 Room Items:None-None
-Room Name:Your Prison Cell
+Room Name:Prison Cell
 Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a desk with<br>a half-eaten red apple, a glass bottle of water, and a book.
 Exit Rooms:S-Hallway Five
 Room Items:Apple-Red, Water-Glass, Book-1984

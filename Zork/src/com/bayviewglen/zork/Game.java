@@ -186,8 +186,8 @@ class Game {
 		String commandWord = command.getCommandWord();
 		if (commandWord.equals("help"))
 			printHelp();
-		else if(commandWord.equals("walk") && command.getSecondWord().equals("north") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
-			System.out.println("Cannot enter without pass code. Please enter pass code.");
+		else if(commandWord.equals("walk") && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
+			System.out.println("Cannot exit without pass code. Please enter pass code.");
 			System.out.println("-------------");
 			System.out.println("| 1 | 2 | 3 |");
 			System.out.println("-------------");
@@ -198,9 +198,36 @@ class Game {
 			System.out.println("    | 0 |    ");
 			System.out.println("    -----    ");
 		}else if(commandWord.equals("4218") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
-			goRoom(new Command("walk", "north", null));
+			goRoom(new Command("walk", "south", null));
 			//}else if(commandWord.equals("go") && command.getSecondWord().equals("through") && command.getThirdWord().equals("trapdoor") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")){
-
+		}else if(commandWord.equals("walk") && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+			System.out.println("Oh no! The door is locked and you are stuck here!\nThe only way to escape is to correctly answer my riddle on the first try.\nIf you do not succeed, you will die a gruesome and painful death.\nDo you accept this challenge?");
+		}else if(commandWord.equals("yes") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+			System.out.println("This is the riddle:");
+			System.out.println();
+			System.out.println("It cannot be seen, cannot be felt");
+			System.out.println("Cannot be heard, cannot be smelt.");
+			System.out.println("It lies behind stars and under hills,");
+			System.out.println("And empty holes it fills.");
+			System.out.println("It comes first and follows after,");
+			System.out.println("Ends life, kills laughter.");
+			System.out.println();
+			System.out.println("Enter your answer.");
+			System.out.println("Your answer must have Answer: \nwith a space after the colon in order to avoid certain death!)");
+		}else if(commandWord.equals("Answer:")) {
+			if(command.getSecondWord().equalsIgnoreCase("dark")) {
+				System.out.println("Congratulations! You escaped!");
+				goRoom(new Command("walk", "south", null));
+			}
+			
+		}else if(commandWord.equals("no") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println("*****************************************");
+			System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can move are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire.\n\nAs you look back up in panic, you see a large,\nsharp-looking metal blade right in front of your face,\nand slowly inching forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"And by the way, while we are on the subject,\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
+			System.out.println();
+			System.out.println("You have lost. Too bad so sad.");
 		}else if (commandWord.equals("walk")) {
 			goRoom(command);
 		}else if (commandWord.equals("quit")) {
