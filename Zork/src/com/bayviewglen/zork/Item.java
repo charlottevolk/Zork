@@ -51,6 +51,12 @@ public class Item {
 		else if(getType().equalsIgnoreCase("coffee")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("book")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("box")) {
+			return true;
+		}
 		else
 			return false;
 	}
@@ -84,6 +90,18 @@ public class Item {
 		}
 		else
 			return false;
+	}
+	
+	public boolean canOpen() {
+		if(getType().equalsIgnoreCase("book")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("box")) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public String getDescription() {
