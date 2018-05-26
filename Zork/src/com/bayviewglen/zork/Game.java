@@ -213,18 +213,20 @@ class Game {
 			System.out.println("Ends life, kills laughter.");
 			System.out.println();
 			System.out.println("Enter your answer.");
-			System.out.println("Your answer must have Answer: \nwith a space after the colon in order to avoid certain death!)");
+			System.out.println("Your answer must have Answer: \nwith a space after the colon in order to avoid certain death!");
 		}else if(commandWord.equals("Answer:")) {
 			if(command.getSecondWord().equalsIgnoreCase("dark")) {
 				System.out.println("Congratulations! You escaped!");
 				goRoom(new Command("walk", "south", null));
 			}else {
 				gameOver();
+				return true;
 			}
 			
 			
 		}else if(commandWord.equals("no") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			gameOver();
+			return true;
 		}else if (commandWord.equals("walk")) {
 			goRoom(command);
 		}else if (commandWord.equals("quit")) {
@@ -235,7 +237,9 @@ class Game {
 		}else if (commandWord.equals("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equals("away")) {
 				System.out.println(
-						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud and all you see is");
+						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud and all you see is darkness...");
+				gameOver();
+				return true;
 			} else {
 				System.out.println("Why run when you could walk?");
 			}
@@ -372,25 +376,25 @@ class Game {
 				System.out.println("Open what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
 				InanimateItem item = new InanimateItem(command.getThirdWord(), command.getSecondWord());
-				if(isInRoom(item)) {
+				if(isInInventory(item)) {
 					if(item.canOpen()) {
-						open(item, code);
+						open(item);
 					}else {
 						System.out.println("You can't open that!");
 					}
 				}else {
-					System.out.println("There is nothing like that in the room...");
+				System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
 				InanimateItem item = new InanimateItem(command.getSecondWord(), "");
-				if(isInRoom(item)) {
+				if(isInInventory(item)) {
 					if(item.canOpen()) {
-						open(item, code);
+						open(item);
 					}else {
 						System.out.println("You can't open that!");
 					}
 				}else {
-					System.out.println("Either there is nothing like that in the room, or you weren't specific enough.\nI'm not a mind-reader, you know.");
+					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else {
 				System.out.println("There is nothing like that in the game...");
@@ -471,12 +475,17 @@ class Game {
 		return false;
 	}
 
-	public void open(InanimateItem object, Code code) {
+	public void open(InanimateItem object) {
 		object.open();
 		if(object.getType().equals("book")) {
-			if(object.getProperty().equals("1984")) {
+			if(object.getProperty().equals("old")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(1));
+			}
+		}else if(object.getType().equals("container")) {
+			if(object.getProperty().equals("plastic")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(2));
 			}
 		}
 		else {

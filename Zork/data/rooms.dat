@@ -51,9 +51,9 @@ Room Description:You are in a hallway. There are three doors; to west, north, an
 Exit Rooms:S-Stairwell Five, W-Room 501, N-Prison Cell, E-Room 503
 Room Items:None-None
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a desk with<br>a half-eaten red apple, a glass bottle of water, and a book.
+Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a desk with<br>a half-eaten red apple, a glass of water, and an old book.
 Exit Rooms:S-Hallway Five
-Room Items:Apple-Red, Water-Glass, Book-1984
+Room Items:Apple-Red, Water-Glass, Book-Old
 Room Name:Stairwell Four
 Room Description:You are on floor four. In front of you (north) is a grey door.
 Exit Rooms:U-Stairwell Five, D-Stairwell Three, N-Hallway Four
@@ -83,9 +83,9 @@ Room Description:You are on floor two. In front of you is a wooden door. Above i
 Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
-Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish-grey stew,<br> a hunk of cheese and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
+Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish-grey stew,<br> a hunk of cheese, what looks like a plastic container, and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
 Exit Rooms:S-Stairwell Two, N-Kitchen
-Room Items:Stew-Pinkish, Coffee-Victory
+Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic
 Room Name:Kitchen
 Room Description:You have just entered a small room coated in silver from bottom to top<br>Right in front of you there is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances,<br>like forks and knifes, and bowls and plates.
 Exit Rooms:S-Cafeteria, N-Fridge

@@ -53,7 +53,6 @@ class Parser
 		}
 
 		StringTokenizer tokenizer = new StringTokenizer(inputLine);
-		int i=0;
 		while(tokenizer.hasMoreTokens()) {
 			input.add(tokenizer.nextToken());
 		}
@@ -64,25 +63,25 @@ class Parser
 		// Now check whether this word is known. If so, create a command
 		// with it. If not, create a "nil" command (for unknown command).
 		
-		for(int j=0; j<input.size(); j++) {
-			if(commands.isCommand(input.get(j))){
-				if(j == input.size()-1) {
-					inputCommands.add(new Command(input.get(j), null, null));
+		for(int i=0; i<input.size(); i++) {
+			if(commands.isCommand(input.get(i))){
+				if(i == input.size()-1) {
+					inputCommands.add(new Command(input.get(i), null, null));
 				}
-				else if(j == input.size()-2){
-					if(commands.isCommand(input.get(j+1))) {
-						inputCommands.add(new Command(input.get(j), null, null));
+				else if(i == input.size()-2){
+					if(commands.isCommand(input.get(i+1))) {
+						inputCommands.add(new Command(input.get(i), null, null));
 					}
-					inputCommands.add(new Command(input.get(j), input.get(j+1), null));
+					inputCommands.add(new Command(input.get(i), input.get(i+1), null));
 				}
-				else if(j <= input.size()-3){
-					if(commands.isCommand(input.get(j+1))) {
-						inputCommands.add(new Command(input.get(j), null, null));
-					}else if(commands.isCommand(input.get(j+2))) {
-						inputCommands.add(new Command(input.get(j), input.get(j+1), null));
+				else if(i <= input.size()-3){
+					if(commands.isCommand(input.get(i+1))) {
+						inputCommands.add(new Command(input.get(i), null, null));
+					}else if(commands.isCommand(input.get(i+2))) {
+						inputCommands.add(new Command(input.get(i), input.get(i+1), null));
 					}
-					else if(commands.isCommand(input.get(j))){
-						inputCommands.add(new Command(input.get(j), input.get(j+1), input.get(j+2)));
+					else if(commands.isCommand(input.get(i))){
+						inputCommands.add(new Command(input.get(i), input.get(i+1), input.get(i+2)));
 					}
 				}
 			}

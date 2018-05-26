@@ -1,7 +1,5 @@
 package com.bayviewglen.zork;
 
-import java.util.ArrayList;
-
 public class Code {
 	
 	private static final int CODE_LENGTH = 14;

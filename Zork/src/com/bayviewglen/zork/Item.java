@@ -57,6 +57,9 @@ public class Item {
 		else if(getType().equalsIgnoreCase("box")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("container")) {
+			return true;
+		}
 		else
 			return false;
 	}
@@ -97,6 +100,9 @@ public class Item {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("box")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("container")) {
 			return true;
 		}
 		else {
