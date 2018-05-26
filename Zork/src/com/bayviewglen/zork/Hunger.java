@@ -6,21 +6,37 @@ public class Hunger{
 	private String[] statBar;
 
 	public Hunger() {
-		for(int i=0; i<statBar.length; i++) {
+		statBar = new String[maxLen];
+		for(int i=0; i<maxLen; i++) {
 			statBar[i] = "*";
 		}
 	}
-	
-	public void reduce() {
-		for(int i=0; i<maxLen; i++) {
-			if(statBar[i].equals("X")) {
-				if(i!=maxLen-1) {
-					statBar[i+1] = "X";
+
+	public boolean reduce() {
+		if(statBar[maxLen-1].equals("*")) {
+			statBar[maxLen-1] = "X";
+			return true;
+		}else {
+			for(int i=0; i<maxLen; i++) {
+				if(statBar[i].equals("X")) {
+					if(i != 0) {
+						statBar[i-1] = "X";
+						return true;
+					}else {
+						return false;
+					}
 				}
 			}
 		}
+		statBar[0] = "X";	
+		return true;
 	}
 	
+	public boolean addHunger() {
+		
+		return false;
+	}
+
 	public void printHunger() {
 		System.out.println("Hunger Bar:");
 		for(int i=0; i<maxLen; i++) {

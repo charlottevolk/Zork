@@ -17,9 +17,10 @@ public class Stats {
 		return thirst;
 	}
 	
-	public void reduce() {
+	public boolean reduce() {
 		hunger.reduce();
 		thirst.reduce();
+		return hunger.reduce() && thirst.reduce();
 	}
 
 }
