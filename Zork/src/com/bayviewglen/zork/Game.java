@@ -218,16 +218,13 @@ class Game {
 			if(command.getSecondWord().equalsIgnoreCase("dark")) {
 				System.out.println("Congratulations! You escaped!");
 				goRoom(new Command("walk", "south", null));
+			}else {
+				gameOver();
 			}
 			
+			
 		}else if(commandWord.equals("no") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println("*****************************************");
-			System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can move are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire.\n\nAs you look back up in panic, you see a large,\nsharp-looking metal blade right in front of your face,\nand slowly inching forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"And by the way, while we are on the subject,\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
-			System.out.println();
-			System.out.println("You have lost. Too bad so sad.");
+			gameOver();
 		}else if (commandWord.equals("walk")) {
 			goRoom(command);
 		}else if (commandWord.equals("quit")) {
@@ -252,7 +249,7 @@ class Game {
 			System.out.println("OMG!! You found a trapdoor! There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot to accomodate a piece of paper.\nThis could be your chance to escape!\nWhat do you want to do next?");
 		}else if(command.getCommandWord().equals("insert") && command.getSecondWord().equals("code") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
 			if(code.isComplete()) {
-				System.out.println("You won!"); 	// add more
+				winGame();
 			}else {
 				System.out.println("Unfortunately, you do not have the full code.\nSo find the rest of it first and then try again :)");
 			}
@@ -486,6 +483,20 @@ class Game {
 			System.out.println("There is nothing inside!");
 		}
 
+	}
+	
+	private void gameOver() {
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("*****************************************");
+		System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can move are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire.\n\nAs you look back up in panic, you see a large,\nsharp-looking metal blade right in front of your face,\nand slowly inching forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"And by the way, while we are on the subject,\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
+		System.out.println();
+		System.out.println("You have lost. Too bad so sad.");
+	}
+	
+	private void winGame() {
+		System.out.println("You won!");
 	}
 
 }
