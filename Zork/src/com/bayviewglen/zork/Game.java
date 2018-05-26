@@ -29,6 +29,7 @@ class Game {
 	private Inventory inventory = new Inventory();
 	private Inventory roomInventory;
 	private Code code = new Code();
+	private Stats stats = new Stats();
 
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -494,6 +495,14 @@ class Game {
 
 	}
 	
+	private void dieOf(String type) {
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("*****************************************");
+		System.out.println("Wow. You died of " + type + ". What an ignominious death.");
+	}
+
 	private void gameOver() {
 		System.out.println();
 		System.out.println();
