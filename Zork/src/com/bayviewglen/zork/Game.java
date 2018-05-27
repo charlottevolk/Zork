@@ -130,12 +130,23 @@ class Game {
 		boolean finished = false;
 		while (!finished) {
 			ArrayList<Command> commandList = parser.getCommands();
+			System.out.println();
 			for(int i=0; i<commandList.size(); i++) {
 				finished = processCommand(commandList.get(i));
+				finished = !(stats.getHunger().reduce());
+				if(finished) {
+					dieOf("hunger");
+					System.out.println();
+				}else {
+					finished = !(stats.getThirst().reduce());
+					if(finished)
+						dieOf("thirst");
+					System.out.println();
+				}
 			}
 
 		}
-		System.out.println("Thank you for playing.  Good bye.");
+		System.out.println("Thank you for playing. Good bye.");
 	}
 
 	/**
@@ -166,6 +177,11 @@ class Game {
 		//scanner.nextLine();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
+		System.out.println();
+		stats.getHunger().printHunger();
+		System.out.println();
+		stats.getThirst().printThirst();
+		System.out.println();
 	}
 
 
@@ -178,7 +194,6 @@ class Game {
 		if (command.getThirdWord() != null) {
 			commandOut += " " + command.getThirdWord();
 		}
-		System.out.println(commandOut);
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
@@ -223,8 +238,8 @@ class Game {
 				gameOver();
 				return true;
 			}
-			
-			
+
+
 		}else if(commandWord.equals("no") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			gameOver();
 			return true;
@@ -302,6 +317,7 @@ class Game {
 					if(food.canEat() && Food.isInValidFoods(food)) {
 						food.eat();
 						inventory.removeItem(food);
+						stats.getHunger().increase();
 					}else {
 						System.out.println("You really thought you could eat that?!");
 					}
@@ -314,6 +330,7 @@ class Game {
 					if(food.canEat() && Food.isInValidFoods(food)) {
 						food.eat();
 						inventory.removeItem(food);
+						stats.getHunger().increase();
 					}else {
 						System.out.println("You really thought you could eat that?!");
 					}
@@ -335,6 +352,7 @@ class Game {
 					if(drink.canDrink() && Drink.isInValidDrinks(drink)) {
 						drink.drink();
 						inventory.removeItem(drink);
+						stats.getThirst().increase();
 					}else {
 						System.out.println("You really thought you could drink that?!");
 					}
@@ -343,10 +361,11 @@ class Game {
 				}
 			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
 				Drink drink = new Drink(command.getSecondWord(), "");
-				if(isInRoom(drink)) {
+				if(isInInventory(drink)) {
 					if(drink.canDrink() && Drink.isInValidDrinks(drink)) {
 						drink.drink();
-						roomInventory.removeItem(drink);
+						inventory.removeItem(drink);
+						stats.getThirst().increase();
 					}else {
 						System.out.println("You really thought you could drink that?!");
 					}
@@ -384,7 +403,7 @@ class Game {
 						System.out.println("You can't open that!");
 					}
 				}else {
-				System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
+					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
 				InanimateItem item = new InanimateItem(command.getSecondWord(), "");
@@ -494,7 +513,7 @@ class Game {
 		}
 
 	}
-	
+
 	private void dieOf(String type) {
 		System.out.println();
 		System.out.println();
@@ -512,7 +531,7 @@ class Game {
 		System.out.println();
 		System.out.println("You have lost. Too bad so sad.");
 	}
-	
+
 	private void winGame() {
 		System.out.println("You won!");
 	}

@@ -18,6 +18,19 @@ public class StatsDriver {
 		stats.getHunger().reduce();
 		stats.getHunger().reduce();
 		stats.getHunger().printHunger();
+		stats.getHunger().increase();
+		stats.getHunger().printHunger();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().increase();
+		stats.getHunger().printHunger();
 	}
 
 }

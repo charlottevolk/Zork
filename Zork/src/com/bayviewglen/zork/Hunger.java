@@ -28,12 +28,19 @@ public class Hunger{
 				}
 			}
 		}
-		statBar[0] = "X";	
+		statBar[0] = "X";
 		return true;
 	}
 	
-	public boolean addHunger() {
-		
+	public boolean increase() {
+		for(int i=0; i<maxLen; i++) {
+			if(statBar[i].equals("X")) {
+				statBar[i] = "*";
+				printHunger();
+				return true;
+			}
+		}
+		printHunger();
 		return false;
 	}
 

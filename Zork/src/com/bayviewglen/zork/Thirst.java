@@ -28,11 +28,21 @@ public class Thirst{
 				}
 			}
 		}
-		statBar[0] = "X";	
+		statBar[0] = "X";
 		return true;
 	}
 	
-	
+	public boolean increase() {
+		for(int i=0; i<maxLen; i++) {
+			if(statBar[i].equals("X")) {
+				statBar[i] = "*";
+				printThirst();
+				return true;
+			}
+		}
+		printThirst();
+		return false;
+	}
 	
 	public void printThirst() {
 		System.out.println("Thirst Bar:");
