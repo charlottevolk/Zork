@@ -202,7 +202,17 @@ class Game {
 		String commandWord = command.getCommandWord();
 		if (commandWord.equals("help"))
 			printHelp();
-		else if(commandWord.equals("walk") && command.getSecondWord() != null && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
+		else if(commandWord.equals("climb")) {
+			System.out.println("Who are you, spiderman??");
+		}else if(commandWord.equals("dance")) {
+			System.out.println("The thought police watches your slick moves and challenges you to a dance battle.");
+			System.out.println("However, in the midst of your moon walk, they taze you!");
+			gameOver();
+			return true;
+		}else if(commandWord.equals("quit")) {
+			System.out.println("Tsk tsk tsk.");
+			System.out.println("Quiting is never the answer.");
+		}else if(commandWord.equals("walk") && command.getSecondWord() != null && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 			System.out.println("Cannot exit without pass code. Please enter pass code.");
 			System.out.println("-------------");
 			System.out.println("| 1 | 2 | 3 |");
@@ -255,7 +265,7 @@ class Game {
 		}else if (commandWord.equals("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equals("away")) {
 				System.out.println(
-						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud and all you see is darkness...");
+						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud.");
 				gameOver();
 				return true;
 			} else {
@@ -269,6 +279,8 @@ class Game {
 			currentRoom.getRoomInventory().removeItem(item);		// DOESN'T WORK. FIX ASAP
 			inventory.addItem(item);
 			System.out.println("OMG!! You found a trapdoor! There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot to accomodate a piece of paper.\nThis could be your chance to escape!\nWhat do you want to do next?");
+		}else if(command.getCommandWord().equals("insert") && (command.getSecondWord()== null)) {
+			System.out.println("What are you inserting?");
 		}else if(command.getCommandWord().equals("insert") && command.getSecondWord().equals("code") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
 			if(code.isComplete()) {
 				winGame();
@@ -345,7 +357,7 @@ class Game {
 				System.out.println("There is nothing like that in the game...");
 			}
 
-
+			
 
 			// Code for all permutations of a Command with commandWord "eat"
 		}else if(command.getCommandWord().equals("eat")) {
@@ -417,7 +429,11 @@ class Game {
 			}
 
 		}else if(command.getCommandWord().equals("look")) {
-			if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
+			if(command.getSecondWord() == null) {
+				System.out.println("what you lookin' at?");
+			}else if(command.getSecondWord().equals("around")) {
+				System.out.println(currentRoom.longDescription());
+			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
 					System.out.println("Your face has lost all colour it once had, a dark grey colour \nhighlights your cheek bones and eyebags, and you have lost \nenough weight that your bones can be easily seen through your \ntransparent looking skin. Out of the corner of your eye, it can \nbe seen that the mirror has  inverted the scribbles on the walls,\nforming a legible message: \r\n" + 
 							"	\"An unknown path you'll find below,  \r\n" + 
