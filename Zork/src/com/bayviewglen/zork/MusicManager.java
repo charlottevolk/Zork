@@ -5,16 +5,22 @@ import java.util.Map;
 
 public class MusicManager {
 	private Map<String, MusicClip> clips = new HashMap<>();
-	private MusicClip current;
+	private MusicClip currentClip;
+	private String currentName;
 	
-	public void playClip(String name) throws Exception{
+	public void playClip(String name){
+		if(name.equalsIgnoreCase(currentName)) {
+			return;
+		}
 		MusicClip musicClip = clips.get(name);
+		
 		if(musicClip == null) {
-			musicClip = new MusicClip(name);
+			musicClip = new MusicClip("./Sound/" + name);
 			clips.put(name, musicClip);
 		}
 		 stopCurrent();
-		 current = musicClip;
+		 currentClip = musicClip;
+		 currentName = name;
 		 musicClip.play();
 	}
 	
@@ -23,8 +29,8 @@ public class MusicManager {
 	}
 	
 	private void stopCurrent() {
-		if (current != null) {
-			current.stop();
+		if (currentClip != null) {
+			currentClip.stop();
 		}
 	}
 }

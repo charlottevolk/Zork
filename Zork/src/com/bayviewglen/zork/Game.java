@@ -30,6 +30,7 @@ class Game {
 	private Inventory roomInventory;
 	private Code code = new Code();
 	private Stats stats = new Stats();
+	private MusicManager music = new MusicManager();
 
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -120,8 +121,10 @@ class Game {
 
 	/**
 	 * Main play routine. Loops until end of play.
+	 
 	 */
-	public void play() {
+	public void play(){
+		music.playClip("dark_world.wav");
 		printWelcome();
 
 		// Enter the main command loop. Here we repeatedly read commands and
@@ -526,6 +529,8 @@ class Game {
 	 * otherwise print an error message.
 	 */
 	private void goRoom(Command command) {
+		music.playClip("dark_world.wav");
+		
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Walk where?");
@@ -541,7 +546,11 @@ class Game {
 			System.out.println("There is no door!");
 		else if(nextRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			currentRoom = nextRoom;
+			music.playClip("Strange_atmosphere.wav");
 			System.out.println(currentRoom.shortDescription());
+		}else if(nextRoom.getRoomName().equalsIgnoreCase("Shrine")) {
+			currentRoom = nextRoom;
+			music.playClip("nightmare_returns.wav");
 		}
 		else {
 			currentRoom = nextRoom;
@@ -612,7 +621,9 @@ class Game {
 		System.out.println("You have lost. Too bad so sad.");
 	}
 	
-	private void room101() {
+	private void room101(){
+		music.playClip("Strange_atmosphere.wav");
+		
 		System.out.println("*Please press enter after each line*");
 		//scanner.nextLine();
 		System.out.println();
