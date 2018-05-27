@@ -432,9 +432,10 @@ class Game {
 				System.out.println("There is nothing like that in the game...");
 			}
 
+			//Code for all permutations of "look"
 		}else if(command.getCommandWord().equals("look")) {
 			if(command.getSecondWord() == null) {
-				System.out.println("what you lookin' at?");
+				System.out.println("What you lookin' at?");
 			}else if(command.getSecondWord().equals("around")) {
 				System.out.println(currentRoom.longDescription());
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
@@ -450,6 +451,25 @@ class Game {
 					code.showEncryptedCode();
 				}
 			}
+			
+			
+			//Code for all permutations of "view"
+		}else if(command.getCommandWord().equalsIgnoreCase("view")) {
+			if(command.getSecondWord() == null) {
+				System.out.println("And what would you like to view today?");
+			}else if(command.getSecondWord().equalsIgnoreCase("stats")) {
+				stats.getHunger().printHunger();
+				System.out.println();
+				stats.getThirst().printThirst();
+				System.out.println();
+			}else if(command.getSecondWord().equalsIgnoreCase("hunger")) {
+				stats.getHunger().printHunger();
+				System.out.println();
+			}else if(command.getSecondWord().equalsIgnoreCase("thirst")) {
+				stats.getThirst().printThirst();
+				System.out.println();
+			}
+			
 			// Code for all permutations of "open" (controls finding lines of the code inside books/boxes)
 		}else if(command.getCommandWord().equals("open")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {

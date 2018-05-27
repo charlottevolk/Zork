@@ -2,7 +2,7 @@ package com.bayviewglen.zork;
 
 public class Hunger{
 
-	private static final int maxLen = 10;
+	private static final int maxLen = 15;
 	private String[] statBar;
 
 	public Hunger() {
