@@ -29,19 +29,22 @@ public class Hunger{
 			}
 		}
 		statBar[0] = "X";
-		return true;
+		return false;
 	}
-	
+
 	public boolean increase() {
-		for(int i=0; i<maxLen; i++) {
-			if(statBar[i].equals("X")) {
-				statBar[i] = "*";
-				printHunger();
-				return true;
+		boolean result = false;
+		for(int j=0; j<5; j++) {
+			for(int i=0; i<maxLen; i++) {
+				if(statBar[i].equals("X")) {
+					statBar[i] = "*";
+					i=100;
+					result = true;
+				}
 			}
 		}
 		printHunger();
-		return false;
+		return result;
 	}
 
 	public void printHunger() {

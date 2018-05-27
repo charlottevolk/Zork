@@ -131,17 +131,21 @@ class Game {
 		while (!finished) {
 			ArrayList<Command> commandList = parser.getCommands();
 			System.out.println();
-			for(int i=0; i<commandList.size(); i++) {
-				finished = processCommand(commandList.get(i));
-				finished = !(stats.getHunger().reduce());
-				if(finished) {
+			boolean noHunger = !(stats.getHunger().reduce());
+			boolean noThirst = !(stats.getThirst().reduce());
+			if(noHunger || noThirst) {
+				if(noHunger) {
 					dieOf("hunger");
 					System.out.println();
-				}else {
-					finished = !(stats.getThirst().reduce());
-					if(finished)
-						dieOf("thirst");
+					finished = true;
+				}else if(noThirst) {
+					dieOf("thirst");
 					System.out.println();
+					finished = true;
+				}
+			}else {
+				for(int i=0; i<commandList.size(); i++) {
+					finished = processCommand(commandList.get(i));
 				}
 			}
 
@@ -322,7 +326,7 @@ class Game {
 			}
 
 
-		// Code for all permuations of "drop"
+			// Code for all permuations of "drop"
 		}else if(command.getCommandWord().equals("drop")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Drop what?!");
@@ -357,7 +361,7 @@ class Game {
 				System.out.println("There is nothing like that in the game...");
 			}
 
-			
+
 
 			// Code for all permutations of a Command with commandWord "eat"
 		}else if(command.getCommandWord().equals("eat")) {
