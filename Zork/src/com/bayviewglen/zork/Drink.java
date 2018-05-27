@@ -32,7 +32,7 @@ public class Drink extends Item{
 
 	public static boolean isInValidDrinks(Item item) {
 		for(int i=0; i<validDrinks.length; i++) {
-			if(item.getDescription().equals(validDrinks[i].getDescription())) { 
+			if(item.getDescription().equalsIgnoreCase(validDrinks[i].getDescription())) { 
 				return true;
 			}
 		}
