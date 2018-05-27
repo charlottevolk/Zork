@@ -246,6 +246,7 @@ class Game {
 		}else if(commandWord.equals("Answer:")) {
 			if(command.getSecondWord().equalsIgnoreCase("dark")) {
 				System.out.println("Congratulations! You escaped!");
+				System.out.println();
 				goRoom(new Command("walk", "south", null));
 			}else {
 				gameOver();
@@ -438,7 +439,6 @@ class Game {
 				System.out.println("What you lookin' at?");
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Room 101") && command.getSecondWord().equals("around")) {
 				room101();
-				return true;
 			}else if(command.getSecondWord().equals("around")) {
 				System.out.println(currentRoom.longDescription());
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
@@ -534,19 +534,13 @@ class Game {
 
 		String direction = command.getSecondWord();
 
-		if (command.getSecondWord().equals("up")) {
-			// if(command.getThirdWord().equals("stairs"){
-			// Room nextRoom = currentRoom.nextRoom(direction);
-			// }else{
-			// System.out.println("You can't walk up into thin air!");
-		}
-
 		// Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
 
 		if (nextRoom == null)
 			System.out.println("There is no door!");
-		else if(currentRoom == nextRoom && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+		else if(nextRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+			currentRoom = nextRoom;
 			System.out.println(currentRoom.shortDescription());
 		}
 		else {
