@@ -436,6 +436,9 @@ class Game {
 		}else if(command.getCommandWord().equals("look")) {
 			if(command.getSecondWord() == null) {
 				System.out.println("What you lookin' at?");
+			}else if(currentRoom.getRoomName().equalsIgnoreCase("Room 101") && command.getSecondWord().equals("around")) {
+				room101();
+				return true;
 			}else if(command.getSecondWord().equals("around")) {
 				System.out.println(currentRoom.longDescription());
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
@@ -543,6 +546,9 @@ class Game {
 
 		if (nextRoom == null)
 			System.out.println("There is no door!");
+		else if(currentRoom == nextRoom && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+			System.out.println(currentRoom.shortDescription());
+		}
 		else {
 			currentRoom = nextRoom;
 			System.out.println(currentRoom.longDescription());
@@ -610,6 +616,44 @@ class Game {
 		System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can move are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire.\n\nAs you look back up in panic, you see a large,\nsharp-looking metal blade right in front of your face,\nand slowly inching forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"And by the way, while we are on the subject,\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
 		System.out.println();
 		System.out.println("You have lost. Too bad so sad.");
+	}
+	
+	private void room101() {
+		System.out.println("*Please press enter after each line*");
+		//scanner.nextLine();
+		System.out.println();
+		System.out.println("There are concrete walls on your left and right.");
+		//scanner.nextLine();
+		System.out.println("\"I had good faith in you,\" says a voice in the shadows.");
+		//scanner.nextLine();
+		System.out.println("The dark figure steps slowly, coming closer. It was O'Brien.");
+		//scanner.nextLine();
+		System.out.println("You struggle to speak, gibberish slipping through your numb lips. He holds up a used syringe.");
+		//scanner.nextLine();
+		System.out.println("\"Lignocaine, but a much larger dosage. You won't be able to move, nor speak for hours.\"");
+		//scanner.nextLine();
+		System.out.println("He take a seat on the edge of the bed, exhaling a deep sigh.");
+		//scanner.nextLine();
+		System.out.println("\"You showed promising results, great loyalty to our nation, to Big Brother.");
+		//scanner.nextLine();
+		System.out.println("Even during the tests, you've always outranked the others. We were considering to release you.");
+		//scanner.nextLine();
+		System.out.println("But it seems like it was all a trick. You are never going to escape now.");
+		//scanner.nextLine();
+		System.out.println("Become familiar to this room, to this new lifestyle, because you are now the enemy.\"");
+		//scanner.nextLine();
+		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
+		//scanner.nextLine();
+		System.out.println("You hear the sound of a keypad as he types something in. A click echoes as he turns a knob and exits.");
+		//scanner.nextLine();
+		System.out.println("The door slams shut, a resounding click confirming it is locked.");
+		//scanner.nextLine();
+		System.out.println("Your legs and arms begin to tingle as warmth spreads though your body. You are now able to move.");
+		//scanner.nextLine();
+		System.out.println("You stand up slowly and look around the room. It's empty except for the bed and the door (south).");
+		//scanner.nextLine();
+		System.out.println();
+		
 	}
 
 	private void winGame() {
