@@ -202,7 +202,7 @@ class Game {
 		String commandWord = command.getCommandWord();
 		if (commandWord.equals("help"))
 			printHelp();
-		else if(commandWord.equals("walk") && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
+		else if(commandWord.equals("walk") && command.getSecondWord() != null && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 			System.out.println("Cannot exit without pass code. Please enter pass code.");
 			System.out.println("-------------");
 			System.out.println("| 1 | 2 | 3 |");
@@ -215,8 +215,7 @@ class Game {
 			System.out.println("    -----    ");
 		}else if(commandWord.equals("4218") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
 			goRoom(new Command("walk", "south", null));
-			//}else if(commandWord.equals("go") && command.getSecondWord().equals("through") && command.getThirdWord().equals("trapdoor") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")){
-		}else if(commandWord.equals("walk") && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+		}else if(commandWord.equals("walk") && command.getSecondWord() != null && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			System.out.println("Oh no! The door is locked and you are stuck here!\nThe only way to escape is to correctly answer my riddle on the first try.\nIf you do not succeed, you will die a gruesome and painful death.\nDo you accept this challenge?");
 		}else if(commandWord.equals("yes") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			System.out.println("This is the riddle:");
@@ -244,7 +243,10 @@ class Game {
 			gameOver();
 			return true;
 		}else if (commandWord.equals("walk")) {
-			goRoom(command);
+			if(command.getSecondWord() != null)
+				goRoom(command);
+			else
+				System.out.println("Walk where?!");
 		}else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
@@ -306,6 +308,44 @@ class Game {
 			}else {
 				System.out.println("There is nothing like that in the game...");
 			}
+
+
+		// Code for all permuations of "drop"
+		}else if(command.getCommandWord().equals("drop")){
+			if(command.getSecondWord() == null && command.getThirdWord() == null) {
+				System.out.println("Drop what?!");
+			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
+				Item item = new Item(command.getThirdWord(), command.getSecondWord());
+				if(isInInventory(item)) {
+					if(item.canPutDown()) {
+						item.putDownItem();
+						currentRoom.getRoomInventory().addItem(item);
+						inventory.removeItem(item);
+
+					}else {
+						System.out.println("You can't put that down!");
+					}
+				}else {
+					System.out.println("There is nothing like that in your inventory...");
+				}
+			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
+				Item item = new Item(command.getSecondWord(), "");
+				if(isInInventory(item)) {
+					if(item.canPutDown()) {
+						item.putDownItem();
+						roomInventory.addItem(item);
+						inventory.removeItem(item);
+					}else {
+						System.out.println("You can't put that down!");
+					}
+				}else {
+					System.out.println("Either there is nothing like that in your inventory, or you weren't specific enough.\nI'm not a mind-reader, you know.");
+				}
+			}else {
+				System.out.println("There is nothing like that in the game...");
+			}
+
+
 
 			// Code for all permutations of a Command with commandWord "eat"
 		}else if(command.getCommandWord().equals("eat")) {
