@@ -13,14 +13,16 @@ public class MusicClip {
 		this.file = file;
 	}
 	
-	public void play(){
+	public void play(boolean loop){
 		File music = new File(file);
 		
 		try {
 			clip = AudioSystem.getClip();
 		
 			clip.open(AudioSystem.getAudioInputStream(music));
-			clip.loop(Clip.LOOP_CONTINUOUSLY);
+			if(loop) {
+				clip.loop(Clip.LOOP_CONTINUOUSLY);
+			}
 			clip.start();
 		} catch (Exception e) {
 			throw new RuntimeException("Fatal error playing music", e);

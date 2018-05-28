@@ -21,7 +21,7 @@ public class MusicManager {
 		 stopCurrent();
 		 currentClip = musicClip;
 		 currentName = name;
-		 musicClip.play();
+		 musicClip.play(true);
 	}
 	
 	public void stopPlaying() {

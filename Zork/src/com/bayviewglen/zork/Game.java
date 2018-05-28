@@ -673,7 +673,9 @@ class Game {
 	}
 
 	private void room101(){
-		//Scanner scanner = new Scanner(System.in);
+		MusicClip footsteps = new MusicClip("./Sound/footsteps1.wav");
+		MusicClip doorSlam = new MusicClip("./Sound/DoorSlam.wav");
+		Scanner scanner = new Scanner(System.in);
 		music.playClip("Strange_atmosphere.wav");
 
 		System.out.println("*Please press enter after each line*");
@@ -682,7 +684,8 @@ class Game {
 		System.out.println("There are concrete walls on your left and right.");
 		//scanner.nextLine();
 		System.out.println("\"I had good faith in you,\" says a voice in the shadows.");
-		//scanner.nextLine();
+		scanner.nextLine();
+		footsteps.play(false);
 		System.out.println("The dark figure steps slowly, coming closer. It was O'Brien.");
 		//scanner.nextLine();
 		System.out.println("You struggle to speak, gibberish slipping through your numb lips. He holds up a used syringe.");
@@ -702,7 +705,8 @@ class Game {
 		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
 		//scanner.nextLine();
 		System.out.println("You hear the sound of a keypad as he types something in. A click echoes as he turns a knob and exits.");
-		//scanner.nextLine();
+		scanner.nextLine();
+		doorSlam.play(false);
 		System.out.println("The door slams shut, a resounding click confirming it is locked.");
 		//scanner.nextLine();
 		System.out.println("Your legs and arms begin to tingle as warmth spreads though your body. You are now able to move.");
@@ -713,15 +717,6 @@ class Game {
 
 	}
 	
-	private void footstepSound() {
-		try {
-			music.playClip("footsteps1");
-			Thread.sleep(5000);			
-		} catch (Exception e) {
-			throw new RuntimeException("Fatal error playing music", e);
-		}
-	}
-
 	private void endCredits() {
 		Scanner scanner = new Scanner(System.in);
 		music.playClip("epic.wav");
