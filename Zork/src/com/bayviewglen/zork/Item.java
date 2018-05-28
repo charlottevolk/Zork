@@ -71,6 +71,9 @@ public class Item {
 		else if(getType().equalsIgnoreCase("stew")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("trunk")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("water")) {
 			return true;
 		}
@@ -130,10 +133,16 @@ public class Item {
 		else if(getType().equalsIgnoreCase("box")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("cabinet")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("container")) {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("drawer")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("trunk")) {
 			return true;
 		}
 		else {

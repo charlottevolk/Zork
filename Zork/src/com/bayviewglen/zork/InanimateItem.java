@@ -25,6 +25,11 @@ public class InanimateItem extends Item {
 		validInanimateItems[5] = new Container("food");
 		validInanimateItems[6] = new Box("black");
 		validInanimateItems[7] = new Drawer("desk");
+		validInanimateItems[8] = new Trunk("blue");
+		validInanimateItems[9] = new Cabinet("kitchen");
+		validInanimateItems[10] = new Box("metal");
+		validInanimateItems[11] = new Box("engraved");
+		validInanimateItems[12] = new Drawer("wardrobe");
 
 	}
 
@@ -35,7 +40,6 @@ public class InanimateItem extends Item {
 	public static boolean isInValidInanimateItems(Item item) {
 		for(int i=0; i<validInanimateItems.length; i++) {
 			if(item.getDescription().equals(validInanimateItems[i].getDescription())) {
-				//item.getType() != null && item.getProperty() != null && 
 				return true;
 			}
 		}

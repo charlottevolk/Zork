@@ -456,15 +456,19 @@ class Game {
 				System.out.println(currentRoom.longDescription());
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
-					System.out.println("Your face has lost all colour it once had, a dark grey colour \nhighlights your cheek bones and eyebags, and you have lost \nenough weight that your bones can be easily seen through your \ntransparent looking skin. Out of the corner of your eye, it can \nbe seen that the mirror has  inverted the scribbles on the walls,\nforming a legible message: \r\n" + 
+					System.out.println("Your face has lost all colour it once had, a dark grey colour \nhighlights your cheekbones and eyebags, and you have lost \nenough weight that your bones can be easily seen through your \ntransparent-looking skin. Out of the corner of your eye, you can\n see that the mirror has inverted the scribbles on the walls,\nforming a legible message: \r\n" + 
 							"	\"An unknown path you'll find below,  \r\n" + 
 							"	one that none has ever known.\r\n" + 
 							"	Complete the song and seal your fate,\r\n" + 
 							"	Your one and only key to escape.\r\n" + 
 							"	for to won ate\"");
-				}else if(command.getSecondWord().equalsIgnoreCase("pillow") || command.getThirdWord().equalsIgnoreCase("pillow")) {
+				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("pillow") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("pillow")) {
 					System.out.println("You find a wrinkled note. Written on it is one line,\nrandom symbols, and then two more lines.\nIt looks like this:");
 					code.showEncryptedCode();
+				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("bed") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("bed")) {
+					System.out.println("You really want to be crawling around down there? This place hasn't been dusted for WEEKS!");
+				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("blanket") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("blanket")) {
+					System.out.println("I wouldn't look under there if I were you...it's kinda nasty...");
 				}
 			}
 
@@ -620,11 +624,17 @@ class Game {
 			}else if(object.getProperty().equalsIgnoreCase("metal")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(7));
+			}else if(object.getProperty().equalsIgnoreCase("engraved")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(8));
 			}
 		}else if(object.getType().equalsIgnoreCase("drawer")) {
 			if(object.getProperty().equalsIgnoreCase("desk")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(4));
+			}else if(object.getProperty().equalsIgnoreCase("wardrobe")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(9));
 			}
 		}else if(object.getType().equalsIgnoreCase("trunk")) {
 			if(object.getProperty().equalsIgnoreCase("blue")) {
@@ -733,7 +743,9 @@ class Game {
 		System.out.println("Room 101 - Strange Atmosphere");
 		System.out.println("Secret Room - You're Next");
 		System.out.println("End Credits - Epic");
+		System.out.println();
 		System.out.println("*********************************************************");
+		System.out.println();
 		System.out.println("Hit Enter to end Game");
 		scanner.nextLine();
 		System.out.println("");

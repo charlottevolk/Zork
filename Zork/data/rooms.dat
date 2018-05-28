@@ -23,9 +23,9 @@ Room Description:You are in a hallway. There are three doors; to west, north, an
 Exit Rooms:S-Stairwell Eight, W-Room 801, N-Room 802, E-Room 803
 Room Items:None-None
 Room Name:Room 801
-Room Description:There is a made-bed, desk, chair, and wardrobe. The desk is empty.
+Room Description:There is a made bed, desk, chair, and wardrobe. The wardrobe has a drawer in the middle. The desk is empty.
 Exit Rooms:E-Hallway Eight
-Room Items:None-None
+Room Items:Drawer-Wardrobe
 Room Name:Room 802
 Room Description:You have entered a room that you should not have. 
 Exit Rooms:S-Hallway Eight
@@ -51,9 +51,17 @@ Room Description:You are in a hallway. There are three doors; to west, north, an
 Exit Rooms:S-Stairwell Five, W-Room 501, N-Prison Cell, E-Room 503
 Room Items:None-None
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a desk with<br>a half-eaten red apple, a glass of water, and an old book.
+Room Description:You are in a white room.<br>Behind you is the bed you just got off of.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a table with<br>a half-eaten red apple, a glass of water, and an old book.
 Exit Rooms:S-Hallway Five
 Room Items:Apple-Red, Water-Glass, Book-Old
+Room Name:Room 501
+Exit Rooms:E-Hallway Five
+Room Description:This room is filled with dolls of all shapes and sizes.<br>You can feel their eyes on you, and you swear you saw one of them move...<br>In the middle of the room is an engraved box.
+Room Items:Box-Engraved
+Room Name:Room 503
+Exit Rooms:W-Hallway Five
+Room Description:You are standing in knee-high water. One of the toilets must have overflowed.
+Room Items:None-None
 Room Name:Stairwell Four
 Room Description:You are on floor four. In front of you (north) is a grey door.
 Exit Rooms:U-Stairwell Five, D-Stairwell Three, N-Hallway Four
@@ -67,13 +75,13 @@ Room Description:There is a made-bed in the center of the room.<br>The bed smell
 Exit Rooms:E-Hallway Four
 Room Items:Drawer-Desk, Cabbage-Purple, Cabbage-Purple, Cabbage-Purple, Water-Glass
 Room Name:Room 402
-Room Description:This room is bright blue all around.<br>The walls surrounding you are blue,<br>the bunk bed to your left is blue,<br> and there are blueberries all over the floor.<br>The bottom bunk has a bottle filled with some sort of blue drink.<br>The top bunk has a blue suitcase on top of it. 
+Room Description:This room is bright blue all around.<br>The walls surrounding you are blue,<br>the bunk bed to your left is blue,<br>and there are blue berries all over the floor.<br>The bottom bunk has a bottle filled with some sort of blue drink.<br>The top bunk has a blue trunk on top of it. 
 Exit Rooms:S-Hallway Four
 Room Items:Berries-Blue, Drink-Blue, Trunk-Blue
 Room Name:Room 403
 Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over<br>On top of the papers there is a raisin muffin and a half empty mug of hot chocolate. 
 Exit Rooms:W-Hallway Four
-Room Items:Table-White, Papers-Pile, Muffin-Raisin, Chocolate-Hot
+Room Items:Muffin-Raisin, Chocolate-Hot
 Room Name:Stairwell Three
 Room Description:You are on floor three. There is no access to this floor.
 Exit Rooms:U-Stairwell Four, D-Stairwell Two
@@ -83,17 +91,17 @@ Room Description:You are on floor two. In front of you is a wooden door. Above i
 Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
-Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish-grey stew,<br> a hunk of cheese, what looks like a plastic container, and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
+Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish stew,<br> some cheddar cheese, what looks like a plastic container, and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
 Exit Rooms:S-Stairwell Two, N-Kitchen
-Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic, Cheese-Hunk
+Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic, Cheese-Cheddar
 Room Name:Kitchen
 Room Description:You have just entered a small room coated in silver from bottom to top<br>Right in front of you there is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances,<br>like forks and knifes, and bowls and plates.<br>One of the bowls has an uncooked fish in it, whith a glass of orange juice next to it.<br>Next to this bowl is a small kitchen cabinet.
 Exit Rooms:S-Cafeteria, N-Fridge
-Room Items:Orange-Juice, Raw-Fish, Cabinet-Kitchen 
+Room Items:Juice-Orange, Fish-Raw, Cabinet-Kitchen 
 Room Name:Fridge
 Room Description:You open the fridge door as it reveals the remains of a human corpse.<br> Isn't this a fun place?<br>Next to the corpse is a small bowl of pasta and a metal box,<br>the pasta has no sauce which is pretty weird. 
 Exit Rooms:S-Kitchen
-Room Items:Pasta-Sauceless, Milk-White, Metal-Box
+Room Items:Pasta-Sauceless, Milk-White, Box-Metal
 Room Name:Stairwell One
 Room Description:You are on the bottom floor. In front of you is a white metal door with "101" engraved in it.
 Exit Rooms:U-Stairwell Two, N-Room 101
