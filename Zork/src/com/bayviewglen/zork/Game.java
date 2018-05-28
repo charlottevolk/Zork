@@ -227,7 +227,7 @@ class Game {
 			gameOver();
 			return true;
 		}else if(commandWord.equalsIgnoreCase("dance")) {
-			System.out.println("The thought police watches your slick moves and challenges you to a dance battle.");
+			System.out.println("The Thought Police watches your slick moves and challenges you to a dance battle.");
 			System.out.println("However, in the midst of your moon walk, they taze you!");
 			gameOver();
 			return true;
@@ -658,6 +658,7 @@ class Game {
 		System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can move are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire.\n\nAs you look back up in panic, you see a large,\nsharp-looking metal blade right in front of your face,\nand slowly inching forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"And by the way, while we are on the subject,\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
 		System.out.println();
 		System.out.println("You have lost. Too bad so sad.");
+		
 		endCredits();
 	}
 
@@ -712,6 +713,7 @@ class Game {
 	}
 
 	private void endCredits() {
+		Scanner scanner = new Scanner(System.in);
 		music.playClip("epic.wav");
 		System.out.println("");
 		System.out.println("");
@@ -731,6 +733,9 @@ class Game {
 		System.out.println("Room 101 - Strange Atmosphere");
 		System.out.println("Secret Room - You're Next");
 		System.out.println("End Credits - Epic");
+		System.out.println("*********************************************************");
+		System.out.println("Hit Enter to end Game");
+		scanner.nextLine();
 		System.out.println("");
 
 	}
