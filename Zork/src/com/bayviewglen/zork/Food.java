@@ -31,6 +31,7 @@ public class Food extends Item{
 		validFoods[14] = new Banana("yellow");
 		validFoods[15] = new Cabbage("");
 		validFoods[16] = new Cabbage("purple");
+		validFoods[17] = new Pasta("brown");
 		
 		
 

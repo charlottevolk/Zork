@@ -99,9 +99,9 @@ Room Description:You have just entered a small room coated in silver from bottom
 Exit Rooms:S-Cafeteria, N-Fridge
 Room Items:Juice-Orange, Fish-Raw, Cabinet-Kitchen 
 Room Name:Fridge
-Room Description:You open the fridge door as it reveals the remains of a human corpse.<br> Isn't this a fun place?<br>Next to the corpse is a small bowl of pasta and a metal box,<br>the pasta has no sauce which is pretty weird. 
+Room Description:You open the fridge door as it reveals the remains of a human corpse.<br> Isn't this a fun place?<br>Next to the corpse is a small bowl of brown pasta and a metal box,<br>the brown pasta has no sauce which is pretty weird. 
 Exit Rooms:S-Kitchen
-Room Items:Pasta-Sauceless, Milk-White, Box-Metal
+Room Items:Pasta-Brown, Milk-White, Box-Metal
 Room Name:Stairwell One
 Room Description:You are on the bottom floor. In front of you is a white metal door with "101" engraved in it.
 Exit Rooms:U-Stairwell Two, N-Room 101

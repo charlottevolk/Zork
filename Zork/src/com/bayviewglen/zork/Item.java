@@ -68,6 +68,9 @@ public class Item {
 		else if(getType().equalsIgnoreCase("liquid")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("pasta")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("stew")) {
 			return true;
 		}
@@ -103,6 +106,9 @@ public class Item {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("chocolate")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("pasta")) {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("stew")) {
