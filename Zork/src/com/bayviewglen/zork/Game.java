@@ -211,6 +211,19 @@ class Game {
 			printHelp();
 		else if(commandWord.equals("climb")) {
 			System.out.println("Who are you, spiderman??");
+		}else if(commandWord.equals("sing")) {
+			System.out.println("Calm down, Mariah Carey.");
+		}else if(commandWord.equals("flip")) {
+			System.out.println("You did a backflip!");
+			System.out.println("However, you landed on your neck. I hope it was worth it.");
+			gameOver();
+			return true;
+		}else if(commandWord.equals("roll")) {
+			System.out.println("You somersaulted, like a kindergartener.");
+		}else if(commandWord.equals("gallop")) {
+			System.out.println("A herd of horsies break through the wall and you join them in galloping over the majestic fields towards the sunset. You burst into flames.");	
+			gameOver();
+			return true;
 		}else if(commandWord.equals("dance")) {
 			System.out.println("The thought police watches your slick moves and challenges you to a dance battle.");
 			System.out.println("However, in the midst of your moon walk, they taze you!");
