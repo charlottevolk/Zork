@@ -658,9 +658,11 @@ class Game {
 		System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can move are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire.\n\nAs you look back up in panic, you see a large,\nsharp-looking metal blade right in front of your face,\nand slowly inching forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"And by the way, while we are on the subject,\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
 		System.out.println();
 		System.out.println("You have lost. Too bad so sad.");
+		endCredits();
 	}
 
 	private void room101(){
+		//Scanner scanner = new Scanner(System.in);
 		music.playClip("Strange_atmosphere.wav");
 
 		System.out.println("*Please press enter after each line*");
@@ -699,6 +701,40 @@ class Game {
 		System.out.println();
 
 	}
+	
+	private void footstepSound() {
+		try {
+			music.playClip("footsteps1");
+			Thread.sleep(5000);			
+		} catch (Exception e) {
+			throw new RuntimeException("Fatal error playing music", e);
+		}
+	}
+
+	private void endCredits() {
+		music.playClip("epic.wav");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("*********************************************************");
+		System.out.println("");
+		System.out.println("This Game is based off of the novel 1984 by George Orwell");
+		System.out.println();
+		System.out.println("Contributors: ");
+		System.out.println("Charlotte Volk");
+		System.out.println("Samantha Chim");
+		System.out.println("Anisha Kapoor");
+		System.out.println("Alexa Wilkes");
+		System.out.println("");
+		System.out.println("Music: ");
+		System.out.println("Game Theme - Dark World");
+		System.out.println("Shrine - Nightmare Returns");
+		System.out.println("Room 101 - Strange Atmosphere");
+		System.out.println("Secret Room - You're Next");
+		System.out.println("End Credits - Epic");
+		System.out.println("");
+
+	}
+
 
 	private void winGame() {
 		System.out.println("You won!");
