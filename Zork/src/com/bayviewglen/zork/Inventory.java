@@ -32,5 +32,14 @@ public class Inventory {
 	public Item getItem(int index){
 		return items.get(index);
 	}
+	
+	public void printInventory() {
+		if(items.size() == 0)
+			System.out.println("You have nothing in your inventory!");
+		for(int i=0; i<items.size(); i++) {
+			System.out.print("|" + items.get(i).getDescription() + "|");
+		}
+		System.out.println();
+	}
 
 }

@@ -12,7 +12,7 @@ package com.bayviewglen.zork;
 
 class CommandWords {
 	// a constant array that holds all valid command words
-	private static final String validCommands[] = { "quit", "help", "walk", "run", "take", "drop", "climb", "dance", "eat", "drink", "open", "look", "view", "insert", "yes", "no", "Answer:", "4218", "sing", "flip", "shake", "roll", "gallop"};
+	private static final String validCommands[] = { "quit", "help", "walk", "run", "take", "drop", "climb", "dance", "eat", "drink", "open", "look", "view", "insert", "sing", "flip", "shake", "roll", "gallop", "yes", "no", "Answer:", "4218"};
 
 	/**
 	 * Constructor - initialise the command words.
@@ -27,7 +27,7 @@ class CommandWords {
 	 **/
 	public boolean isCommand(String aString) {
 		for (int i = 0; i < validCommands.length; i++) {
-			if (validCommands[i].equals(aString))
+			if (validCommands[i].equalsIgnoreCase(aString))
 				return true;
 		}
 		// if we get here, the string was not found in the commands

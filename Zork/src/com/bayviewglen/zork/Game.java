@@ -209,32 +209,32 @@ class Game {
 		}
 
 		String commandWord = command.getCommandWord();
-		if (commandWord.equals("help"))
+		if (commandWord.equalsIgnoreCase("help"))
 			printHelp();
-		else if(commandWord.equals("climb")) {
-			System.out.println("Who are you, spiderman??");
-		}else if(commandWord.equals("sing")) {
+		else if(commandWord.equalsIgnoreCase("climb")) {
+			System.out.println("Who are you, Spiderman??");
+		}else if(commandWord.equalsIgnoreCase("sing")) {
 			System.out.println("Calm down, Mariah Carey.");
-		}else if(commandWord.equals("flip")) {
+		}else if(commandWord.equalsIgnoreCase("flip")) {
 			System.out.println("You did a backflip!");
 			System.out.println("However, you landed on your neck. I hope it was worth it.");
 			gameOver();
 			return true;
-		}else if(commandWord.equals("roll")) {
+		}else if(commandWord.equalsIgnoreCase("roll")) {
 			System.out.println("You somersaulted, like a kindergartener.");
-		}else if(commandWord.equals("gallop")) {
+		}else if(commandWord.equalsIgnoreCase("gallop")) {
 			System.out.println("A herd of horsies break through the wall and you join them in galloping over the majestic fields towards the sunset. You burst into flames.");	
 			gameOver();
 			return true;
-		}else if(commandWord.equals("dance")) {
+		}else if(commandWord.equalsIgnoreCase("dance")) {
 			System.out.println("The thought police watches your slick moves and challenges you to a dance battle.");
 			System.out.println("However, in the midst of your moon walk, they taze you!");
 			gameOver();
 			return true;
-		}else if(commandWord.equals("quit")) {
+		}else if(commandWord.equalsIgnoreCase("quit")) {
 			System.out.println("Tsk tsk tsk.");
-			System.out.println("Quiting is never the answer.");
-		}else if(commandWord.equals("walk") && command.getSecondWord() != null && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
+			System.out.println("Quitting is never the answer.");
+		}else if(commandWord.equalsIgnoreCase("walk") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 			System.out.println("Cannot exit without pass code. Please enter pass code.");
 			System.out.println("-------------");
 			System.out.println("| 1 | 2 | 3 |");
@@ -247,9 +247,9 @@ class Game {
 			System.out.println("    -----    ");
 		}else if(commandWord.equals("4218") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
 			goRoom(new Command("walk", "south", null));
-		}else if(commandWord.equals("walk") && command.getSecondWord() != null && command.getSecondWord().equals("south") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+		}else if(commandWord.equalsIgnoreCase("walk") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("south") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			System.out.println("Oh no! The door is locked and you are stuck here!\nThe only way to escape is to correctly answer my riddle on the first try.\nIf you do not succeed, you will die a gruesome and painful death.\nDo you accept this challenge?");
-		}else if(commandWord.equals("yes") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+		}else if(commandWord.equalsIgnoreCase("yes") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			System.out.println("This is the riddle:");
 			System.out.println();
 			System.out.println("It cannot be seen, cannot be felt");
@@ -272,21 +272,16 @@ class Game {
 			}
 
 
-		}else if(commandWord.equals("no") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
+		}else if(commandWord.equalsIgnoreCase("no") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			gameOver();
 			return true;
-		}else if (commandWord.equals("walk")) {
+		}else if (commandWord.equalsIgnoreCase("walk")) {
 			if(command.getSecondWord() != null)
 				goRoom(command);
 			else
 				System.out.println("Walk where?!");
-		}else if (commandWord.equals("quit")) {
-			if (command.hasSecondWord())
-				System.out.println("Quit what?");
-			else
-				return true; // signal that we want to quit
-		}else if (commandWord.equals("run")) {
-			if (command.getSecondWord() != null && command.getSecondWord().equals("away")) {
+		}else if (commandWord.equalsIgnoreCase("run")) {
+			if (command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("away")) {
 				System.out.println(
 						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud.");
 				gameOver();
@@ -296,21 +291,21 @@ class Game {
 			}
 
 			// Code for all permutations of a Command with commandWord "take"
-		}else if(command.getCommandWord().equals("take") && command.getSecondWord() != null && command.getSecondWord().equals("dark") && command.getThirdWord() != null && command.getThirdWord().equals("chocolate") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
+		}else if(command.getCommandWord().equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("dark") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("chocolate") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
 			Item item = new Item(command.getThirdWord(), command.getSecondWord());
 			item.pickUpItem();
-			currentRoom.getRoomInventory().removeItem(item);		// DOESN'T WORK. FIX ASAP
+			currentRoom.getRoomInventory().removeItem(item);
 			inventory.addItem(item);
 			System.out.println("OMG!! You found a trapdoor! There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot to accomodate a piece of paper.\nThis could be your chance to escape!\nWhat do you want to do next?");
-		}else if(command.getCommandWord().equals("insert") && (command.getSecondWord()== null)) {
+		}else if(command.getCommandWord().equalsIgnoreCase("insert") && (command.getSecondWord()== null)) {
 			System.out.println("What are you inserting?");
-		}else if(command.getCommandWord().equals("insert") && command.getSecondWord().equals("code") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
+		}else if(command.getCommandWord().equalsIgnoreCase("insert") && command.getSecondWord().equalsIgnoreCase("code") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
 			if(code.isComplete()) {
 				winGame();
 			}else {
 				System.out.println("Unfortunately, you do not have the full code.\nSo find the rest of it first and then try again :)");
 			}
-		}else if(command.getCommandWord().equals("take")){
+		}else if(command.getCommandWord().equalsIgnoreCase("take")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Take what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
@@ -318,7 +313,7 @@ class Game {
 				if(isInRoom(item)) {
 					if(item.canPickUp()) {
 						item.pickUpItem();
-						currentRoom.getRoomInventory().removeItem(item);		// DOESN'T WORK. FIX ASAP
+						currentRoom.getRoomInventory().removeItem(item);
 						inventory.addItem(item);
 
 					}else {
@@ -346,7 +341,7 @@ class Game {
 
 
 			// Code for all permuations of "drop"
-		}else if(command.getCommandWord().equals("drop")){
+		}else if(command.getCommandWord().equalsIgnoreCase("drop")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Drop what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
@@ -383,7 +378,7 @@ class Game {
 
 
 			// Code for all permutations of a Command with commandWord "eat"
-		}else if(command.getCommandWord().equals("eat")) {
+		}else if(command.getCommandWord().equalsIgnoreCase("eat")) {
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Eat what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
@@ -418,7 +413,7 @@ class Game {
 
 
 			// Code for all permutations of a Command with commandWord "drink"
-		}else if(command.getCommandWord().equals("drink")) {
+		}else if(command.getCommandWord().equalsIgnoreCase("drink")) {
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Drink what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
@@ -452,12 +447,12 @@ class Game {
 			}
 
 			//Code for all permutations of "look"
-		}else if(command.getCommandWord().equals("look")) {
+		}else if(command.getCommandWord().equalsIgnoreCase("look")) {
 			if(command.getSecondWord() == null) {
 				System.out.println("What you lookin' at?");
-			}else if(currentRoom.getRoomName().equalsIgnoreCase("Room 101") && command.getSecondWord().equals("around")) {
+			}else if(currentRoom.getRoomName().equalsIgnoreCase("Room 101") && command.getSecondWord().equalsIgnoreCase("around")) {
 				room101();
-			}else if(command.getSecondWord().equals("around")) {
+			}else if(command.getSecondWord().equalsIgnoreCase("around")) {
 				System.out.println(currentRoom.longDescription());
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
@@ -489,10 +484,12 @@ class Game {
 			}else if(command.getSecondWord().equalsIgnoreCase("thirst")) {
 				stats.getThirst().printThirst();
 				System.out.println();
+			}else if(command.getSecondWord().equalsIgnoreCase("inventory")) {
+				inventory.printInventory();
 			}
 
 			// Code for all permutations of "open" (controls finding lines of the code inside books/boxes)
-		}else if(command.getCommandWord().equals("open")){
+		}else if(command.getCommandWord().equalsIgnoreCase("open")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Open what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
@@ -606,36 +603,36 @@ class Game {
 
 	public void open(InanimateItem object) {
 		object.open();
-		if(object.getType().equals("book")) {
-			if(object.getProperty().equals("old")) {
+		if(object.getType().equalsIgnoreCase("book")) {
+			if(object.getProperty().equalsIgnoreCase("old")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(1));
 			}
-		}else if(object.getType().equals("container")) {
-			if(object.getProperty().equals("plastic")) {
+		}else if(object.getType().equalsIgnoreCase("container")) {
+			if(object.getProperty().equalsIgnoreCase("plastic")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(2));
 			}
-		}else if(object.getType().equals("box")) {
-			if(object.getProperty().equals("black")) {
+		}else if(object.getType().equalsIgnoreCase("box")) {
+			if(object.getProperty().equalsIgnoreCase("black")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(3));
-			}else if(object.getProperty().equals("metal")) {
+			}else if(object.getProperty().equalsIgnoreCase("metal")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(7));
 			}
-		}else if(object.getType().equals("drawer")) {
-			if(object.getProperty().equals("desk")) {
+		}else if(object.getType().equalsIgnoreCase("drawer")) {
+			if(object.getProperty().equalsIgnoreCase("desk")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(4));
 			}
-		}else if(object.getType().equals("trunk")) {
-			if(object.getProperty().equals("blue")) {
+		}else if(object.getType().equalsIgnoreCase("trunk")) {
+			if(object.getProperty().equalsIgnoreCase("blue")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(5));
 			}
-		}else if(object.getType().equals("cabinet")) {
-			if(object.getProperty().equals("kitchen")) {
+		}else if(object.getType().equalsIgnoreCase("cabinet")) {
+			if(object.getProperty().equalsIgnoreCase("kitchen")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(6));
 			}

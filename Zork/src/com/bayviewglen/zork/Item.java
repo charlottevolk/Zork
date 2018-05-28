@@ -142,15 +142,15 @@ public class Item {
 	}
 
 	public String getDescription() {
-		return property + " " + type.toLowerCase();
+		return property.toLowerCase() + " " + type.toLowerCase();
 	}
 
 	public String getType() {
-		return type;
+		return type.toLowerCase();
 	}
 
 	public String getProperty() {
-		return property;
+		return property.toLowerCase();
 	}
 	
 	
