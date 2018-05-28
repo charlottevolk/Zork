@@ -551,6 +551,7 @@ class Game {
 		}else if(nextRoom.getRoomName().equalsIgnoreCase("Shrine")) {
 			currentRoom = nextRoom;
 			music.playClip("nightmare_returns.wav");
+			System.out.println(currentRoom.shortDescription());
 		}
 		else {
 			currentRoom = nextRoom;
