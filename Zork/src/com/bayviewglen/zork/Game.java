@@ -9,11 +9,13 @@ import java.util.Scanner;
 /**
  * Class Game - the main class of the "Zork" game.
  *
- * Author: Michael Kolling Version: 1.1 Date: March 2000
+ * Original Author: Michael Kolling Version: 1.1 Date: March 2000
  * 
- * This class is the main class of the "Zork" application. Zork is a very
- * simple, text based adventure game. Users can walk around some scenery. That's
- * all. It should really be extended to make it more interesting!
+ * Extended by: Charlotte Volk, Alexa Wilkes, Samantha Chim, Anisha Kapoor
+ * 
+ * Mr. DesLauriers ISC3U-AP ISP
+ * 
+ * This class is the main class of the "Zork" application.
  * 
  * To play this game, create an instance of this class and call the "play"
  * routine.
@@ -121,7 +123,7 @@ class Game {
 
 	/**
 	 * Main play routine. Loops until end of play.
-	 
+
 	 */
 	public void play(){
 		music.playClip("dark_world.wav");
@@ -134,7 +136,7 @@ class Game {
 		while (!finished) {
 			ArrayList<Command> commandList = parser.getCommands();
 			System.out.println();
-			boolean noHunger = !(stats.getHunger().reduce());
+			/*boolean noHunger = !(stats.getHunger().reduce());
 			boolean noThirst = !(stats.getThirst().reduce());
 			if(noHunger || noThirst) {
 				if(noHunger) {
@@ -146,7 +148,7 @@ class Game {
 					System.out.println();
 					finished = true;
 				}
-			}else {
+			}else */{
 				for(int i=0; i<commandList.size(); i++) {
 					finished = processCommand(commandList.get(i));
 				}
@@ -470,8 +472,8 @@ class Game {
 					code.showEncryptedCode();
 				}
 			}
-			
-			
+
+
 			//Code for all permutations of "view"
 		}else if(command.getCommandWord().equalsIgnoreCase("view")) {
 			if(command.getSecondWord() == null) {
@@ -488,32 +490,32 @@ class Game {
 				stats.getThirst().printThirst();
 				System.out.println();
 			}
-			
+
 			// Code for all permutations of "open" (controls finding lines of the code inside books/boxes)
 		}else if(command.getCommandWord().equals("open")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Open what?!");
 			}else if(ItemsInGame.isInGame(command.getThirdWord())) {
 				InanimateItem item = new InanimateItem(command.getThirdWord(), command.getSecondWord());
-				if(isInInventory(item)) {
+				if(isInInventory(item) || isInRoom(item)) {
 					if(item.canOpen()) {
 						open(item);
 					}else {
 						System.out.println("You can't open that!");
 					}
 				}else {
-					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
+					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nthere is nothing like that in the room,\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else if(ItemsInGame.isInGame(command.getSecondWord())) {
 				InanimateItem item = new InanimateItem(command.getSecondWord(), "");
-				if(isInInventory(item)) {
+				if(isInInventory(item) || isInRoom(item)) {
 					if(item.canOpen()) {
 						open(item);
 					}else {
 						System.out.println("You can't open that!");
 					}
 				}else {
-					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
+					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nthere is nothing like that in the room,\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else {
 				System.out.println("There is nothing like that in the game...");
@@ -543,7 +545,7 @@ class Game {
 	 */
 	private void goRoom(Command command) {
 		music.playClip("dark_world.wav");
-		
+
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Walk where?");
@@ -614,8 +616,30 @@ class Game {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(2));
 			}
-		}
-		else {
+		}else if(object.getType().equals("box")) {
+			if(object.getProperty().equals("black")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(3));
+			}else if(object.getProperty().equals("metal")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(7));
+			}
+		}else if(object.getType().equals("drawer")) {
+			if(object.getProperty().equals("desk")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(4));
+			}
+		}else if(object.getType().equals("trunk")) {
+			if(object.getProperty().equals("blue")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(5));
+			}
+		}else if(object.getType().equals("cabinet")) {
+			if(object.getProperty().equals("kitchen")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(6));
+			}
+		}else {
 			System.out.println("There is nothing inside!");
 		}
 
@@ -638,10 +662,10 @@ class Game {
 		System.out.println();
 		System.out.println("You have lost. Too bad so sad.");
 	}
-	
+
 	private void room101(){
 		music.playClip("Strange_atmosphere.wav");
-		
+
 		System.out.println("*Please press enter after each line*");
 		//scanner.nextLine();
 		System.out.println();
@@ -676,7 +700,7 @@ class Game {
 		System.out.println("You stand up slowly and look around the room. It's empty except for the bed and the door (south).");
 		//scanner.nextLine();
 		System.out.println();
-		
+
 	}
 
 	private void winGame() {
