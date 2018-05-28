@@ -63,13 +63,13 @@ Room Description:You are in a hallway. There are three doors; to west, north, an
 Exit Rooms:S-Stairwell Four, W-Room 401, N-Room 402, E-Room 403
 Room Items:None-None
 Room Name:Room 401
-Room Description:There is a made-bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The side table next to the bed has one curious drawer.<br>On top of the desk are 3 cabbages and a glass of water.<br>How...tastey...
+Room Description:There is a made-bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The desk next to the bed has one curious drawer.<br>On top of the desk are 3 purple cabbages and a glass of water.<br>How...tasty...
 Exit Rooms:E-Hallway Four
-Room Items:Bed-made, Table-Side, Table-Drawer, Cabbages-Three, Water-Glass
+Room Items:Drawer-Desk, Cabbage-Purple, Cabbage-Purple, Cabbage-Purple, Water-Glass
 Room Name:Room 402
 Room Description:This room is bright blue all around.<br>The walls surrounding you are blue,<br>the bunk bed to your left is blue,<br> and there are blueberries all over the floor.<br>The bottom bunk has a bottle filled with some sort of blue drink.<br>The top bunk has a blue suitcase on top of it. 
 Exit Rooms:S-Hallway Four
-Room Items:Berries-Blue, Bed-Bunk, Drink-Blue, Trunk-Blue
+Room Items:Berries-Blue, Drink-Blue, Trunk-Blue
 Room Name:Room 403
 Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over<br>On top of the papers there is a raisin muffin and a half empty mug of hot chocolate. 
 Exit Rooms:W-Hallway Four

@@ -13,7 +13,7 @@ public class Food extends Item{
 	}
 
 	public static void setValidFoods() {
-		validFoods = new Food[20];
+		validFoods = new Food[30];
 		validFoods[0] = new Apple("");
 		validFoods[1] = new Apple("red");
 		validFoods[2] = new Apple("green");
@@ -27,6 +27,11 @@ public class Food extends Item{
 		validFoods[10] = new Chocolate("");
 		validFoods[11] = new Chocolate("dark");
 		validFoods[12] = new Chocolate("weird");
+		validFoods[13] = new Banana("");
+		validFoods[14] = new Banana("yellow");
+		validFoods[15] = new Cabbage("");
+		validFoods[16] = new Cabbage("purple");
+		
 		
 
 	}
@@ -38,7 +43,6 @@ public class Food extends Item{
 	public static boolean isInValidFoods(Item item) {
 		for(int i=0; i<validFoods.length; i++) {
 			if(item.getDescription().equals(validFoods[i].getDescription())) {
-				//item.getType() != null && item.getProperty() != null && 
 				return true;
 			}
 		}

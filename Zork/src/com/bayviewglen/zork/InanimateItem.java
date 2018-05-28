@@ -23,6 +23,8 @@ public class InanimateItem extends Item {
 		validInanimateItems[3] = new Box("steel");
 		validInanimateItems[4] = new Container("plastic");
 		validInanimateItems[5] = new Container("food");
+		validInanimateItems[6] = new Box("black");
+		validInanimateItems[7] = new Drawer("desk");
 
 	}
 

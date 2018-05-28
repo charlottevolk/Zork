@@ -38,22 +38,7 @@ public class Item {
 		if(getType().equalsIgnoreCase("apple")){
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("chocolate")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("cheese")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("bread")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("water")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("stew")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("coffee")) {
+		else if(getType().equalsIgnoreCase("banana")) {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("book")) {
@@ -62,7 +47,31 @@ public class Item {
 		else if(getType().equalsIgnoreCase("box")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("bread")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("cabbage")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("cheese")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("chocolate")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("coffee")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("container")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("liquid")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("stew")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("water")) {
 			return true;
 		}
 		else
@@ -70,38 +79,7 @@ public class Item {
 	}
 	
 	public boolean canPutDown() {
-		if(getType().equalsIgnoreCase("apple")){
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("chocolate")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("cheese")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("bread")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("water")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("stew")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("coffee")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("book")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("box")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("container")) {
-			return true;
-		}
-		else
-			return false;
+		return canPickUp();
 	}
 	
 	
@@ -109,16 +87,22 @@ public class Item {
 		if(getType().equalsIgnoreCase("apple")){
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("banana")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("bread")) {
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("stew")) {
+		else if(getType().equalsIgnoreCase("cabbage")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("cheese")) {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("chocolate")) {
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("cheese")) {
+		else if(getType().equalsIgnoreCase("stew")) {
 			return true;
 		}
 		else
@@ -126,10 +110,13 @@ public class Item {
 	}
 	
 	public boolean canDrink() {
-		if(getType().equalsIgnoreCase("water")){
+		if(getType().equalsIgnoreCase("coffee")) {
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("coffee")) {
+		else if(getType().equalsIgnoreCase("water")){
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("liquid")) {
 			return true;
 		}
 		else
@@ -144,6 +131,9 @@ public class Item {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("container")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("drawer")) {
 			return true;
 		}
 		else {
