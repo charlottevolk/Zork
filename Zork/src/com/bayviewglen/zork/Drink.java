@@ -23,6 +23,8 @@ public class Drink extends Item{
 		validDrinks[2] = new Water("bottle");
 		validDrinks[3] = new Coffee("");
 		validDrinks[4] = new Coffee("Victory");
+		validDrinks[5] = new Liquid("");
+		validDrinks[6] = new Liquid("yellow");
 
 	}
 
