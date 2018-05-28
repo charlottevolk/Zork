@@ -552,6 +552,10 @@ class Game {
 			currentRoom = nextRoom;
 			music.playClip("nightmare_returns.wav");
 			System.out.println(currentRoom.shortDescription());
+		}else if(nextRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
+			currentRoom = nextRoom;
+			music.playClip("SecretRoom.wav");
+			System.out.println(currentRoom.shortDescription());
 		}
 		else {
 			currentRoom = nextRoom;
