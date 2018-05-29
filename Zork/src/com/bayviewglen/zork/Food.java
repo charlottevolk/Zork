@@ -13,7 +13,7 @@ public class Food extends Item{
 	}
 
 	public static void setValidFoods() {
-		validFoods = new Food[30];
+		validFoods = new Food[50];
 		validFoods[0] = new Apple("");
 		validFoods[1] = new Apple("red");
 		validFoods[2] = new Apple("green");
@@ -26,7 +26,7 @@ public class Food extends Item{
 		validFoods[9] = new Cheese("cheddar");
 		validFoods[10] = new Chocolate("");
 		validFoods[11] = new Chocolate("dark");
-		validFoods[12] = new Chocolate("weird");
+		validFoods[12] = new Chocolate("white");
 		validFoods[13] = new Banana("");
 		validFoods[14] = new Banana("yellow");
 		validFoods[15] = new Cabbage("");
@@ -43,6 +43,18 @@ public class Food extends Item{
 		validFoods[26] = new Berries("blue");
 		validFoods[27] = new Fish("golden");
 		validFoods[28] = new Cheese("swiss");
+		validFoods[29] = new Cheese("feta");
+		validFoods[30] = new Banana("green");
+		validFoods[31] = new Cabbage("green");
+		validFoods[32] = new Berries("acai");
+		validFoods[33] = new Muffin("cinnamon");
+		validFoods[34] = new Muffin("pumpkin");
+		validFoods[35] = new Muffin("oatmeal");
+		validFoods[36] = new Bread("corn");
+		validFoods[37] = new Bread("sourdough");
+		validFoods[38] = new Bread("rye");
+		validFoods[39] = new Bread("ciabatta");
+		validFoods[40] = new Bread("garlic");
 		
 		
 

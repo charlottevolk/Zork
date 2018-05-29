@@ -17,7 +17,7 @@ public class Drink extends Item{
 	}
 	
 	public static void setValidDrinks() {
-		validDrinks = new Drink[20];
+		validDrinks = new Drink[40];
 		validDrinks[0] = new Water("");
 		validDrinks[1] = new Water("glass");
 		validDrinks[2] = new Water("bottle");
@@ -37,6 +37,19 @@ public class Drink extends Item{
 		validDrinks[16] = new Liquid("amber");
 		validDrinks[17] = new Juice("apple");
 		validDrinks[18] = new Tea("green");
+		validDrinks[19] = new Coffee("black");
+		validDrinks[20] = new Tea("iced");
+		validDrinks[21] = new Juice("pineapple");
+		validDrinks[22] = new Juice("pomegranate");
+		validDrinks[23] = new Juice("watermelon");
+		validDrinks[24] = new Juice("tomato");
+		validDrinks[25] = new Water("spring");
+		validDrinks[26] = new Milk("goat");
+		validDrinks[27] = new Tea("black");
+		validDrinks[28] = new Milk("almond");
+		validDrinks[29] = new Milk("soy");
+		validDrinks[30] = new Tea("pekoe");
+		validDrinks[31] = new Tea("oolong");
 
 	}
 
