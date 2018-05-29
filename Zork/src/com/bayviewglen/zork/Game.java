@@ -479,8 +479,8 @@ class Game {
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
 					System.out.println("Your face has lost all colour it once had,\na dark grey sweeps over your cheekbones and eyebags.\nYou have lost enough weight that your bones can be easily seen\nthrough your transparent-looking skin.\nOut of the corner of your eye,\nit can be sees that the mirror\nhas inverted the scribbles on the walls,\nforming a legible message: \r\n\n" + 
-							"	\"An unknown path you'll find below,  \r\n" + 
-							"	one that none has ever known.\r\n" + 
+							"	\"An unknown path you'll find above,  \r\n" + 
+							"	somwhere in this Ministry of Love.\r\n" + 
 							"	Complete the song and seal your fate,\r\n" + 
 							"	Your one and only key to escape.\r\n" + 
 							"	for to won ate\"");
@@ -781,7 +781,54 @@ class Game {
 
 
 	private void winGame() {
-		System.out.println("You won!");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("*Please press enter after each line*");
+		scanner.nextLine();
+		System.out.println();
+		System.out.println("A loud hiss sounds through the room and the trap door slowly raises.");
+		scanner.nextLine();
+		System.out.println("It’s an exit!");
+		scanner.nextLine();
+		System.out.println("You crawl through the trap door.");
+		//scanner.nextLine();
+		System.out.println("The ceiling is low and the tunnel is narrow.");
+		//scanner.nextLine();
+		System.out.println("You crawl forward, bruising and scraping your hands and knees on the rough surface.");
+		//scanner.nextLine();
+		System.out.println("You get tired very quickly.");
+		//scanner.nextLine();
+		System.out.println("Looks like someone took one too many chocolate bars…");
+		//scanner.nextLine();
+		System.out.println("You keep going. It's getting harder and harder for you to breathe.");
+		//scanner.nextLine();
+		System.out.println("The oxygen is running out…");
+		//scanner.nextLine();
+		System.out.println("Should have taken gym class more seriously…");
+		//scanner.nextLine();
+		System.out.println("(good thing no one loves you)");
+		//scanner.nextLine();
+		System.out.println("you look forward for one last moment and spot a small pinprick of light in the distance.");
+		scanner.nextLine();
+		System.out.println("You feel adrenaline rushing into your failing muscles");
+		//scanner.nextLine();
+		System.out.println("and you crawl desperately towards your last hope.");
+		//scanner.nextLine();
+		System.out.println("With one final push, you reach the end of the tunnel, falling onto the dirt ground.");
+		//scanner.nextLine();
+		System.out.println("You look up to see the entrance to a garden paradise.");
+		//scanner.nextLine();
+		System.out.println("There is a beautiful silver gate, green hedges that run for miles, and a golden sun setting over the horizon.");
+		scanner.nextLine();
+		System.out.println("O'Brien is standing in front of you, waiting to welcome you with open arms.");
+		//scanner.nextLine();
+		System.out.println("You have done it.");
+		//scanner.nextLine();
+		System.out.println("You have reached the place with no darkness.");
+		//scanner.nextLine();
+		System.out.println("You smile and step forward into the light…");
+		//scanner.nextLine();
+		System.out.println();
+		
 	}
 
 }
