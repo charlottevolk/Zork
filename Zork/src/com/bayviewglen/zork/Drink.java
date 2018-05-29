@@ -17,7 +17,7 @@ public class Drink extends Item{
 	}
 	
 	public static void setValidDrinks() {
-		validDrinks = new Drink[30];
+		validDrinks = new Drink[40];
 		validDrinks[0] = new Water("");
 		validDrinks[1] = new Water("glass");
 		validDrinks[2] = new Water("bottle");
