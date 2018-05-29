@@ -71,6 +71,9 @@ public class Item {
 		else if(getType().equalsIgnoreCase("juice")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("jar")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("liquid")) {
 			return true;
 		}
@@ -176,6 +179,9 @@ public class Item {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("drawer")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("jar")) {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("trunk")) {

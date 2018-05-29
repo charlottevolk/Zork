@@ -651,6 +651,11 @@ class Game {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(6));
 			}
+		}else if(object.getType().equalsIgnoreCase("jar")) {
+			if(object.getProperty().equalsIgnoreCase("cookie")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(10));
+			}
 		}else {
 			System.out.println("There is nothing inside!");
 		}

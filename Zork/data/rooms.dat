@@ -29,7 +29,7 @@ Room Items:Drawer-Wardrobe
 Room Name:Room 802
 Room Description:You have entered a room that you should not have, but that's okay because no one appears to be here.<br>You have entered the Thought Police Lounge.<br>There is a table with a carrot muffin, a green apple, and a large cookie jar.
 Exit Rooms:S-Hallway Eight
-Room Items:Container-Cookie Jar, Apple-Green, Muffin-Carrot
+Room Items:Jar-Cookie, Apple-Green, Muffin-Carrot
 Room Name:Room 803
 Room Description:This room is very tiny. You feel like a giant in this unusual room.<br>There are benches around the edges of this room.<br>In the center of the room there is a black box with scratches all over it.<br>One bench has a completely black banana on it,<br>another has a tin of a yellow liquid,<br>could be apple juice,<br>or it could be something else...
 Exit Rooms:W-Hallway Eight
@@ -91,7 +91,7 @@ Room Description:You are on floor two.<br>In front of you is a wooden door. Abov
 Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
-Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish stew,<br> some cheddar cheese, what looks like a plastic container, and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
+Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish stew,<br>some cheddar cheese, what looks like a plastic container, and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
 Exit Rooms:S-Stairwell Two, N-Kitchen
 Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic, Cheese-Cheddar
 Room Name:Kitchen

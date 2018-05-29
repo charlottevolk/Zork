@@ -30,7 +30,7 @@ public class InanimateItem extends Item {
 		validInanimateItems[10] = new Box("metal");
 		validInanimateItems[11] = new Box("engraved");
 		validInanimateItems[12] = new Drawer("wardrobe");
-		validInanimateItems[13] = new Container("cookie jar");
+		validInanimateItems[13] = new Jar("cookie");
 
 	}
 
