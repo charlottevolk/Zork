@@ -675,6 +675,7 @@ class Game {
 	private void room101(){
 		MusicClip footsteps = new MusicClip("./Sound/footsteps1.wav");
 		MusicClip doorSlam = new MusicClip("./Sound/DoorSlam.wav");
+		MusicClip keypad = new MusicClip("./Sound/keypad.wav");
 		Scanner scanner = new Scanner(System.in);
 		music.playClip("Strange_atmosphere.wav");
 
@@ -703,7 +704,8 @@ class Game {
 		System.out.println("Become familiar to this room, to this new lifestyle, because you are now the enemy.\"");
 		//scanner.nextLine();
 		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
-		//scanner.nextLine();
+		scanner.nextLine();
+		keypad.play(false);
 		System.out.println("You hear the sound of a keypad as he types something in. A click echoes as he turns a knob and exits.");
 		scanner.nextLine();
 		doorSlam.play(false);
