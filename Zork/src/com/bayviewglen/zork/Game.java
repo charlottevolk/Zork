@@ -170,19 +170,19 @@ class Game {
 		//scanner.nextLine();
 		System.out.println("darkness...");
 		//scanner.nextLine();
-		System.out.print("Your eyes shoot open. You inhale sharply as");
+		System.out.println("Your eyes shoot open. You inhale sharply as");
 		//scanner.nextLine();
-		System.out.print("your air-deprived lungs begs for oxygen.");
+		System.out.println("your air-deprived lungs beg for oxygen.");
 		//scanner.nextLine();
-		System.out.print("You find yourself to be lying down on a bed,");
+		System.out.println("You find yourself to be lying down on a bed with");
 		//scanner.nextLine();
-		System.out.print("a pillow under your head and a blanket over your body.");
+		System.out.println("a pillow under your head and a blanket over your body.");
 		//scanner.nextLine();
-		System.out.print("You push head up (creating a crinkling sound),");
+		System.out.println("You whip your head up, off of the bed in a daze,");
 		//scanner.nextLine();
-		System.out.print("move the blanket to the side,");
+		System.out.println("and move the blanket to the side.");
 		//scanner.nextLine();
-		System.out.print("and get off the bed to stand and look around.");
+		System.out.println("Then you get off the bed and begin to look around...");
 		//scanner.nextLine();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -212,12 +212,12 @@ class Game {
 		if (commandWord.equalsIgnoreCase("help"))
 			printHelp();
 		else if(commandWord.equalsIgnoreCase("climb")) {
-			System.out.println("Who are you, Spiderman??");
+			System.out.println("Who are you, Spiderman?? No... No you are not...");
 		}else if(commandWord.equalsIgnoreCase("sing")) {
-			System.out.println("Calm down, Mariah Carey.");
+			System.out.println("Calm down Mariah Carey, no one wants to hear that!");
 		}else if(commandWord.equalsIgnoreCase("flip")) {
 			System.out.println("You did a backflip!");
-			System.out.println("However, you landed on your neck. I hope it was worth it.");
+			System.out.println("However, you landed on your neck which kinda sucks. I hope it was worth it.");
 			gameOver();
 			return true;
 		}else if(commandWord.equalsIgnoreCase("roll")) {
@@ -233,10 +233,10 @@ class Game {
 			return true;
 		}else if(commandWord.equalsIgnoreCase("quit")) {
 			System.out.println("Tsk tsk tsk.");
-			System.out.println("Quitting is never the answer.");
+			System.out.println("Quitting is never the answer...and it's no fun either.");
 		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("rubber") && command.getThirdWord().equalsIgnoreCase("duck") && currentRoom.getRoomName().equalsIgnoreCase("Room 503")) {
-			System.out.println("The rubber duck transforms into a killer duck with a sharp, metal bill.");
-			System.out.println("With one final quack, it attacks you.");
+			System.out.println("The rubber duck transforms into a rubber killer duck with a pointy metal bill.");
+			System.out.println("With one final quack, and a squeak here and there, it attacks you!");
 			gameOver();
 			return true;
 		}else if(commandWord.equalsIgnoreCase("walk") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
@@ -253,7 +253,7 @@ class Game {
 		}else if(commandWord.equals("4218") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
 			goRoom(new Command("walk", "south", null));
 		}else if(commandWord.equalsIgnoreCase("walk") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("south") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
-			System.out.println("Oh no! The door is locked and you are stuck here!\nThe only way to escape is to correctly answer my riddle on the first try.\nIf you do not succeed, you will die a gruesome and painful death.\nDo you accept this challenge?");
+			System.out.println("Oh no! \nThe door is locked and you are stuck here!\nThe only way to escape is to correctly answer my riddle on the first try.\nIf you do not succeed, you will die a gruesome and painful death,\nWhich I guess is fun too...\nDo you accept this challenge?");
 		}else if(commandWord.equalsIgnoreCase("yes") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			System.out.println("This is the riddle:");
 			System.out.println();
@@ -288,7 +288,7 @@ class Game {
 		}else if (commandWord.equalsIgnoreCase("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("away")) {
 				System.out.println(
-						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch.\nIt was ineffective, but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud.");
+						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch!\nIt was ineffective...but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud.");
 				gameOver();
 				return true;
 			} else {
@@ -461,7 +461,7 @@ class Game {
 				System.out.println(currentRoom.longDescription());
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
-					System.out.println("Your face has lost all colour it once had, a dark grey colour \nhighlights your cheekbones and eyebags, and you have lost \nenough weight that your bones can be easily seen through your \ntransparent-looking skin. Out of the corner of your eye, you can\n see that the mirror has inverted the scribbles on the walls,\nforming a legible message: \r\n" + 
+					System.out.println("Your face has lost all colour it once had,\na dark grey sweeps over your cheekbones and eyebags.\nYou have lost enough weight that your bones can be easily seen\nthrough your transparent-looking skin.\nOut of the corner of your eye,\nit can be sees that the mirror\nhas inverted the scribbles on the walls,\nforming a legible message: \r\n\n" + 
 							"	\"An unknown path you'll find below,  \r\n" + 
 							"	one that none has ever known.\r\n" + 
 							"	Complete the song and seal your fate,\r\n" + 
@@ -471,9 +471,9 @@ class Game {
 					System.out.println("You find a wrinkled note. Written on it is one line,\nrandom symbols, and then two more lines.\nIt looks like this:");
 					code.showEncryptedCode();
 				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("bed") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("bed")) {
-					System.out.println("You really want to be crawling around down there? This place hasn't been dusted for WEEKS!");
+					System.out.println("You really want to be crawling around down there? This place hasn't been dusted for WEEKS! Ya nasty...");
 				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("blanket") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("blanket")) {
-					System.out.println("I wouldn't look under there if I were you...it's kinda nasty...");
+					System.out.println("I wouldn't look under there if I were you...it's kinda unsanitary...");
 				}
 			}
 
@@ -670,7 +670,7 @@ class Game {
 		System.out.println();
 		System.out.println();
 		System.out.println("*****************************************");
-		System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can move are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire.\n\nAs you look back up in panic, you see a large,\nsharp-looking metal blade right in front of your face,\nand slowly inching forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"And by the way, while we are on the subject,\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
+		System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can access are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire!\n\nAs you look back up in panic, you see a large,\nsharp metal blade right in front of your face,\nit slowly inches forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
 		System.out.println();
 		System.out.println("You have lost. Too bad so sad.");
 		
@@ -693,26 +693,26 @@ class Game {
 		footsteps.play(false);
 		System.out.println("The dark figure steps slowly, coming closer. It was O'Brien.");
 		//scanner.nextLine();
-		System.out.println("You struggle to speak, gibberish slipping through your numb lips. He holds up a used syringe.");
+		System.out.println("You struggle to speak with only gibberish slipping through your numb lips. He holds up a used syringe.");
 		//scanner.nextLine();
 		System.out.println("\"Lignocaine, but a much larger dosage. You won't be able to move, nor speak for hours.\"");
 		//scanner.nextLine();
-		System.out.println("He take a seat on the edge of the bed, exhaling a deep sigh.");
+		System.out.println("He takes a seat on the edge of the bed, exhaling a deep sigh.");
 		//scanner.nextLine();
-		System.out.println("\"You showed promising results, great loyalty to our nation, to Big Brother.");
+		System.out.println("\"You showed promising results, great loyalty to our nation... to Big Brother.");
 		//scanner.nextLine();
-		System.out.println("Even during the tests, you've always outranked the others. We were considering to release you.");
+		System.out.println("Even during the tests, you always outranked the others. We were even considering releasing you.");
 		//scanner.nextLine();
-		System.out.println("But it seems like it was all a trick. You are never going to escape now.");
+		System.out.println("But it seems it was all a lie, a cheap trick in your sick mind. You are never going to escape now.");
 		//scanner.nextLine();
-		System.out.println("Become familiar to this room, to this new lifestyle, because you are now the enemy.\"");
+		System.out.println("Become familiar with this room, with this new lifestyle, because you are now the enemy.\"");
 		//scanner.nextLine();
 		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
 		//scanner.nextLine();
 		System.out.println("You hear the sound of a keypad as he types something in. A click echoes as he turns a knob and exits.");
 		scanner.nextLine();
 		doorSlam.play(false);
-		System.out.println("The door slams shut, a resounding click confirming it is locked.");
+		System.out.println("The door slams shut, with a resounding click confirming that it's locked.");
 		//scanner.nextLine();
 		System.out.println("Your legs and arms begin to tingle as warmth spreads though your body. You are now able to move.");
 		//scanner.nextLine();
