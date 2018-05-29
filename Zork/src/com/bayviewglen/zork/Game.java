@@ -234,7 +234,7 @@ class Game {
 		}else if(commandWord.equalsIgnoreCase("quit")) {
 			System.out.println("Tsk tsk tsk.");
 			System.out.println("Quitting is never the answer...and it's no fun either.");
-		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("rubber") && command.getThirdWord().equalsIgnoreCase("duck") && currentRoom.getRoomName().equalsIgnoreCase("Room 503")) {
+		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("rubber") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("duck") && currentRoom.getRoomName().equalsIgnoreCase("Room 503")) {
 			System.out.println("The rubber duck transforms into a rubber killer duck with a pointy metal bill.");
 			System.out.println("With one final quack, and a squeak here and there, it attacks you!");
 			gameOver();
