@@ -212,9 +212,9 @@ class Game {
 		if (commandWord.equalsIgnoreCase("help"))
 			printHelp();
 		else if(commandWord.equalsIgnoreCase("shake")) {
-			System.out.println("My ex man brought his new girlfriend. She said \"oh my god,\" I'm just gonna shake it.");
+			System.out.println("My ex-man brought his new girlfriend. She said \"Oh my god!\" I'm just gonna shake it.");
 		}else if(commandWord.equalsIgnoreCase("climb")) {
-			System.out.println("Who are you, Spiderman?? No... No you are not...");
+			System.out.println("Who are you, Spiderman?? No...No you are not...");
 		}else if(commandWord.equalsIgnoreCase("sing")) {
 			System.out.println("Calm down Mariah Carey, no one wants to hear that!");
 		}else if(commandWord.equalsIgnoreCase("flip")) {
@@ -225,11 +225,11 @@ class Game {
 		}else if(commandWord.equalsIgnoreCase("roll")) {
 			System.out.println("You somersaulted, like a kindergartener.");
 		}else if(commandWord.equalsIgnoreCase("gallop")) {
-			System.out.println("A herd of horsies break through the wall and you join them in galloping over the majestic fields towards the sunset. You burst into flames.");	
+			System.out.println("A herd of horsies break through the wall\nand you join them in galloping over the majestic fields towards the sunset.\nYou burst into flames.");	
 			gameOver();
 			return true;
 		}else if(commandWord.equalsIgnoreCase("dance")) {
-			System.out.println("The Thought Police watches your slick moves and challenges you to a dance battle.");
+			System.out.println("The Thought Police watch your slick moves and challenge you to a dance battle.");
 			System.out.println("However, in the midst of your moon walk, they taze you!");
 			gameOver();
 			return true;
@@ -239,6 +239,17 @@ class Game {
 		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("rubber") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("duck") && currentRoom.getRoomName().equalsIgnoreCase("Room 503")) {
 			System.out.println("The rubber duck transforms into a rubber killer duck with a pointy metal bill.");
 			System.out.println("With one final quack, and a squeak here and there, it attacks you!");
+			gameOver();
+			return true;
+		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("doll")&& currentRoom.getRoomName().equalsIgnoreCase("Room 501")) {
+			System.out.println("You pick up a doll with glass eyes and a drawstring hanging from its back.");
+			System.out.println("You pull and release the string. A piercing scream rings out and the room shakes violently.");
+			System.out.println("The doll slowly smiles, revealing sharp teeth stained with blood.");
+			System.out.println("You suddenly feel a horrific pain at the back of your ankle.");
+			System.out.println("You stumble, clutching your leg in pain and see another doll holding a piece of your Achilles in her hand.");
+			System.out.println("You are unable to run away, and the dolls begin closing in");
+			System.out.println("You almost pass out from panic, but unfortunately for you, you are not able to.");
+			System.out.println("Too bad. It would make what is to come a lot easier...");
 			gameOver();
 			return true;
 		}else if(commandWord.equalsIgnoreCase("walk") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
@@ -468,8 +479,8 @@ class Game {
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
 					System.out.println("Your face has lost all colour it once had,\na dark grey sweeps over your cheekbones and eyebags.\nYou have lost enough weight that your bones can be easily seen\nthrough your transparent-looking skin.\nOut of the corner of your eye,\nit can be sees that the mirror\nhas inverted the scribbles on the walls,\nforming a legible message: \r\n\n" + 
-							"	\"An unknown path you'll find below,  \r\n" + 
-							"	one that none has ever known.\r\n" + 
+							"	\"An unknown path you'll find above,  \r\n" + 
+							"	somwhere in this Ministry of Love.\r\n" + 
 							"	Complete the song and seal your fate,\r\n" + 
 							"	Your one and only key to escape.\r\n" + 
 							"	for to won ate\"");
@@ -544,7 +555,7 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println("You have been captured.\nYou need to escape\nthe Ministry of Love.");
+		System.out.println("You have been captured by Big Brother.\nIn order to escape the Ministry of Love, you must find the secret exit\nand retrieve all the lines to the secret password that are scattered around the building.");
 
 
 		System.out.println("Your command words are:");
@@ -684,7 +695,7 @@ class Game {
 		System.out.println();
 		System.out.println();
 		System.out.println("*****************************************");
-		System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can access are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire!\n\nAs you look back up in panic, you see a large,\nsharp metal blade right in front of your face,\nit slowly inches forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
+		System.out.println("A slow chuckling is heard.\n\nAn iron voice says \"You have made a grave error!\"\nand you are suddenly paralyzed, with no way to move or speak.\n\nThe only thing you can move are your eyes.\n\nYou notice smoke drifting up past your face,\nand you realize that the room is on fire!\n\nAs you look back up in panic, you see a large,\nsharp metal blade right in front of your face,\nit slowly inches forward until it is pressing into your neck.\n\nThe iron voice says gleefully \"\n\n'Here comes a candle to light you to bed,\nHere comes a chopper to chop off your head!'\"\n\nYou shut your eyes, and wait for the inevitable death that awaits you.");
 		System.out.println();
 		System.out.println("You have lost. Too bad so sad.");
 		
@@ -714,7 +725,7 @@ class Game {
 		//scanner.nextLine();
 		System.out.println("He takes a seat on the edge of the bed, exhaling a deep sigh.");
 		//scanner.nextLine();
-		System.out.println("\"You showed promising results, great loyalty to our nation... to Big Brother.");
+		System.out.println("\"You showed promising results, great loyalty to our nation...to Big Brother.");
 		//scanner.nextLine();
 		System.out.println("Even during the tests, you always outranked the others. We were even considering releasing you.");
 		//scanner.nextLine();
@@ -770,7 +781,54 @@ class Game {
 
 
 	private void winGame() {
-		System.out.println("You won!");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("*Please press enter after each line*");
+		scanner.nextLine();
+		System.out.println();
+		System.out.println("A loud hiss sounds through the room and the trap door slowly raises.");
+		scanner.nextLine();
+		System.out.println("It’s an exit!");
+		scanner.nextLine();
+		System.out.println("You crawl through the trap door.");
+		//scanner.nextLine();
+		System.out.println("The ceiling is low and the tunnel is narrow.");
+		//scanner.nextLine();
+		System.out.println("You crawl forward, bruising and scraping your hands and knees on the rough surface.");
+		//scanner.nextLine();
+		System.out.println("You get tired very quickly.");
+		//scanner.nextLine();
+		System.out.println("Looks like someone took one too many chocolate bars…");
+		//scanner.nextLine();
+		System.out.println("You keep going. It's getting harder and harder for you to breathe.");
+		//scanner.nextLine();
+		System.out.println("The oxygen is running out…");
+		//scanner.nextLine();
+		System.out.println("Should have taken gym class more seriously…");
+		//scanner.nextLine();
+		System.out.println("(good thing no one loves you)");
+		//scanner.nextLine();
+		System.out.println("you look forward for one last moment and spot a small pinprick of light in the distance.");
+		scanner.nextLine();
+		System.out.println("You feel adrenaline rushing into your failing muscles");
+		//scanner.nextLine();
+		System.out.println("and you crawl desperately towards your last hope.");
+		//scanner.nextLine();
+		System.out.println("With one final push, you reach the end of the tunnel, falling onto the dirt ground.");
+		//scanner.nextLine();
+		System.out.println("You look up to see the entrance to a garden paradise.");
+		//scanner.nextLine();
+		System.out.println("There is a beautiful silver gate, green hedges that run for miles, and a golden sun setting over the horizon.");
+		scanner.nextLine();
+		System.out.println("O'Brien is standing in front of you, waiting to welcome you with open arms.");
+		//scanner.nextLine();
+		System.out.println("You have done it.");
+		//scanner.nextLine();
+		System.out.println("You have reached the place with no darkness.");
+		//scanner.nextLine();
+		System.out.println("You smile and step forward into the light…");
+		//scanner.nextLine();
+		System.out.println();
+		
 	}
 
 }
