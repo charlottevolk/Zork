@@ -126,7 +126,9 @@ class Game {
 
 	 */
 	public void play(){
-		music.playClip("dark_world.wav");
+		//winGame();
+		music.playClip("NewDawn.wav");
+		//music.playClip("dark_world.wav");
 		printWelcome();
 
 		// Enter the main command loop. Here we repeatedly read commands and
@@ -781,6 +783,7 @@ class Game {
 
 
 	private void winGame() {
+		music.playClip("orfeliasDream.wav");
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("*Please press enter after each line*");
 		scanner.nextLine();
@@ -828,7 +831,7 @@ class Game {
 		System.out.println("You smile and step forward into the light…");
 		scanner.nextLine();
 		System.out.println();
-		
+		endCredits();
 	}
 
 }
