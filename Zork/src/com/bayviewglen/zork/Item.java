@@ -65,6 +65,12 @@ public class Item {
 		else if(getType().equalsIgnoreCase("container")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("fish")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("juice")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("liquid")) {
 			return true;
 		}
@@ -77,7 +83,16 @@ public class Item {
 		else if(getType().equalsIgnoreCase("trunk")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("milk")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("muffin")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("water")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("tea")){
 			return true;
 		}
 		else
@@ -108,6 +123,12 @@ public class Item {
 		else if(getType().equalsIgnoreCase("chocolate")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("fish")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("muffin")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("pasta")) {
 			return true;
 		}
@@ -125,7 +146,16 @@ public class Item {
 		else if(getType().equalsIgnoreCase("water")){
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("juice")) {
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("liquid")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("milk")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("tea")){
 			return true;
 		}
 		else
