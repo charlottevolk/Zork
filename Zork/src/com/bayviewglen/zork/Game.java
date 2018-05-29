@@ -301,12 +301,16 @@ class Game {
 			item.pickUpItem();
 			currentRoom.getRoomInventory().removeItem(item);
 			inventory.addItem(item);
+			System.out.println();
 			System.out.println("OMG!! You found a trapdoor! There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot to accomodate a piece of paper.\nThis could be your chance to escape!\nWhat do you want to do next?");
+			System.out.println();
 		}else if(command.getCommandWord().equalsIgnoreCase("insert") && (command.getSecondWord()== null)) {
 			System.out.println("What are you inserting?");
 		}else if(command.getCommandWord().equalsIgnoreCase("insert") && command.getSecondWord().equalsIgnoreCase("code") && currentRoom.getRoomName().equalsIgnoreCase("Secret Room")) {
 			if(code.isComplete()) {
 				winGame();
+				endCredits();
+				return true;
 			}else {
 				System.out.println("Unfortunately, you do not have the full code.\nSo find the rest of it first and then try again :)");
 			}
@@ -655,6 +659,9 @@ class Game {
 			if(object.getProperty().equalsIgnoreCase("cookie")) {
 				System.out.println("You found a line of the code!!");
 				code.unencryptLine(code.getLine(10));
+			}else if(object.getProperty().equalsIgnoreCase("mason")) {
+				System.out.println("You found a line of the code!!");
+				code.unencryptLine(code.getLine(11));
 			}
 		}else {
 			System.out.println("There is nothing inside!");

@@ -41,6 +41,12 @@ public class Item {
 		else if(getType().equalsIgnoreCase("banana")) {
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("berries")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("beverage")){
+			return true;
+		}
 		else if(getType().equalsIgnoreCase("book")) {
 			return true;
 		}
@@ -77,41 +83,44 @@ public class Item {
 		else if(getType().equalsIgnoreCase("liquid")) {
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("pasta")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("stew")) {
-			return true;
-		}
-		else if(getType().equalsIgnoreCase("trunk")) {
-			return true;
-		}
 		else if(getType().equalsIgnoreCase("milk")) {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("muffin")) {
 			return true;
 		}
-		else if(getType().equalsIgnoreCase("water")) {
+		else if(getType().equalsIgnoreCase("pasta")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("stew")) {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("tea")){
 			return true;
 		}
+		else if(getType().equalsIgnoreCase("trunk")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("water")) {
+			return true;
+		}
 		else
 			return false;
 	}
-	
+
 	public boolean canPutDown() {
 		return canPickUp();
 	}
-	
-	
+
+
 	public boolean canEat() {
 		if(getType().equalsIgnoreCase("apple")){
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("banana")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("berries")){
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("bread")) {
@@ -141,9 +150,12 @@ public class Item {
 		else
 			return false;
 	}
-	
+
 	public boolean canDrink() {
-		if(getType().equalsIgnoreCase("coffee")) {
+		if(getType().equalsIgnoreCase("beverage")) {
+			return true;
+		}
+		else if(getType().equalsIgnoreCase("coffee")) {
 			return true;
 		}
 		else if(getType().equalsIgnoreCase("water")){
@@ -164,7 +176,7 @@ public class Item {
 		else
 			return false;
 	}
-	
+
 	public boolean canOpen() {
 		if(getType().equalsIgnoreCase("book")) {
 			return true;
@@ -203,6 +215,6 @@ public class Item {
 	public String getProperty() {
 		return property.toLowerCase();
 	}
-	
-	
+
+
 }

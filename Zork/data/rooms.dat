@@ -3,7 +3,7 @@ Room Description:You are now on floor ten.<br>In front of you is a big black doo
 Exit Rooms:D-Stairwell Nine, N-Shrine
 Room Items:None-None
 Room Name:Shrine
-Room Description:You are in a candle-lit room.<br>The crimson red wax melted into pools on the ground.<br>The dull light of the room reveals<br> an acrylic-painted portrait of Big Brother.<br>You have entered a shrine. 
+Room Description:You are in a candle-lit room.<br>The crimson red wax has melted into pools on the ground.<br>The dull light of the room reveals<br>an acrylic-painted portrait of Big Brother.<br>You have entered a shrine. 
 Exit Rooms:S-Stairwell Ten, W-Secret Room
 Room Items:None-none
 Room Name:Secret Room
@@ -39,7 +39,7 @@ Room Description:You are on floor seven.<br>In place of a door is a large, red-b
 Exit Rooms:U-Stairwell Eight, D-Stairwell Six
 Room Items:None-None
 Room Name:Stairwell Six
-Room Description:You are on floor six.<br>A monsterous cow is guarding the entry, it's udders ready to shoot milk at whomever disturbs it.<br>There is no access to this floor.
+Room Description:You are on floor six.<br>A monstrous cow is guarding the entry, its udders ready to shoot milk at whomever disturbs it.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Seven, D-Stairwell Five
 Room Items:None-None
 Room Name:Stairwell Five
@@ -71,17 +71,17 @@ Room Description:You are in a hallway.<br>There are three doors; to west, north,
 Exit Rooms:S-Stairwell Four, W-Room 401, N-Room 402, E-Room 403
 Room Items:None-None
 Room Name:Room 401
-Room Description:There is a made-bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The desk next to the bed has one curious drawer.<br>On top of the desk are 3 purple cabbages and a glass of water.<br>How...tasty...
+Room Description:There is a made-bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The desk next to the bed has one curious drawer.<br>On top of the desk are 2 purple cabbages and a glass of water.<br>How...tasty...
 Exit Rooms:E-Hallway Four
 Room Items:Drawer-Desk, Cabbage-Purple, Cabbage-Purple, Cabbage-Purple, Water-Glass
 Room Name:Room 402
-Room Description:This room is bright blue all around.<br>The walls surrounding you are blue,<br>the bunk bed to your left is blue,<br>and there are blue berries all over the floor.<br>The bottom bunk has a bottle filled with some sort of blue drink.<br>The top bunk has a blue trunk on top of it. 
+Room Description:This room is bright blue all around.<br>The walls surrounding you are blue,<br>the bunk bed to your left is blue,<br>and there are blue berries all over the floor.<br>The bottom bunk has a bottle filled with some sort of blue beverage.<br>The top bunk has a blue trunk on top of it. 
 Exit Rooms:S-Hallway Four
-Room Items:Berries-Blue, Drink-Blue, Trunk-Blue
+Room Items:Berries-Blue, Beverage-Blue, Trunk-Blue
 Room Name:Room 403
-Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over<br>On top of the papers there is a raisin muffin and a half empty mug of hot tea. 
+Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over<br>On top of the papers there is a raisin muffin, a mason jar, and a half empty mug of hot tea. 
 Exit Rooms:W-Hallway Four
-Room Items:Muffin-Raisin, Tea-Hot
+Room Items:Muffin-Raisin, Jar-Mason, Tea-Hot
 Room Name:Stairwell Three
 Room Description:You are on floor three.<br>The door is upside down, and unfortunately, you forgot your gravity-defying boots at home.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Four, D-Stairwell Two

@@ -31,7 +31,8 @@ public class Drink extends Item{
 		validDrinks[10] = new Juice("orange");
 		validDrinks[11] = new Tea("");
 		validDrinks[12] = new Tea("hot");
-		
+		validDrinks[13] = new Beverage("");
+		validDrinks[14] = new Beverage("blue");
 
 	}
 

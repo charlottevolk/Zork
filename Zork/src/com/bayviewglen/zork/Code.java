@@ -52,6 +52,11 @@ public class Code {
 		}
 		System.out.println("Here is what you have so far:");
 		showEncryptedCode();
+		if(isComplete()) {
+			System.out.println();
+			System.out.println("Congratulations!\nYou have found the full code!\nWhatcha gonna do about that?");
+			System.out.println();
+		}
 	}
 	
 	public void showEncryptedCode() {
