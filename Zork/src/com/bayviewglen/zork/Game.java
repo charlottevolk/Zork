@@ -211,7 +211,9 @@ class Game {
 		String commandWord = command.getCommandWord();
 		if (commandWord.equalsIgnoreCase("help"))
 			printHelp();
-		else if(commandWord.equalsIgnoreCase("climb")) {
+		else if(commandWord.equalsIgnoreCase("shake")) {
+			System.out.println("My ex man brought his new girlfriend. She said \"oh my god,\" I'm just gonna shake it.");
+		}else if(commandWord.equalsIgnoreCase("climb")) {
 			System.out.println("Who are you, Spiderman?? No... No you are not...");
 		}else if(commandWord.equalsIgnoreCase("sing")) {
 			System.out.println("Calm down Mariah Carey, no one wants to hear that!");
