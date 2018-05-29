@@ -1,5 +1,5 @@
 Room Name:Stairwell Ten
-Room Description:You are now on floor ten. In front of you is a big black door with a giant poster of Big Brother in the center.
+Room Description:You are now on floor ten.<br>In front of you is a big black door with a giant poster of Big Brother in the center.
 Exit Rooms:D-Stairwell Nine, N-Shrine
 Room Items:None-None
 Room Name:Shrine
@@ -11,7 +11,7 @@ Room Description:You seem to have stumbled upon a secret room.<br>The room is fi
 Exit Rooms:E-Shrine
 Room Items:Chocolate-Dark
 Room Name:Stairwell Nine
-Room Description:You are on floor nine. There is no access to this floor.
+Room Description:You are on floor nine.<br>You hear some foreign mumbling that attempts to follow a beat (but ultimately fails) in the background.<br>A beaming sign with bold letters read "MINOR NINERS ONLY #PAR-TAY".<br>It seems like you were not invited.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Ten, D-Stairwell Eight
 Room Items:None-None
 Room Name:Stairwell Eight
@@ -19,35 +19,35 @@ Room Description:You are on floor eight. In front of you (north) is a grey door.
 Exit Rooms:U-Stairwell Nine, D-Stairwell Seven, N-Hallway Eight
 Room Items:None-None
 Room Name:Hallway Eight
-Room Description:You are in a hallway. There are three doors; to west, north, and east. Behind you is the stairwell.
+Room Description:You are in a hallway.<br>There are three doors; to west, north, and east.<br>Behind you is the stairwell.
 Exit Rooms:S-Stairwell Eight, W-Room 801, N-Room 802, E-Room 803
 Room Items:None-None
 Room Name:Room 801
-Room Description:There is a made bed, desk, chair, and wardrobe. The wardrobe has a drawer in the middle. The desk is empty.
+Room Description:There is a made bed, desk, chair, and a wardrobe.<br>The wardrobe has a drawer in the middle. The desk is empty.
 Exit Rooms:E-Hallway Eight
 Room Items:Drawer-Wardrobe
 Room Name:Room 802
-Room Description:You have entered a room that you should not have.<br>But that's Ok because no one appears to be here.<br>You have entered the Thought Police Lounge.
+Room Description:You have entered a room that you should not have, but that's okay because no one appears to be here.<br>You have entered the Thought Police Lounge.<br>There is a table full with a carrot muffin, a green apple, and a large cookie jar.
 Exit Rooms:S-Hallway Eight
-Room Items:None-None
+Room Items:Container-Cookie Jar, Apple-Green, Muffin-Carrot
 Room Name:Room 803
 Room Description:This room is very tiny. You feel like a giant in this unusual room.<br>There are benches around the edges of this room.<br>In the center of the room there is a black box with scratches all over it.<br>One bench has a completely black banana on it,<br>another has a tin of a yellow liquid,<br>could be apple juice,<br>or it could be something else...
 Exit Rooms:W-Hallway Eight
 Room Items:Box-Black, Banana-Black, Liquid-Yellow
 Room Name:Stairwell Seven
-Room Description:You are on floor seven. There is no access to this floor.
+Room Description:You are on floor seven.<br>In place of a door is a large, red-bricked wall.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Eight, D-Stairwell Six
 Room Items:None-None
 Room Name:Stairwell Six
-Room Description:You are on floor six. There is no access to this floor.
+Room Description:You are on floor six.<br>A monsterous cow is guarding the entry, it's udders ready to shoot milk at whomever disturbs it.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Seven, D-Stairwell Five
 Room Items:None-None
 Room Name:Stairwell Five
-Room Description:You are on floor five. In front of you (north) is a grey door.
+Room Description:You are on floor five.<br>In front of you (north) is a grey door.
 Exit Rooms:U-Stairwell Six, D-Stairwell Four, N-Hallway Five
 Room Items:None-None
 Room Name:Hallway Five
-Room Description:You are in a hallway. There are three doors; to west, north, and east. Behind you is the stairwell.
+Room Description:You are in a hallway.<br>There are three doors; to west, north, and east.<br>Behind you is the stairwell.
 Exit Rooms:S-Stairwell Five, W-Room 501, N-Prison Cell, E-Room 503
 Room Items:None-None
 Room Name:Prison Cell
@@ -59,15 +59,15 @@ Room Description:This room is filled with dolls of all shapes and sizes.<br>You 
 Exit Rooms:E-Hallway Five
 Room Items:Box-Engraved
 Room Name:Room 503
-Room Description:You are standing in knee-high water. One of the toilets must have overflowed.
+Room Description:You are standing in knee-high water.<br>One of the toilets must have overflowed. There is a rubber duck floating, minding it's own business.
 Exit Rooms:W-Hallway Five
 Room Items:None-None
 Room Name:Stairwell Four
-Room Description:You are on floor four. In front of you (north) is a grey door.
+Room Description:You are on floor four.<br>In front of you (north) is a grey door.
 Exit Rooms:U-Stairwell Five, D-Stairwell Three, N-Hallway Four
 Room Items:None-None
 Room Name:Hallway Four
-Room Description:You are in a hallway. There are three doors; to west, north, and east. Behind you is the stairwell.
+Room Description:You are in a hallway.<br>There are three doors; to west, north, and east.<br>Behind you is the stairwell.
 Exit Rooms:S-Stairwell Four, W-Room 401, N-Room 402, E-Room 403
 Room Items:None-None
 Room Name:Room 401
@@ -83,11 +83,11 @@ Room Description:You enter a room and immediately run into a white table.<br>The
 Exit Rooms:W-Hallway Four
 Room Items:Muffin-Raisin, Tea-Hot
 Room Name:Stairwell Three
-Room Description:You are on floor three. There is no access to this floor.
+Room Description:You are on floor three.<br>The door is upside down, and unfortunately, you forgot your gravity-defying boots at home.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Four, D-Stairwell Two
 Room Items:None-None
 Room Name:Stairwell Two
-Room Description:You are on floor two. In front of you is a wooden door. Above it has a red sign reading "CAFETERIA" in bold letters.
+Room Description:You are on floor two.<br>In front of you is a wooden door. Above it has a red sign reading "CAFETERIA" in bold letters.
 Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
@@ -95,18 +95,18 @@ Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy 
 Exit Rooms:S-Stairwell Two, N-Kitchen
 Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic, Cheese-Cheddar
 Room Name:Kitchen
-Room Description:You have just entered a small room coated in silver from bottom to top<br>Right in front of you there is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances,<br>like forks and knifes, and bowls and plates.<br>One of the bowls has a raw fish in it, with a glass of orange juice next to it.<br>Next to this bowl is a small kitchen cabinet.
+Room Description:You have just entered a small room coated in silver from top to bottom.<br>In front of you is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances and utensils.<br>The kitchen island has a bowl with a raw fish in it, with a glass of orange juice next to it.<br>Under the counter is a small kitchen cabinet.
 Exit Rooms:S-Cafeteria, N-Fridge
 Room Items:Juice-Orange, Fish-Raw, Cabinet-Kitchen 
 Room Name:Fridge
-Room Description:You open the fridge door as it reveals the remains of a human corpse.<br> Isn't this a fun place?<br>Next to the corpse is a small bowl of brown pasta and a metal box,<br>the brown pasta has no sauce which is pretty weird. 
+Room Description:You open the fridge door as it reveals the remains of a human corpse.<br>Isn't this a fun place?<br>Next to the corpse is a small bowl of brown pasta and a metal box.<br>The brown pasta has no sauce which is pretty weird. 
 Exit Rooms:S-Kitchen
 Room Items:Pasta-Brown, Milk-White, Box-Metal
 Room Name:Stairwell One
-Room Description:You are on the bottom floor. In front of you is a white metal door with "101" engraved in it.
+Room Description:You are on the bottom floor.<br>In front of you is a white metal door with "101" engraved in it.
 Exit Rooms:U-Stairwell Two, N-Room 101
 Room Items:None-None
 Room Name:Room 101
-Room Description:The room is dark,<br>the only light source is right above you,<br>causing a sharp pain to your eyes.<br>You're lying in a bed at the center of a room.<br>You struggle to move your body, but it doesn't respond.<br>You are however able to shift your head from side to side.
+Room Description:The room is dark, the only light source is right above you, causing a sharp pain to your eyes.<br>You're lying in a bed at the center of a room.<br>You try to move your body, struggling as it doesn't respond.<br>However, you are able to shift your head from side to side.
 Exit Rooms:S-Stairwell One
 Room Items:None-None

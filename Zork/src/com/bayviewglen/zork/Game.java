@@ -234,6 +234,11 @@ class Game {
 		}else if(commandWord.equalsIgnoreCase("quit")) {
 			System.out.println("Tsk tsk tsk.");
 			System.out.println("Quitting is never the answer.");
+		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("rubber") && command.getThirdWord().equalsIgnoreCase("duck") && currentRoom.getRoomName().equalsIgnoreCase("Room 503")) {
+			System.out.println("The rubber duck transforms into a killer duck with a sharp, metal bill.");
+			System.out.println("With one final quack, it attacks you.");
+			gameOver();
+			return true;
 		}else if(commandWord.equalsIgnoreCase("walk") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("south") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 			System.out.println("Cannot exit without pass code. Please enter pass code.");
 			System.out.println("-------------");
