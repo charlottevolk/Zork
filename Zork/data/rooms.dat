@@ -27,7 +27,7 @@ Room Description:There is a made bed, desk, chair, and wardrobe. The wardrobe ha
 Exit Rooms:E-Hallway Eight
 Room Items:Drawer-Wardrobe
 Room Name:Room 802
-Room Description:You have entered a room that you should not have. 
+Room Description:You have entered a room that you should not have.<br>But that's Ok because no one appears to be here.<br>You have entered the Thought Police Lounge.
 Exit Rooms:S-Hallway Eight
 Room Items:None-None
 Room Name:Room 803
@@ -79,9 +79,9 @@ Room Description:This room is bright blue all around.<br>The walls surrounding y
 Exit Rooms:S-Hallway Four
 Room Items:Berries-Blue, Drink-Blue, Trunk-Blue
 Room Name:Room 403
-Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over<br>On top of the papers there is a raisin muffin and a half empty mug of hot chocolate. 
+Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over<br>On top of the papers there is a raisin muffin and a half empty mug of hot tea. 
 Exit Rooms:W-Hallway Four
-Room Items:Muffin-Raisin, Chocolate-Hot
+Room Items:Muffin-Raisin, tea-hot
 Room Name:Stairwell Three
 Room Description:You are on floor three. There is no access to this floor.
 Exit Rooms:U-Stairwell Four, D-Stairwell Two
@@ -95,7 +95,7 @@ Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy 
 Exit Rooms:S-Stairwell Two, N-Kitchen
 Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic, Cheese-Cheddar
 Room Name:Kitchen
-Room Description:You have just entered a small room coated in silver from bottom to top<br>Right in front of you there is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances,<br>like forks and knifes, and bowls and plates.<br>One of the bowls has an uncooked fish in it, whith a glass of orange juice next to it.<br>Next to this bowl is a small kitchen cabinet.
+Room Description:You have just entered a small room coated in silver from bottom to top<br>Right in front of you there is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances,<br>like forks and knifes, and bowls and plates.<br>One of the bowls has a raw fish in it, with a glass of orange juice next to it.<br>Next to this bowl is a small kitchen cabinet.
 Exit Rooms:S-Cafeteria, N-Fridge
 Room Items:Juice-Orange, Fish-Raw, Cabinet-Kitchen 
 Room Name:Fridge
