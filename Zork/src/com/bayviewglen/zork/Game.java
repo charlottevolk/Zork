@@ -262,7 +262,7 @@ class Game {
 		}else if(commandWord.equals("4218") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
 			goRoom(new Command("walk", "south", null));
 		}else if(commandWord.equalsIgnoreCase("walk") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("south") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
-			System.out.println("Oh no! \nThe door is locked and you are stuck here!\nThe only way to escape is to correctly answer my riddle on the first try.\nIf you do not succeed, you will die a gruesome and painful death,\nWhich I guess is fun too...\nDo you accept this challenge?");
+			System.out.println("Oh no! \nThe door is locked and you are stuck here!\nThe only way to escape is to correctly answer my riddle on the first try.\nIf you do not succeed, you will die a gruesome and painful death,\nwhich I guess is fun too...\nDo you accept this challenge?");
 		}else if(commandWord.equalsIgnoreCase("yes") && currentRoom.getRoomName().equalsIgnoreCase("Room 101")) {
 			System.out.println("This is the riddle:");
 			System.out.println();
@@ -311,7 +311,7 @@ class Game {
 			currentRoom.getRoomInventory().removeItem(item);
 			inventory.addItem(item);
 			System.out.println();
-			System.out.println("You found a trapdoor. There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot to accomodate a piece of paper.\nThis could be your chance to escape!\nWhat would you like to do next?");
+			System.out.println("You found a trapdoor. There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot that can accommodate a sheet of paper.\nThis could be your chance to escape!\nWhat would you like to do next?");
 			System.out.println();
 		}else if(command.getCommandWord().equalsIgnoreCase("insert") && (command.getSecondWord()== null)) {
 			System.out.println("What are you inserting?");
@@ -476,19 +476,19 @@ class Game {
 				System.out.println(currentRoom.longDescription());
 			}else if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
 				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
-					System.out.println("Your face has lost all colour it once had,\na dark grey sweeps over your cheekbones and eyebags.\nYou have lost enough weight that your bones can be easily seen\nthrough your transparent-looking skin.\nOut of the corner of your eye,\nit can be sees that the mirror\nhas inverted the scribbles on the walls,\nforming a legible message: \r\n\n" + 
+					System.out.println("Your face has lost all colour it once had,\nand a dark grey sweeps over your cheekbones and eyebags.\nYou have lost enough weight that your bones can be easily seen\nthrough your transparent-looking skin.\nOut of the corner of your eye,\nyou can see that the mirror\nhas inverted the scribbles on the walls,\nforming a legible message: \r\n\n" + 
 							"	\"An unknown path you'll find above,  \r\n" + 
 							"	somewhere in this Ministry of Love.\r\n" + 
 							"	Complete the song and seal your fate,\r\n" + 
-							"	Your one and only key to escape.\r\n" + 
-							"	for to won ate\"");
+							"	Your one and only key to escape,\r\n" + 
+							"	for to won ate.\"");
 				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("pillow") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("pillow")) {
 					System.out.println("You find a wrinkled note. Written on it is one line,\nrandom symbols, and then two more lines.\nIt looks like this:");
 					code.showEncryptedCode();
 				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("bed") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("bed")) {
 					System.out.println("Don't worry kiddo, the only monster in this room is you.");
 				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("blanket") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("blanket")) {
-					System.out.println("There seems to be a yellow stain, still quite damp. It's ok, we dont judge here. :)");
+					System.out.println("There seems to be a yellow stain, still quite damp. It's okay, we dont judge here. :)");
 				}
 			}
 
@@ -553,7 +553,7 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println("You have been captured by Big Brother.\nIn order to escape the Ministry of Love, you must find the secret exit\nand retrieve all the lines to the secret password that are scattered around the building.");
+		System.out.println("You have been captured by Big Brother.\nIn order to escape the Ministry of Love, you must find the secret exit\nand retrieve all the lines to the secret code that are scattered around the building.");
 
 
 		System.out.println("Your command words are:");
@@ -715,11 +715,11 @@ class Game {
 		System.out.println("\"I had good faith in you,\" says a voice in the shadows.");
 		scanner.nextLine();
 		footsteps.play(false);
-		System.out.println("The dark figure steps slowly, coming closer. It was O'Brien.");
+		System.out.println("The dark figure steps slowly, coming closer. It is O'Brien.");
 		//scanner.nextLine();
-		System.out.println("You struggle to speak with only gibberish slipping through your numb lips. He holds up a used syringe.");
+		System.out.println("You struggle to speak, but only gibberish slips through your numb lips. O'Brien holds up a used syringe.");
 		//scanner.nextLine();
-		System.out.println("\"Lignocaine, but a much larger dosage. You won't be able to move, nor speak for hours.\"");
+		System.out.println("\"Lignocaine, but a much larger dosage. You won't be able to move, nor speak, for a while.\"");
 		//scanner.nextLine();
 		System.out.println("He takes a seat on the edge of the bed, exhaling a deep sigh.");
 		//scanner.nextLine();
@@ -733,7 +733,7 @@ class Game {
 		//scanner.nextLine();
 		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
 		//scanner.nextLine();
-		System.out.println("\"Next time, we shall meet in a place with no darkness.\"");
+		System.out.println("\"Next time, we shall meet in the place where there is no darkness.\"");
 		scanner.nextLine();
 		keypad.play(false);
 		System.out.println("You hear the sound of a keypad as he types something in. A click echoes as he turns a knob and exits.");
@@ -756,7 +756,7 @@ class Game {
 		System.out.println("");
 		System.out.println("*********************************************************");
 		System.out.println("");
-		System.out.println("This Game is based off of the novel 1984 by George Orwell");
+		System.out.println("This game is based off of the novel 1984 by George Orwell.");
 		System.out.println();
 		System.out.println("Contributors: ");
 		System.out.println("Charlotte Volk");
@@ -808,7 +808,7 @@ class Game {
 		scanner.nextLine();
 		System.out.println("(good thing no one loves you)");
 		scanner.nextLine();
-		System.out.println("you look forward for one last moment and spot a small pinprick of light in the distance.");
+		System.out.println("You look forward for one last moment and spot a small pinprick of light in the distance.");
 		scanner.nextLine();
 		System.out.println("You feel adrenaline rushing into your failing muscles");
 		scanner.nextLine();

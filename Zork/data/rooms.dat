@@ -3,7 +3,7 @@ Room Description:You are now on floor ten.<br>In front of you is a big black doo
 Exit Rooms:D-Stairwell Nine, N-Shrine
 Room Items:None-None
 Room Name:Shrine
-Room Description:You are in a candle-lit room.<br>The crimson red wax has melted into pools on the ground.<br>The dull light of the room reveals<br>an acrylic-painted portrait of Big Brother.<br>Underneath the portrait is a single golden fish on a pedestal, along with a bowl of amber liquid.<br>You have entered a shrine. 
+Room Description:You are in a candlelit room.<br>The crimson red wax has melted into pools on the ground.<br>The dull light of the room reveals<br>an acrylic-painted portrait of Big Brother.<br>Underneath the portrait is a single golden fish on a pedestal,<br>along with a bowl of amber liquid.<br>You have entered a shrine. 
 Exit Rooms:S-Stairwell Ten, W-Secret Room
 Room Items:Fish-Golden, Liquid-Amber
 Room Name:Secret Room
@@ -23,7 +23,7 @@ Room Description:You are in a hallway.<br>There are three doors; to west, north,
 Exit Rooms:S-Stairwell Eight, W-Room 801, N-Room 802, E-Room 803
 Room Items:None-None
 Room Name:Room 801
-Room Description:There is a made bed, desk, chair, and a wardrobe.<br>The wardrobe has a drawer in the middle.<br>There is also a glass of apple juice and a mug of green tea on the wardrobe.<br>The desk is empty, but there are two slices of white bread and a slice of swiss cheese.<br>Maybe you can make a sandwich?
+Room Description:There is a made bed, desk, chair, and a wardrobe.<br>The wardrobe has a drawer in the middle.<br>There is also a glass of apple juice and a mug of green tea on the wardrobe.<br>The desk is empty, but there are two slices of white bread and a slice of swiss cheese on top of it.<br>Maybe you can make a sandwich?
 Exit Rooms:E-Hallway Eight
 Room Items:Drawer-Wardrobe, Bread-White, Bread-White, Cheese-Swiss, Juice-Apple, Tea-Green
 Room Name:Room 802
@@ -35,11 +35,11 @@ Room Description:This room is very tiny. You feel like a giant in this unusual r
 Exit Rooms:W-Hallway Eight
 Room Items:Box-Black, Banana-Black, Liquid-Yellow
 Room Name:Stairwell Seven
-Room Description:You are on floor seven.<br>In place of a door is a large, red-bricked wall.<br>There is no access to this floor.
+Room Description:You are on floor seven.<br>In place of a door is a large, red brick wall.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Eight, D-Stairwell Six
 Room Items:None-None
 Room Name:Stairwell Six
-Room Description:You are on floor six.<br>A monstrous cow is guarding the entry, its udders ready to shoot milk at whomever disturbs it.<br>There is no access to this floor.<br>How udderly disappointing...
+Room Description:You are on floor six.<br>A monstrous cow is guarding the entry, its udders ready to shoot milk at whoever disturbs it.<br>There is no access to this floor.<br>How udderly disappointing...
 Exit Rooms:U-Stairwell Seven, D-Stairwell Five
 Room Items:None-None
 Room Name:Stairwell Five
@@ -51,7 +51,7 @@ Room Description:You are in a hallway.<br>There are three doors; to west, north,
 Exit Rooms:S-Stairwell Five, W-Room 501, N-Prison Cell, E-Room 503
 Room Items:None-None
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>Behind you is the bed you just got off of.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a table with<br>a red apple, a glass of water, a piece of brown bread, a glass of white milk, and an old book.
+Room Description:You are in a white room.<br>Behind you is the bed you just got off of.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a table with<br>a red apple, a glass of water, a piece of brown bread, a glass of white milk, and an old book on top of it.
 Exit Rooms:S-Hallway Five
 Room Items:Apple-Red, Water-Glass, Book-Old, Bread-Brown, Milk-White
 Room Name:Room 501
@@ -59,7 +59,7 @@ Room Description:This room is filled with dolls of all shapes and sizes.<br>You 
 Exit Rooms:E-Hallway Five
 Room Items:Box-Engraved
 Room Name:Room 503
-Room Description:You are standing in knee-high water.<br>One of the toilets must have overflowed. There is a rubber duck floating, minding it's own business.
+Room Description:You are standing in knee-high water.<br>One of the toilets must have overflowed. There is a rubber duck floating around, minding its own business.
 Exit Rooms:W-Hallway Five
 Room Items:None-None
 Room Name:Stairwell Four
@@ -71,7 +71,7 @@ Room Description:You are in a hallway.<br>There are three doors; to west, north,
 Exit Rooms:S-Stairwell Four, W-Room 401, N-Room 402, E-Storeroom
 Room Items:None-None
 Room Name:Room 401
-Room Description:There is a made-bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The desk next to the bed has one curious drawer.<br>On top of the desk are 2 purple cabbages and a glass of water.<br>How...tasty...
+Room Description:There is a made bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The desk next to the bed has one curious drawer.<br>On top of the desk are 2 purple cabbages and a glass of water.<br>How...tasty...
 Exit Rooms:E-Hallway Four
 Room Items:Drawer-Desk, Cabbage-Purple, Cabbage-Purple, Cabbage-Purple, Water-Glass
 Room Name:Room 402
@@ -79,7 +79,7 @@ Room Description:This room is bright blue all around.<br>The walls surrounding y
 Exit Rooms:S-Hallway Four
 Room Items:Berries-Blue, Beverage-Blue, Trunk-Blue
 Room Name:Storeroom
-Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over<br>On top of the papers there is a raisin muffin, a mason jar, and a half empty mug of hot tea<br>Lining the sides of the room are shelves piled high with food and drink.<br>You must have stumbled into a secret storeroom<br>Some of the things on the shelves are:<br>- Feta cheese<br>- White chocolate<br>- Black coffee<br>- Iced tea<br>- A Green Banana<br>- A Green cabbage<br>- Acai berries<br>- Pineapple juice<br>- Pomegranate Juice<br>- Watermelon Juice<br>- Tomato juice<br>- Spring water<br>- Goat milk<br>- Black tea<br>- Almond milk<br>- Soy milk<br>- Pekoe tea<br>- Oolong tea<br>- Cinnamon muffin<br>- Corn bread<br>- Pumpkin muffin<br>- Oatmeal muffin<br>- Sourdough bread<br>- Rye bread<br>- Ciabetta bread<br>- Garlic bread  
+Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over on them.<br>On top of the papers there is a raisin muffin, a mason jar, and a half empty mug of hot tea.<br>Lining the sides of the room are shelves piled high with food and drink.<br>You must have stumbled into a secret storeroom.<br>Some of the things on the shelves are<br>- Feta cheese<br>- White chocolate<br>- Black coffee<br>- Iced tea<br>- Green banana<br>- Green cabbage<br>- Acai berries<br>- Pineapple juice<br>- Pomegranate juice<br>- Watermelon juice<br>- Tomato juice<br>- Spring water<br>- Goat milk<br>- Black tea<br>- Almond milk<br>- Soy milk<br>- Pekoe tea<br>- Oolong tea<br>- Cinnamon muffin<br>- Corn bread<br>- Pumpkin muffin<br>- Oatmeal muffin<br>- Sourdough bread<br>- Rye bread<br>- Ciabetta bread<br>- Garlic bread  
 Exit Rooms:W-Hallway Four
 Room Items:Muffin-Raisin, Jar-Mason, Tea-Hot, Cheese-Feta, Chocolate-White, Coffee-Black, Tea-Iced, Banana-Green, Cabbage-Green, Berries-Acai, Juice-Pineapple, Juice-Pomegranate, Juice-Watermelon, Juice-Tomato, Water-Spring, Milk-Goat, Tea-Black, Milk-Almond, Milk-Soy, Tea-Pekoe, Tea-Oolong, Muffin-Cinnamon, Bread-Corn, Muffin-Pumpkin, Bread-Sourdough, Bread-Rye, Bread-Ciabatta, Bread-Garlic
 Room Name:Stairwell Three
@@ -107,6 +107,6 @@ Room Description:You are on the bottom floor.<br>In front of you is a white meta
 Exit Rooms:U-Stairwell Two, N-Room 101
 Room Items:None-None
 Room Name:Room 101
-Room Description:The room is dark, the only light source is right above you, causing a sharp pain to your eyes.<br>You're lying in a bed at the center of a room.<br>You try to move your body, struggling as it doesn't respond.<br>However, you are able to shift your head from side to side.
+Room Description:The room is dark. The only light source is right above you, causing a sharp pain in your eyes.<br>You are lying in a bed at the center of the room.<br>You try to move your body, struggling as it doesn't respond.<br>However, you are able to shift your head from side to side.
 Exit Rooms:S-Stairwell One
 Room Items:None-None
