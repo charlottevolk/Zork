@@ -806,6 +806,8 @@ class Game {
 		scanner.nextLine();
 		System.out.println("Should have taken gym class more seriously…");
 		scanner.nextLine();
+		System.out.println("Just as you are about to give up and die a pathetic and meaningless death,");
+		scanner.nextLine();
 		System.out.println("(good thing no one loves you)");
 		scanner.nextLine();
 		System.out.println("You look forward for one last moment and spot a small pinprick of light in the distance.");
