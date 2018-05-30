@@ -126,9 +126,7 @@ class Game {
 
 	 */
 	public void play(){
-		//winGame();
-		music.playClip("NewDawn.wav");
-		//music.playClip("dark_world.wav");
+		music.playClip("dark_world.wav");
 		printWelcome();
 
 		// Enter the main command loop. Here we repeatedly read commands and
