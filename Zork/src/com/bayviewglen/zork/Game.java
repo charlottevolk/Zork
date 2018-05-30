@@ -176,7 +176,7 @@ class Game {
 		//scanner.nextLine();
 		System.out.println("You shoot up and off of the bed in a daze, moving the blanket to the side.");
 		//scanner.nextLine();
-		System.out.println("You get off the bed and begin to look around...");
+		System.out.println("You begin to look around...");
 		//scanner.nextLine();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -272,9 +272,9 @@ class Game {
 			System.out.println("Ends life, kills laughter.");
 			System.out.println();
 			System.out.println("Enter your answer.");
-			System.out.println("Your answer must have Answer: \nwith a space after the colon in order to avoid certain death!");
+			System.out.println("Your answer must start with \"Answer: \"\n(make sure there is a space after the colon, before your answer)\nin order to avoid certain death!");
 		}else if(commandWord.equals("Answer:")) {
-			if(command.getSecondWord().equalsIgnoreCase("dark")) {
+			if(command.getSecondWord() != null && (command.getSecondWord().equalsIgnoreCase("dark") || command.getSecondWord().equalsIgnoreCase("darkness"))) {
 				System.out.println("Congratulations! You escaped!");
 				System.out.println();
 				goRoom(new Command("walk", "south", null));
@@ -551,11 +551,16 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println("You have been captured by Big Brother.\nIn order to escape the Ministry of Love, you must find the secret exit\nand retrieve all the lines to the secret code that are scattered around the building.");
-
-
+		System.out.println("You have been captured by Big Brother.\nIn order to escape the Ministry of Love,\nyou must first retrieve all the lines to the secret code that are scattered around the building,\nand then find the secret exit.");
+		System.out.println();
+		System.out.println();
 		System.out.println("Your command words are:");
 		parser.showCommands();
+		System.out.println();
+		System.out.println();
+		System.out.println("To move from room to room, use the syntax 'walk direction'.\nYou can go north, south, east, or west.");
+		System.out.println();
+		System.out.println("Hint: mirror spelled backwards is rorrim");
 	}
 
 	/**

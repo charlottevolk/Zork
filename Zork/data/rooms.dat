@@ -1,5 +1,5 @@
 Room Name:Stairwell Ten
-Room Description:You are now on floor ten.<br>In front of you is a big black door with a giant poster of Big Brother in the center.
+Room Description:You are now on floor ten.<br>To the north is a big black door with a giant poster of Big Brother in the center.
 Exit Rooms:D-Stairwell Nine, N-Shrine
 Room Items:None-None
 Room Name:Shrine
@@ -15,11 +15,11 @@ Room Description:You are on floor nine.<br>You hear some foreign mumbling that a
 Exit Rooms:U-Stairwell Ten, D-Stairwell Eight
 Room Items:None-None
 Room Name:Stairwell Eight
-Room Description:You are on floor eight. In front of you (north) is a grey door.
+Room Description:You are on floor eight. To the north is a grey door.
 Exit Rooms:U-Stairwell Nine, D-Stairwell Seven, N-Hallway Eight
 Room Items:None-None
 Room Name:Hallway Eight
-Room Description:You are in a hallway.<br>There are three doors; to west, north, and east.<br>Behind you is the stairwell.
+Room Description:You are in a hallway.<br>There are three doors; to the west, north, and east.<br>To the south is the stairwell.
 Exit Rooms:S-Stairwell Eight, W-Room 801, N-Room 802, E-Room 803
 Room Items:None-None
 Room Name:Room 801
@@ -43,15 +43,15 @@ Room Description:You are on floor six.<br>A monstrous cow is guarding the entry,
 Exit Rooms:U-Stairwell Seven, D-Stairwell Five
 Room Items:None-None
 Room Name:Stairwell Five
-Room Description:You are on floor five.<br>In front of you (north) is a grey door.
+Room Description:You are on floor five.<br>To the north is a grey door.
 Exit Rooms:U-Stairwell Six, D-Stairwell Four, N-Hallway Five
 Room Items:None-None
 Room Name:Hallway Five
-Room Description:You are in a hallway.<br>There are three doors; to west, north, and east.<br>Behind you is the stairwell.
+Room Description:You are in a hallway.<br>There are three doors; to the west, north, and east.<br>To the south is the stairwell.
 Exit Rooms:S-Stairwell Five, W-Room 501, N-Prison Cell, E-Room 503
 Room Items:None-None
 Room Name:Prison Cell
-Room Description:You are in a white room.<br>Behind you is the bed you just got off of.<br>To your right is a large wardrobe with a mirror mounted on it.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a table with<br>a red apple, a glass of water, a piece of brown bread, a glass of white milk, and an old book on top of it.
+Room Description:You are in a white room.<br>Behind you is the bed.<br>To your right is a large mirror mounted on the wall.<br>To your left there are some illegible scribbles on the wall.<br>In front of you is a table with<br>a red apple, a glass of water, a piece of brown bread, a glass of white milk, and an old book.
 Exit Rooms:S-Hallway Five
 Room Items:Apple-Red, Water-Glass, Book-Old, Bread-Brown, Milk-White
 Room Name:Room 501
@@ -63,11 +63,11 @@ Room Description:You are standing in knee-high water.<br>One of the toilets must
 Exit Rooms:W-Hallway Five
 Room Items:None-None
 Room Name:Stairwell Four
-Room Description:You are on floor four.<br>In front of you (north) is a grey door.
+Room Description:You are on floor four.<br>To the north is a grey door.
 Exit Rooms:U-Stairwell Five, D-Stairwell Three, N-Hallway Four
 Room Items:None-None
 Room Name:Hallway Four
-Room Description:You are in a hallway.<br>There are three doors; to west, north, and east.<br>Behind you is the stairwell.
+Room Description:You are in a hallway.<br>There are three doors; to the west, north, and east.<br>To the south is the stairwell.
 Exit Rooms:S-Stairwell Four, W-Room 401, N-Room 402, E-Storeroom
 Room Items:None-None
 Room Name:Room 401
@@ -87,7 +87,7 @@ Room Description:You are on floor three.<br>The door is upside down, and unfortu
 Exit Rooms:U-Stairwell Four, D-Stairwell Two
 Room Items:None-None
 Room Name:Stairwell Two
-Room Description:You are on floor two.<br>In front of you is a wooden door. Above it has a red sign reading "CAFETERIA" in bold letters.
+Room Description:You are on floor two.<br>To the north is a wooden door. Above it has a red sign reading "CAFETERIA" in bold letters.
 Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
@@ -95,7 +95,7 @@ Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy 
 Exit Rooms:S-Stairwell Two, N-Kitchen
 Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic, Cheese-Cheddar
 Room Name:Kitchen
-Room Description:You have just entered a small room coated in silver from top to bottom.<br>In front of you is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances and utensils.<br>The kitchen island has a bowl with a raw fish in it, with a glass of orange juice next to it.<br>Under the counter is a small kitchen cabinet.
+Room Description:You have just entered a small room coated in silver from top to bottom.<br>To the north is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances and utensils.<br>The kitchen island has a bowl with a raw fish in it, with a glass of orange juice next to it.<br>Under the counter is a small kitchen cabinet.
 Exit Rooms:S-Cafeteria, N-Fridge
 Room Items:Juice-Orange, Fish-Raw, Cabinet-Kitchen 
 Room Name:Fridge
@@ -103,7 +103,7 @@ Room Description:You open the fridge door as it reveals the remains of a human c
 Exit Rooms:S-Kitchen
 Room Items:Pasta-Brown, Milk-White, Box-Metal
 Room Name:Stairwell One
-Room Description:You are on the bottom floor.<br>In front of you is a white metal door with "101" engraved in it.
+Room Description:You are on the bottom floor.<br>To the north is a white metal door with "101" engraved in it.
 Exit Rooms:U-Stairwell Two, N-Room 101
 Room Items:None-None
 Room Name:Room 101
