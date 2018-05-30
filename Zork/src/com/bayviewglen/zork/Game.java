@@ -172,19 +172,13 @@ class Game {
 		//scanner.nextLine();
 		System.out.println("darkness...");
 		//scanner.nextLine();
-		System.out.println("Your eyes shoot open. You inhale sharply as");
+		System.out.println("Your eyes shoot open. You inhale sharply as your air-deprived lungs beg for oxygen.");
 		//scanner.nextLine();
-		System.out.println("your air-deprived lungs beg for oxygen.");
+		System.out.println("You find yourself to be lying down on a bed with a pillow under your head and a blanket over your body.");
 		//scanner.nextLine();
-		System.out.println("You find yourself to be lying down on a bed with");
+		System.out.println("You shoot up and off of the bed in a daze, moving the blanket to the side.");
 		//scanner.nextLine();
-		System.out.println("a pillow under your head and a blanket over your body.");
-		//scanner.nextLine();
-		System.out.println("You whip your head up, off of the bed in a daze,");
-		//scanner.nextLine();
-		System.out.println("and move the blanket to the side.");
-		//scanner.nextLine();
-		System.out.println("Then you get off the bed and begin to look around...");
+		System.out.println("You get off the bed and begin to look around...");
 		//scanner.nextLine();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -216,9 +210,9 @@ class Game {
 		else if(commandWord.equalsIgnoreCase("shake")) {
 			System.out.println("My ex-man brought his new girlfriend. She said \"Oh my god!\" I'm just gonna shake it.");
 		}else if(commandWord.equalsIgnoreCase("climb")) {
-			System.out.println("Who are you, Spiderman?? No...No you are not...");
+			System.out.println("Who are you, Spiderman?? No...No, you are not...");
 		}else if(commandWord.equalsIgnoreCase("sing")) {
-			System.out.println("Calm down Mariah Carey, no one wants to hear that!");
+			System.out.println("Calm down Mariah Carey, no one wants to hear that.");
 		}else if(commandWord.equalsIgnoreCase("flip")) {
 			System.out.println("You did a backflip!");
 			System.out.println("However, you landed on your neck which kinda sucks. I hope it was worth it.");
@@ -237,9 +231,9 @@ class Game {
 			return true;
 		}else if(commandWord.equalsIgnoreCase("quit")) {
 			System.out.println("Tsk tsk tsk.");
-			System.out.println("Quitting is never the answer...and it's no fun either.");
+			System.out.println("Quitting is never the answer.");
 		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("rubber") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("duck") && currentRoom.getRoomName().equalsIgnoreCase("Room 503")) {
-			System.out.println("The rubber duck transforms into a rubber killer duck with a pointy metal bill.");
+			System.out.println("The rubber duck transforms into a killer rubber duck with a pointy metal bill.");
 			System.out.println("With one final quack, and a squeak here and there, it attacks you!");
 			gameOver();
 			return true;
@@ -317,7 +311,7 @@ class Game {
 			currentRoom.getRoomInventory().removeItem(item);
 			inventory.addItem(item);
 			System.out.println();
-			System.out.println("OMG!! You found a trapdoor! There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot to accomodate a piece of paper.\nThis could be your chance to escape!\nWhat do you want to do next?");
+			System.out.println("You found a trapdoor. There is a small display screen with the words \n\"Insert code\" written on it.\nBelow is a small slot to accomodate a piece of paper.\nThis could be your chance to escape!\nWhat would you like to do next?");
 			System.out.println();
 		}else if(command.getCommandWord().equalsIgnoreCase("insert") && (command.getSecondWord()== null)) {
 			System.out.println("What are you inserting?");
@@ -327,8 +321,10 @@ class Game {
 				endCredits();
 				return true;
 			}else {
-				System.out.println("Unfortunately, you do not have the full code.\nSo find the rest of it first and then try again :)");
+				System.out.println("Unfortunately, you do not have the full code.\nFind the rest of it first and then try again :)");
 			}
+		}else if(command.getCommandWord().equalsIgnoreCase("take") && command.getSecondWord() != null && (command.getSecondWord().equalsIgnoreCase("pillow") || command.getSecondWord().equalsIgnoreCase("blanket")) && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
+			System.out.println("It is too heavy for you to carry around. Do you even lift, bruh??");
 		}else if(command.getCommandWord().equalsIgnoreCase("take")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Take what?!");
@@ -482,7 +478,7 @@ class Game {
 				if(command.getSecondWord().equalsIgnoreCase("mirror")) {
 					System.out.println("Your face has lost all colour it once had,\na dark grey sweeps over your cheekbones and eyebags.\nYou have lost enough weight that your bones can be easily seen\nthrough your transparent-looking skin.\nOut of the corner of your eye,\nit can be sees that the mirror\nhas inverted the scribbles on the walls,\nforming a legible message: \r\n\n" + 
 							"	\"An unknown path you'll find above,  \r\n" + 
-							"	somwhere in this Ministry of Love.\r\n" + 
+							"	somewhere in this Ministry of Love.\r\n" + 
 							"	Complete the song and seal your fate,\r\n" + 
 							"	Your one and only key to escape.\r\n" + 
 							"	for to won ate\"");
@@ -490,9 +486,9 @@ class Game {
 					System.out.println("You find a wrinkled note. Written on it is one line,\nrandom symbols, and then two more lines.\nIt looks like this:");
 					code.showEncryptedCode();
 				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("bed") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("bed")) {
-					System.out.println("You really want to be crawling around down there? This place hasn't been dusted for WEEKS! Ya nasty...");
+					System.out.println("Don't worry kiddo, the only monster in this room is you.");
 				}else if(command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("blanket") || command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("blanket")) {
-					System.out.println("I wouldn't look under there if I were you...it's kinda unsanitary...");
+					System.out.println("There seems to be a yellow stain, still quite damp. It's ok, we dont judge here. :)");
 				}
 			}
 
@@ -731,11 +727,13 @@ class Game {
 		//scanner.nextLine();
 		System.out.println("Even during the tests, you always outranked the others. We were even considering releasing you.");
 		//scanner.nextLine();
-		System.out.println("But it seems it was all a lie, a cheap trick in your sick mind. You are never going to escape now.");
+		System.out.println("But it seems it was all a lie, a cheap trick in your sick mind.");
 		//scanner.nextLine();
 		System.out.println("Become familiar with this room, with this new lifestyle, because you are now the enemy.\"");
 		//scanner.nextLine();
 		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
+		//scanner.nextLine();
+		System.out.println("\"Next time, we shall meet in a place with no darkness.\"");
 		scanner.nextLine();
 		keypad.play(false);
 		System.out.println("You hear the sound of a keypad as he types something in. A click echoes as he turns a knob and exits.");
