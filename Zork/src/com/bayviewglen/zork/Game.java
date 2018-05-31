@@ -323,6 +323,8 @@ class Game {
 			}
 		}else if(command.getCommandWord().equalsIgnoreCase("take") && command.getSecondWord() != null && (command.getSecondWord().equalsIgnoreCase("pillow") || command.getSecondWord().equalsIgnoreCase("blanket")) && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
 			System.out.println("It is too heavy for you to carry around. Do you even lift, bruh??");
+		}else if(command.getCommandWord().equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("human") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("corpse")) {
+			System.out.println("Jeez. Ya nasty.");
 		}else if(command.getCommandWord().equalsIgnoreCase("take")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Take what?!");
@@ -354,7 +356,7 @@ class Game {
 					System.out.println("Either there is nothing like that in the room, or you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else {
-				System.out.println("There is nothing like that in the game...");
+				System.out.println("There is no item like that in the game...");
 			}
 
 
@@ -390,7 +392,7 @@ class Game {
 					System.out.println("Either there is nothing like that in your inventory, or you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else {
-				System.out.println("There is nothing like that in the game...");
+				System.out.println("There is no item like that in the game...");
 			}
 
 
@@ -426,7 +428,7 @@ class Game {
 					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else {
-				System.out.println("There is nothing like that in the game...");
+				System.out.println("There is no item like that in the game...");
 			}
 
 
@@ -461,7 +463,7 @@ class Game {
 					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else {
-				System.out.println("There is nothing like that in the game...");
+				System.out.println("There is no item like that in the game...");
 			}
 
 			//Code for all permutations of "look"
@@ -537,7 +539,7 @@ class Game {
 					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nthere is nothing like that in the room,\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
 				}
 			}else {
-				System.out.println("There is nothing like that in the game...");
+				System.out.println("There is no item like that in the game...");
 			}
 		}
 
@@ -558,7 +560,9 @@ class Game {
 		parser.showCommands();
 		System.out.println();
 		System.out.println();
-		System.out.println("To move from room to room, use the syntax 'walk direction'.\nYou can go north, south, east, or west.");
+		System.out.println("To move from room to room, use the syntax 'walk [direction]'.\nYou can go north, south, east, or west.");
+		System.out.println();
+		System.out.println("If you are having trouble seeing, you can always look around. That tends to help.");
 		System.out.println();
 		System.out.println("Hint: mirror spelled backwards is rorrim");
 	}
@@ -834,7 +838,6 @@ class Game {
 		System.out.println("You smile and step forward into the light…");
 		scanner.nextLine();
 		System.out.println();
-		endCredits();
 	}
 
 }

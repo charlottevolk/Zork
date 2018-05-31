@@ -27,7 +27,7 @@ Room Description:There is a made bed, desk, chair, and a wardrobe.<br>The wardro
 Exit Rooms:E-Hallway Eight
 Room Items:Drawer-Wardrobe, Bread-White, Bread-White, Cheese-Swiss, Juice-Apple, Tea-Green
 Room Name:Room 802
-Room Description:You have entered a room that you should not have, but that's okay because no one appears to be here.<br>You have entered the Thought Police Lounge.<br>There is a table with a carrot muffin, a green apple, a glass of strawberry milk, and a large cookie jar.
+Room Description:You have entered a room that you should not have, but that's okay because no one appears to be here.<br>You have entered the Thought Police Lounge.<br>There is a table with a carrot muffin, a green apple, a glass of strawberry milk, and a cookie jar.
 Exit Rooms:S-Hallway Eight
 Room Items:Jar-Cookie, Apple-Green, Muffin-Carrot, Milk-Strawberry
 Room Name:Room 803
@@ -71,7 +71,7 @@ Room Description:You are in a hallway.<br>There are three doors; to the west, no
 Exit Rooms:S-Stairwell Four, W-Room 401, N-Room 402, E-Storeroom
 Room Items:None-None
 Room Name:Room 401
-Room Description:There is a made bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The desk next to the bed has one curious drawer.<br>On top of the desk are 2 purple cabbages and a glass of water.<br>How...tasty...
+Room Description:There is a made bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The desk next to the bed has one drawer that looks a little curious...<br>On top of the desk are 2 purple cabbages and a glass of water.<br>How...tasty...
 Exit Rooms:E-Hallway Four
 Room Items:Drawer-Desk, Cabbage-Purple, Cabbage-Purple, Cabbage-Purple, Water-Glass
 Room Name:Room 402
