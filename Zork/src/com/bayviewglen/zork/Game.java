@@ -136,7 +136,7 @@ class Game {
 		while (!finished) {
 			ArrayList<Command> commandList = parser.getCommands();
 			System.out.println();
-			/*boolean noHunger = !(stats.getHunger().reduce());
+			boolean noHunger = !(stats.getHunger().reduce());
 			boolean noThirst = !(stats.getThirst().reduce());
 			if(noHunger || noThirst) {
 				if(noHunger) {
@@ -148,7 +148,7 @@ class Game {
 					System.out.println();
 					finished = true;
 				}
-			}else */{
+			}else {
 				for(int i=0; i<commandList.size(); i++) {
 					finished = processCommand(commandList.get(i));
 				}
@@ -165,7 +165,7 @@ class Game {
 		Scanner scanner= new Scanner(System.in);
 		//System.out.println();
 		System.out.println("*Please press enter after each line*");
-		System.out.println("");
+		System.out.println();
 		scanner.nextLine();
 		System.out.println("Darkness.");
 		scanner.nextLine();
@@ -229,10 +229,6 @@ class Game {
 		}else if(commandWord.equalsIgnoreCase("quit")) {
 			System.out.println("Tsk tsk tsk.");
 			System.out.println("Quitting is never the answer.");
-		}else if(commandWord.equalsIgnoreCase("hint") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
-			System.out.println("This room isn't that tough, but here's a pity hint:");
-			System.out.println("Hint: mirror spelled backwards is rorrim");
-			System.out.println("*This is the only hint you can ever get. God Speed.");
 		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("rubber") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("duck") && currentRoom.getRoomName().equalsIgnoreCase("Room 503")) {
 			System.out.println("The rubber duck transforms into a killer rubber duck with a pointy metal bill.");
 			System.out.println("With one final quack, and a squeak here and there, it attacks you!");
@@ -325,7 +321,7 @@ class Game {
 				System.out.println("Unfortunately, you do not have the full code.\nFind the rest of it first and then try again :)");
 			}
 		}else if(command.getCommandWord().equalsIgnoreCase("take") && command.getSecondWord() != null && (command.getSecondWord().equalsIgnoreCase("pillow") || command.getSecondWord().equalsIgnoreCase("blanket")) && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
-			System.out.println("It is too heavy for you to carry around. My grandmas got more muscle than you bro...");
+			System.out.println("It is too heavy for you to carry around. Do you even lift, bruh??");
 		}else if(command.getCommandWord().equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("human") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("corpse")) {
 			System.out.println("Jeez. Ya nasty. Sick person.");
 		}else if(command.getCommandWord().equalsIgnoreCase("take")){
@@ -425,7 +421,7 @@ class Game {
 						inventory.removeItem(food);
 						stats.getHunger().increase();
 					}else {
-						System.out.println("You really thought you could eat that!?");
+						System.out.println("You really thought you could eat that?!");
 					}
 				}else {
 					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
@@ -562,11 +558,18 @@ class Game {
 		System.out.println("Your command words are:");
 		parser.showCommands();
 		System.out.println();
+		System.out.println("You may enter multiple commands per line. I'm nice like that.");
 		System.out.println();
 		System.out.println("To move from room to room, use the syntax 'walk [direction]'.\nYou can go north, south, east, or west.");
 		System.out.println();
 		System.out.println("If you are having trouble seeing, you can always look around. That tends to help.");
 		System.out.println();
+		if(currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")) {
+			System.out.println("This room isn't that tough, but here's a pity hint:");
+			System.out.println("Mirror spelled backwards is rorrim.");
+			System.out.println("This is the only hint you can ever get. God Speed.");
+			System.out.println();
+		}
 	}
 
 	/**
@@ -726,9 +729,9 @@ class Game {
 		footsteps.play(false);
 		System.out.println("The dark figure begins to walk...stepping slowly...coming closer...");
 		scanner.nextLine();
-		System.out.println("You struggle to speak, but only gibberish slips through your numb lips. O'Brien holds up a used syringe.");
-		scanner.nextLine();
 		System.out.println("It is O'Brien.");
+		scanner.nextLine();
+		System.out.println("You struggle to speak, but only gibberish slips through your numb lips. O'Brien holds up a used syringe.");
 		scanner.nextLine();
 		System.out.println("\"Lignocaine, but a much larger dosage. You won't be able to move, nor speak, for a while.\"");
 		scanner.nextLine();
@@ -743,6 +746,8 @@ class Game {
 		System.out.println("Become familiar with this room, with this new lifestyle, because you are now the enemy.\"");
 		scanner.nextLine();
 		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
+		scanner.nextLine();
+		System.out.println("\"We shall meet again in the place where there is no darkness.\"");
 		scanner.nextLine();
 		keypad.play(false);
 		System.out.println("You hear the sound of a keypad as he types something in. A click echoes as he turns a knob and exits.");
@@ -784,7 +789,7 @@ class Game {
 		System.out.println();
 		System.out.println("Hit Enter to end Game");
 		scanner.nextLine();
-		System.out.println("");
+		System.out.println();
 
 	}
 
@@ -803,7 +808,7 @@ class Game {
 		scanner.nextLine();
 		System.out.println("The ceiling is low and the tunnel is narrow.");
 		scanner.nextLine();
-		System.out.println("You move forward with urgency, bruising and scraping your hands and knees on the rough surface.");
+		System.out.println("You crawl forward, bruising and scraping your hands and knees on the rough surface.");
 		scanner.nextLine();
 		System.out.println("You get tired very quickly.");
 		scanner.nextLine();

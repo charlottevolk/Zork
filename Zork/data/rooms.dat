@@ -81,13 +81,13 @@ Room Items:Berries-Blue, Beverage-Blue, Trunk-Blue
 Room Name:Storeroom
 Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over on them.<br>On top of the papers there is a raisin muffin,<br>a mason jar, and a half empty mug of hot tea.<br>Lining the sides of the room are shelves piled high with food and drinks.<br>You must have stumbled into a secret storeroom.<br>Some of the things on the shelves are...<br>- Feta cheese<br>- White chocolate<br>- Black coffee<br>- Iced tea<br>- Green banana<br>- Green cabbage<br>- Acai berries<br>- Pineapple juice<br>- Pomegranate juice<br>- Watermelon juice<br>- Tomato juice<br>- Spring water<br>- Goat milk<br>- Black tea<br>- Almond milk<br>- Soy milk<br>- Pekoe tea<br>- Oolong tea<br>- Cinnamon muffin<br>- Corn bread<br>- Pumpkin muffin<br>- Oatmeal muffin<br>- Sourdough bread<br>- Rye bread<br>- Ciabetta bread<br>- Garlic bread  
 Exit Rooms:W-Hallway Four
-Room Items:Muffin-Raisin, Jar-Mason, Tea-Hot, Cheese-Feta, Chocolate-White, Coffee-Black, Tea-Iced, Banana-Green, Cabbage-Green, Berries-Acai, Juice-Pineapple, Juice-Pomegranate, Juice-Watermelon, Juice-Tomato, Water-Spring, Milk-Goat, Tea-Black, Milk-Almond, Milk-Soy, Tea-Pekoe, Tea-Oolong, Muffin-Cinnamon, Bread-Corn, Muffin-Pumpkin, Bread-Sourdough, Bread-Rye, Bread-Ciabatta, Bread-Garlic
+Room Items:Muffin-Raisin, Jar-Mason, Tea-Hot, Cheese-Feta, Chocolate-White, Coffee-Black, Tea-Iced, Banana-Green, Cabbage-Green, Berries-Acai, Juice-Pineapple, Juice-Pomegranate, Juice-Watermelon, Juice-Tomato, Water-Spring, Milk-Goat, Tea-Black, Milk-Almond, Milk-Soy, Tea-Pekoe, Tea-Oolong, Muffin-Cinnamon, Bread-Corn, Muffin-Pumpkin, Muffin-Oatmeal, Bread-Sourdough, Bread-Rye, Bread-Ciabatta, Bread-Garlic
 Room Name:Stairwell Three
 Room Description:You are on floor three.<br>The door is upside down, and unfortunately,<br>you forgot your gravity-defying boots at home.<br>What a shame.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Four, D-Stairwell Two
 Room Items:None-None
 Room Name:Stairwell Two
-Room Description:You are on floor two.<br>To the north is a wooden door.<br>Above it has a red sign reading "CAFETERIA" in bold letters.
+Room Description:You are on floor two.<br>To the north is a wooden door.<br>Above it there is a red sign reading "CAFETERIA" in bold letters.
 Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
@@ -95,7 +95,7 @@ Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy 
 Exit Rooms:S-Stairwell Two, N-Kitchen
 Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic, Cheese-Cheddar
 Room Name:Kitchen
-Room Description:You have just entered a small room coated in silver from top to bottom.<br>To the north is a refrigerator big enough to fit a human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances and utensils like a kitchen would be.<br>The island has a bowl with a raw fish in it, and a glass of orange juice next to it.<br>Under the counter is a small kitchen cabinet.
+Room Description:You have just entered a small room coated in silver from top to bottom.<br>To the north is a refrigerator big enough to fit a human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances and utensils, like you would expect from a kitchen.<br>The island has a bowl with a raw fish in it.<br>There is a glass of orange juice next to the bowl.<br>Under the counter is a small kitchen cabinet.
 Exit Rooms:S-Cafeteria, N-Fridge
 Room Items:Juice-Orange, Fish-Raw, Cabinet-Kitchen 
 Room Name:Fridge
