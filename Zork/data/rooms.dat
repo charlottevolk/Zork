@@ -71,7 +71,7 @@ Room Description:You are in a hallway.<br>There are three doors; to the west, no
 Exit Rooms:S-Stairwell Four, W-Room 401, N-Room 402, E-Storeroom
 Room Items:None-None
 Room Name:Room 401
-Room Description:There is a made bed in the center of the room.<br>The bed smells like feet, but you pretend not to notice<br>The desk next to the bed has one drawer that looks a little curious...<br>On top of the desk are 2 purple cabbages and a glass of water.<br>How...tasty...
+Room Description:There is a made bed in the center of the room.<br>The bed smells like feet, but to be fair you do too.<br>The desk next to the bed has one drawer that looks a little curious...<br>On top of the desk are 2 purple cabbages and a glass of water.<br>How...tasty...
 Exit Rooms:E-Hallway Four
 Room Items:Drawer-Desk, Cabbage-Purple, Cabbage-Purple, Cabbage-Purple, Water-Glass
 Room Name:Room 402
@@ -79,27 +79,27 @@ Room Description:This room is bright blue all around.<br>The walls surrounding y
 Exit Rooms:S-Hallway Four
 Room Items:Berries-Blue, Beverage-Blue, Trunk-Blue
 Room Name:Storeroom
-Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over on them.<br>On top of the papers there is a raisin muffin, a mason jar, and a half empty mug of hot tea.<br>Lining the sides of the room are shelves piled high with food and drink.<br>You must have stumbled into a secret storeroom.<br>Some of the things on the shelves are<br>- Feta cheese<br>- White chocolate<br>- Black coffee<br>- Iced tea<br>- Green banana<br>- Green cabbage<br>- Acai berries<br>- Pineapple juice<br>- Pomegranate juice<br>- Watermelon juice<br>- Tomato juice<br>- Spring water<br>- Goat milk<br>- Black tea<br>- Almond milk<br>- Soy milk<br>- Pekoe tea<br>- Oolong tea<br>- Cinnamon muffin<br>- Corn bread<br>- Pumpkin muffin<br>- Oatmeal muffin<br>- Sourdough bread<br>- Rye bread<br>- Ciabetta bread<br>- Garlic bread  
+Room Description:You enter a room and immediately run into a white table.<br>The table is piled with papers with the words "Down with Big Brother" written over and over on them.<br>On top of the papers there is a raisin muffin,<br>a mason jar, and a half empty mug of hot tea.<br>Lining the sides of the room are shelves piled high with food and drinks.<br>You must have stumbled into a secret storeroom.<br>Some of the things on the shelves are...<br>- Feta cheese<br>- White chocolate<br>- Black coffee<br>- Iced tea<br>- Green banana<br>- Green cabbage<br>- Acai berries<br>- Pineapple juice<br>- Pomegranate juice<br>- Watermelon juice<br>- Tomato juice<br>- Spring water<br>- Goat milk<br>- Black tea<br>- Almond milk<br>- Soy milk<br>- Pekoe tea<br>- Oolong tea<br>- Cinnamon muffin<br>- Corn bread<br>- Pumpkin muffin<br>- Oatmeal muffin<br>- Sourdough bread<br>- Rye bread<br>- Ciabetta bread<br>- Garlic bread  
 Exit Rooms:W-Hallway Four
 Room Items:Muffin-Raisin, Jar-Mason, Tea-Hot, Cheese-Feta, Chocolate-White, Coffee-Black, Tea-Iced, Banana-Green, Cabbage-Green, Berries-Acai, Juice-Pineapple, Juice-Pomegranate, Juice-Watermelon, Juice-Tomato, Water-Spring, Milk-Goat, Tea-Black, Milk-Almond, Milk-Soy, Tea-Pekoe, Tea-Oolong, Muffin-Cinnamon, Bread-Corn, Muffin-Pumpkin, Bread-Sourdough, Bread-Rye, Bread-Ciabatta, Bread-Garlic
 Room Name:Stairwell Three
-Room Description:You are on floor three.<br>The door is upside down, and unfortunately, you forgot your gravity-defying boots at home.<br>There is no access to this floor.
+Room Description:You are on floor three.<br>The door is upside down, and unfortunately,<br>you forgot your gravity-defying boots at home.<br>What a shame.<br>There is no access to this floor.
 Exit Rooms:U-Stairwell Four, D-Stairwell Two
 Room Items:None-None
 Room Name:Stairwell Two
-Room Description:You are on floor two.<br>To the north is a wooden door. Above it has a red sign reading "CAFETERIA" in bold letters.
+Room Description:You are on floor two.<br>To the north is a wooden door.<br>Above it has a red sign reading "CAFETERIA" in bold letters.
 Exit Rooms:U-Stairwell Three, D-Stairwell One, N-Cafeteria
 Room Items:None-None
 Room Name:Cafeteria
-Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish stew,<br>some cheddar cheese, what looks like a plastic container, and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
+Room Description:You are now in the Cafeteria.<br>The smell of grease and moldy cheese fills your nostrils.<br>There are 10 circular tables, each with 5 chairs, each empty.<br>On one is a metal tray of pinkish stew,<br>some cheddar cheese,<br>what looks like a plastic container,<br>and a mug of victory coffee.<br>It appears someone before you had forgotten to put their tray away.
 Exit Rooms:S-Stairwell Two, N-Kitchen
 Room Items:Stew-Pinkish, Coffee-Victory, Container-Plastic, Cheese-Cheddar
 Room Name:Kitchen
-Room Description:You have just entered a small room coated in silver from top to bottom.<br>To the north is a refrigerator larger than an average human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances and utensils.<br>The kitchen island has a bowl with a raw fish in it, with a glass of orange juice next to it.<br>Under the counter is a small kitchen cabinet.
+Room Description:You have just entered a small room coated in silver from top to bottom.<br>To the north is a refrigerator big enough to fit a human being.<br>You are in the kitchen.<br>It is full of industrial kitchen appliances and utensils like a kitchen would be.<br>The island has a bowl with a raw fish in it, and a glass of orange juice next to it.<br>Under the counter is a small kitchen cabinet.
 Exit Rooms:S-Cafeteria, N-Fridge
 Room Items:Juice-Orange, Fish-Raw, Cabinet-Kitchen 
 Room Name:Fridge
-Room Description:You open the fridge door as it reveals the remains of a human corpse.<br>Isn't this a fun place?<br>Next to the corpse is a small bowl of brown pasta and a metal box.<br>The brown pasta has no sauce which is pretty weird. 
+Room Description:You open the fridge door.<br>It reveals the remains of a human corpse.<br>Isn't this a fun place?<br>Next to the corpse is a small bowl of brown pasta and a metal box.<br>The brown pasta has no sauce which is pretty weird. 
 Exit Rooms:S-Kitchen
 Room Items:Pasta-Brown, Milk-White, Box-Metal
 Room Name:Stairwell One
@@ -107,6 +107,6 @@ Room Description:You are on the bottom floor.<br>To the north is a white metal d
 Exit Rooms:U-Stairwell Two, N-Room 101
 Room Items:None-None
 Room Name:Room 101
-Room Description:A sharp pain shoots though your skull. Your body clashes with the ground.<br><br>Darkness.<br><br>The room is dark. The only light source is right above you, causing a sharp pain in your eyes.<br>You are lying in a bed at the center of the room.<br>You try to move your body, struggling as it doesn't respond.<br>However, you are able to shift your head from side to side.
+Room Description:A nauseating pain shoots though your head. Your face receives a rough greeting from the ground.<br><br>Darkness.<br><br>The room is dark. The only light source is right above you, causing a sharp pain in your eyes.<br>You are lying in a bed at the center of the room.<br>You try to move your body, struggling as it doesn't respond.<br>However, you are able to shift your head from side to side.
 Exit Rooms:S-Stairwell One
 Room Items:None-None

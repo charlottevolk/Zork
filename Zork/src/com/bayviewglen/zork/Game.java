@@ -205,7 +205,7 @@ class Game {
 		if (commandWord.equalsIgnoreCase("help"))
 			printHelp();
 		else if(commandWord.equalsIgnoreCase("shake")) {
-			System.out.println("My ex-man brought his new girlfriend. She said \"Oh my god!\" I'm just gonna shake it.");
+			System.out.println("My ex-man brought his new girlfriend. She said \"Oh my god!\" , but I'm just gonna shake it.");
 		}else if(commandWord.equalsIgnoreCase("climb")) {
 			System.out.println("Who are you, Spiderman?? No...No, you are not...");
 		}else if(commandWord.equalsIgnoreCase("sing")) {
@@ -298,11 +298,11 @@ class Game {
 		}else if (commandWord.equalsIgnoreCase("run")) {
 			if (command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("away")) {
 				System.out.println(
-						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch!\nIt was ineffective...but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud.");
+						"You are caught by the Thought Police.\nYou attempt to fight back,\nthrowing your strongest punch!\nIt was super ineffective...but we acknowledge your efforts.\nThey shoot a tranqilizer dart into your neck.\nYou drop to the ground with a thud.");
 				gameOver();
 				return true;
 			} else {
-				System.out.println("Why run when you could walk?");
+				System.out.println("Why run when you could walk?!");
 			}
 
 			// Code for all permutations of a Command with commandWord "take"
@@ -325,9 +325,9 @@ class Game {
 				System.out.println("Unfortunately, you do not have the full code.\nFind the rest of it first and then try again :)");
 			}
 		}else if(command.getCommandWord().equalsIgnoreCase("take") && command.getSecondWord() != null && (command.getSecondWord().equalsIgnoreCase("pillow") || command.getSecondWord().equalsIgnoreCase("blanket")) && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
-			System.out.println("It is too heavy for you to carry around. Do you even lift, bruh??");
+			System.out.println("It is too heavy for you to carry around. My grandmas got more muscle than you bro...");
 		}else if(command.getCommandWord().equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("human") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("corpse")) {
-			System.out.println("Jeez. Ya nasty.");
+			System.out.println("Jeez. Ya nasty. Sick person.");
 		}else if(command.getCommandWord().equalsIgnoreCase("take")){
 			if(command.getSecondWord() == null && command.getThirdWord() == null) {
 				System.out.println("Take what?!");
@@ -425,7 +425,7 @@ class Game {
 						inventory.removeItem(food);
 						stats.getHunger().increase();
 					}else {
-						System.out.println("You really thought you could eat that?!");
+						System.out.println("You really thought you could eat that!?");
 					}
 				}else {
 					System.out.println("Either there is nothing like that in your inventory, (i.e. take it first!!!)\nor you weren't specific enough.\nI'm not a mind-reader, you know.");
@@ -724,9 +724,11 @@ class Game {
 		System.out.println("\"I had good faith in you,\" says a voice in the shadows.");
 		scanner.nextLine();
 		footsteps.play(false);
-		System.out.println("The dark figure steps slowly, coming closer. It is O'Brien.");
+		System.out.println("The dark figure begins to walk...stepping slowly...coming closer...");
 		scanner.nextLine();
 		System.out.println("You struggle to speak, but only gibberish slips through your numb lips. O'Brien holds up a used syringe.");
+		scanner.nextLine();
+		System.out.println("It is O'Brien.");
 		scanner.nextLine();
 		System.out.println("\"Lignocaine, but a much larger dosage. You won't be able to move, nor speak, for a while.\"");
 		scanner.nextLine();
@@ -742,8 +744,6 @@ class Game {
 		scanner.nextLine();
 		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
 		scanner.nextLine();
-		System.out.println("\"Next time, we shall meet in the place where there is no darkness.\"");
-		scanner.nextLine();
 		keypad.play(false);
 		System.out.println("You hear the sound of a keypad as he types something in. A click echoes as he turns a knob and exits.");
 		scanner.nextLine();
@@ -752,7 +752,7 @@ class Game {
 		scanner.nextLine();
 		System.out.println("Your legs and arms begin to tingle as warmth spreads though your body. You are now able to move.");
 		scanner.nextLine();
-		System.out.println("You stand up slowly and look around the room. It's empty except for the bed and the door (south).");
+		System.out.println("You stand up slowly and look around the room... It is empty besides the bed and the door (south).");
 		scanner.nextLine();
 		System.out.println();
 
@@ -803,7 +803,7 @@ class Game {
 		scanner.nextLine();
 		System.out.println("The ceiling is low and the tunnel is narrow.");
 		scanner.nextLine();
-		System.out.println("You crawl forward, bruising and scraping your hands and knees on the rough surface.");
+		System.out.println("You move forward with urgency, bruising and scraping your hands and knees on the rough surface.");
 		scanner.nextLine();
 		System.out.println("You get tired very quickly.");
 		scanner.nextLine();
@@ -823,7 +823,7 @@ class Game {
 		scanner.nextLine();
 		System.out.println("You feel adrenaline rushing into your failing muscles");
 		scanner.nextLine();
-		System.out.println("and you crawl desperately towards your last hope.");
+		System.out.println("as you crawl desperately towards your last hope.");
 		scanner.nextLine();
 		System.out.println("With one final push, you reach the end of the tunnel, falling onto the dirt ground.");
 		scanner.nextLine();
