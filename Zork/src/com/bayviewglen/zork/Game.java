@@ -164,20 +164,19 @@ class Game {
 	private void printWelcome() {
 		Scanner scanner= new Scanner(System.in);
 		//System.out.println();
-		System.out.println("...Please press enter after each line...");
-		//scanner.nextLine();
-		System.out.println("...");
-		//scanner.nextLine();
-		System.out.println("darkness...");
-		//scanner.nextLine();
+		System.out.println("*Please press enter after each line*");
+		System.out.println("");
+		scanner.nextLine();
+		System.out.println("Darkness.");
+		scanner.nextLine();
 		System.out.println("Your eyes shoot open. You inhale sharply as your air-deprived lungs beg for oxygen.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("You find yourself to be lying down on a bed with a pillow under your head and a blanket over your body.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("You shoot up and off of the bed in a daze, moving the blanket to the side.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("You begin to look around...");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 		System.out.println();
@@ -230,6 +229,10 @@ class Game {
 		}else if(commandWord.equalsIgnoreCase("quit")) {
 			System.out.println("Tsk tsk tsk.");
 			System.out.println("Quitting is never the answer.");
+		}else if(commandWord.equalsIgnoreCase("hint") && currentRoom.getRoomName().equalsIgnoreCase("Prison Cell")){
+			System.out.println("This room isn't that tough, but here's a pity hint:");
+			System.out.println("Hint: mirror spelled backwards is rorrim");
+			System.out.println("*This is the only hint you can ever get. God Speed.");
 		}else if(commandWord.equalsIgnoreCase("take") && command.getSecondWord() != null && command.getSecondWord().equalsIgnoreCase("rubber") && command.getThirdWord() != null && command.getThirdWord().equalsIgnoreCase("duck") && currentRoom.getRoomName().equalsIgnoreCase("Room 503")) {
 			System.out.println("The rubber duck transforms into a killer rubber duck with a pointy metal bill.");
 			System.out.println("With one final quack, and a squeak here and there, it attacks you!");
@@ -564,7 +567,6 @@ class Game {
 		System.out.println();
 		System.out.println("If you are having trouble seeing, you can always look around. That tends to help.");
 		System.out.println();
-		System.out.println("Hint: mirror spelled backwards is rorrim");
 	}
 
 	/**
@@ -715,31 +717,31 @@ class Game {
 		music.playClip("Strange_atmosphere.wav");
 
 		System.out.println("*Please press enter after each line*");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println();
 		System.out.println("There are concrete walls on your left and right.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("\"I had good faith in you,\" says a voice in the shadows.");
 		scanner.nextLine();
 		footsteps.play(false);
 		System.out.println("The dark figure steps slowly, coming closer. It is O'Brien.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("You struggle to speak, but only gibberish slips through your numb lips. O'Brien holds up a used syringe.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("\"Lignocaine, but a much larger dosage. You won't be able to move, nor speak, for a while.\"");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("He takes a seat on the edge of the bed, exhaling a deep sigh.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("\"You showed promising results, great loyalty to our nation...to Big Brother.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("Even during the tests, you always outranked the others. We were even considering releasing you.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("But it seems it was all a lie, a cheap trick in your sick mind.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("Become familiar with this room, with this new lifestyle, because you are now the enemy.\"");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("He stands up, dusting off the wrinkles in his trousers, and walks past your head.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("\"Next time, we shall meet in the place where there is no darkness.\"");
 		scanner.nextLine();
 		keypad.play(false);
@@ -747,11 +749,11 @@ class Game {
 		scanner.nextLine();
 		doorSlam.play(false);
 		System.out.println("The door slams shut, with a resounding click confirming that it's locked.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("Your legs and arms begin to tingle as warmth spreads though your body. You are now able to move.");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println("You stand up slowly and look around the room. It's empty except for the bed and the door (south).");
-		//scanner.nextLine();
+		scanner.nextLine();
 		System.out.println();
 
 	}
